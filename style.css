@@ -1,9 +1,7 @@
 #footer{
-  margin-top:250px;
+  margin-top:95px;
 }
-#nav{
-  height: 80px;
-}
+
 body{
   /* background-color:white; */
   background:url(img/texture.jpg);
@@ -22,10 +20,6 @@ td, th{
     background-repeat: no-repeat;
     background-size: 100%;
  } */
- #header{
-    background-image: url(img/home-background.jpg);
-    background-position: left;
- }
  .spaceTop{
      padding-top: 50px;
  }
