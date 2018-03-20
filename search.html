@@ -55,7 +55,6 @@
 			  contentType: "application/json",
 			  crossDomain: true,
 			  success: function(data,status){
-				//alert("Data: " + data + "\nStatus: " + status); 
 				$('#tabela').dynatable({
 				  dataset:{
 					records: data.map((item) => {
@@ -181,8 +180,10 @@
 					  <th>start</th>
 					  <th>end</th>
 					  <th>bit_score</th>
-					  <th>feature_rf</th>
+						<th>feature_rf</th>
+						<th>Details</th>
 					</thead>
+
 				  </table>
 			</div>
 		  </div>
