@@ -28,7 +28,6 @@ class Dao extends database {
     "JOIN localization ON localization.loc_id = loc_feature.id_loc ".
     "JOIN organism ON feature.organism_id = organism.organism_id ".
     " $where";
-    // echo $sql;
 
 		$horario = $this->selectDB($sql,$params,null);
 		return $horario;
