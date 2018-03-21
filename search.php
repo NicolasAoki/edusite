@@ -19,8 +19,6 @@
 
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<script src="node_modules/jspkg-archive/jquery.dynatable.js"></script>
-		<link rel="stylesheet" type="text/css" href="node_modules/jspkg-archive/jquery.dynatable.css"/>
 		
 
 	</head>
@@ -31,7 +29,7 @@
 		  var val = [];
 		  $(function(){
 			$('#save').click(function(event){
-			  event.preventDefault()
+			  event.preventDefault();
 			  selectedValues = $('#select-organismos').val();
 			  $(':checkbox:checked').each(function(i){
 				val[i] = $(this).attr('name');
@@ -56,9 +54,17 @@
 			  crossDomain: true,
 			  success: function(data,status){
 					var aux_data = '';
+					var nome_botao = "View";
 					$.each(data,function(key,value){
 						aux_data += '<tr>';
 						aux_data += '<td>'+value.abbreviation+'</td>'
+						aux_data += '<td>'+value.loc_identification+'</td>'
+						aux_data += '<td>'+value.start+'</td>'
+						aux_data += '<td>'+value.end+'</td>'
+						aux_data += '<td style="text-align:center;">'+value.strand+'</td>'
+						aux_data += '<td>'+value.feature_name+'</td>'
+						aux_data += '<td>'+value.bit_score+'</td>'
+						aux_data += '<td><button class="btn btn-primary meio">'+nome_botao+'</button></td>'
 						aux_data += '</tr>';
 					});
 					console.log(aux_data);
@@ -155,6 +161,13 @@
 				<table class="table table-bordered table-striped" id="tabela">
 					<tr>
 						<th>abbreviation</th>
+						<th>Identification</th>
+						<th>Start</th>
+						<th>End</th>
+						<th>Strand</th>
+						<th>Feature name</th>
+						<th>Bit Score</th>
+						<th>Details</th>						
 					</tr>
 				</table>
 			</div>
