@@ -94,52 +94,60 @@
 		<div class="spaceTop"></div>
 		<div class="container">
 		  <div class="row" style="background-color:#E0E4CC;border-radius:5px;">
-			<div class="col-md-6 altura">
-			  <form id="myForm">
-				<div class="col-xs-5 form-group">
-				  <label for="exampleFormControlSelect2">Example multiple select</label>
-				  <select multiple class="form-control" id="select-organismos">
-					<option>AE009948</option>
-					<option>AL732656</option>
-					<option>CP000114</option>
-					<option>CP003810</option>
-					<option>CP003919</option>
-				  </select>
+				<div class="col-md-6 altura">
+					<form id="myForm">
+						<div class="col-md-5 form-group">
+							<label for="exampleFormControlSelect2">Example multiple select</label>
+							<select multiple class="form-control" id="select-organismos">
+							<option>AE009948</option>
+							<option>AL732656</option>
+							<option>CP000114</option>
+							<option>CP003810</option>
+							<option>CP003919</option>
+							</select>
+						</div>
+					<div class="col-md-5" style="margin-top:29px;">
+						<div class="form-check">
+						<input type="checkbox" class="form-check-input" name="SHARED" id="checkbox1">
+						<label class="form-check-label" for="exampleCheck1">Shared</label>
+						</div>
+						<div class="form-check">
+						<input type="checkbox" class="form-check-input" name="CORE" id="checkbox2">
+						<label class="form-check-label" for="exampleCheck1">Core</label>
+						</div>
+						<div class="form-check">
+						<input type="checkbox" class="form-check-input" name="EXCLUSIVE" id="checkbox3">
+						<label class="form-check-label" for="exampleCheck1">Exclusive</label>
+						</div>
+					</div>
+					</form>
 				</div>
-				<div class="col-xs-5">
-				  <div class="form-check">
-					<input type="checkbox" class="form-check-input" name="SHARED" id="checkbox1">
-					<label class="form-check-label" for="exampleCheck1">Shared</label>
-				  </div>
-				  <div class="form-check">
-					<input type="checkbox" class="form-check-input" name="CORE" id="checkbox2">
-					<label class="form-check-label" for="exampleCheck1">Core</label>
-				  </div>
-				  <div class="form-check">
-					<input type="checkbox" class="form-check-input" name="EXCLUSIVE" id="checkbox3">
-					<label class="form-check-label" for="exampleCheck1">Exclusive</label>
-				  </div>
-					<button id="save" class="btn btn-primary">Submit</button>
-					<button class="btn btn-success">redo search</button>
-				</div>
-			  </form>
-			</div>
-			<div class="col-md-6">
 				<div class="col-md-6">
-					<input type="text" name="sequence" placeholder="Insert sequence" style="background-color:white;margin-top:10px;">
-					<div style="margin-top:10px;"></div>
-					<label class="btn btn-info" for="my-file-selector">
-							<input id="my-file-selector" type="file" style="display:none;">
-								Choose text file
-					</label>
+					<div class="col-md-6">
+						<input type="text" name="sequence" placeholder="Insert sequence" style="background-color:white;margin-top:10px;">
+						<div style="margin-top:10px;"></div>
+						<label class="btn btn-info" for="my-file-selector">
+								<input id="my-file-selector" type="file" style="display:none;">Choose text file
+						</label>
 				</div>
-				
 				<div class="col-md-6">
 					<input type="text" name="srnaName" placeholder="sRNA name Ex:. tracrRNA" style="background-color:white;margin-top:10px;">
 				</div>
-				
+				</div>
+				<div class="col-md-12 spaceTop">
+					<div class="col-md-2">
+							<input type="text" name="start" placeholder="Start" style="background-color:white;margin-bottom:10px;">
+					</div>
+					<div class="col-md-2">
+						<input type="text" name="end" placeholder="End" style="background-color:white;margin-bottom:10px;">
+					</div>
+					<div class="col-md-5">
+						<button id="save" class="btn btn-primary">Submit</button>
+						<button class="btn btn-success">redo search</button>
+					</div>
+				</div>
 			</div>
-			</div>
+		
 		  </div>
 		</div>
 		<hr>
