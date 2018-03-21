@@ -77,65 +77,23 @@
 		</script>
 	  
 	<body>
+		<?php
+			include("cabecalho.php");
+		?>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 text-left">
+					<h1 class="white-text">Search</h1>
 
-		<!-- Header -->
-		<header id="header">
-			<div class="container">
-
-				<div class="navbar-header">
-					<!-- Logo -->
-					<div class="navbar-brand">
-						<a class="logo" href="index.html">
-							<img src="./img/logo-alt.png" alt="logo">
-						</a>
-					</div>
-					<!-- /Logo -->
-
-					<!-- Mobile toggle -->
-					<button class="navbar-toggle">
-						<span></span>
-					</button>
-					<!-- /Mobile toggle -->
-				</div>
-
-				<!-- Navigation -->
-				<nav id="nav">
-					<ul class="main-menu nav navbar-nav navbar-right">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">search</a></li>
-						<li><a href="#">blast</a></li>
-						<li><a href="#">download</a></li>
-						<li><a href="#">about</a></li>
-						<li><a href="#">team</a></li>
-					</ul>
-				</nav>
-				<!-- /Navigation -->
-
-			</div>
-		</header>
-		<!-- /Header -->
-
-		<!-- Hero-area -->
-		<div class="hero-area section" style="height:50px;">
-
-			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/home-background.jpg)"></div>
-			<!-- /Backgound Image -->
-
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 text-left">
-						<h1 class="white-text">Search</h1>
-
-					</div>
 				</div>
 			</div>
+		</div>
 
 		</div>
 		<!-- /Hero-area -->
 		<div class="spaceTop"></div>
 		<div class="container">
-		  <div class="row">
+		  <div class="row" style="background-color:#E0E4CC;border-radius:5px;">
 			<div class="col-md-6 altura">
 			  <form id="myForm">
 				<div class="col-xs-5 form-group">
@@ -165,6 +123,22 @@
 					<button class="btn btn-success">redo search</button>
 				</div>
 			  </form>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<input type="text" name="sequence" placeholder="Insert sequence" style="background-color:white;margin-top:10px;">
+					<div style="margin-top:10px;"></div>
+					<label class="btn btn-info" for="my-file-selector">
+							<input id="my-file-selector" type="file" style="display:none;">
+								Choose text file
+					</label>
+				</div>
+				
+				<div class="col-md-6">
+					<input type="text" name="srnaName" placeholder="sRNA name Ex:. tracrRNA" style="background-color:white;margin-top:10px;">
+				</div>
+				
+			</div>
 			</div>
 		  </div>
 		</div>
