@@ -9,17 +9,17 @@
 				<script type="text/javascript" src="js/jquery.min.js"></script>
 				<script type="text/javascript" src="js/bootstrap.min.js"></script>
 				<script type="text/javascript" src="js/main.js"></script>
-		
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
+ 
+ <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 
 
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
-		
 
 	</head>
 	<script>
@@ -67,7 +67,6 @@
 						aux_data += '<td><button class="btn btn-primary meio">'+nome_botao+'</button></td>'
 						aux_data += '</tr>';
 					});
-					console.log(aux_data);
 					$('#tabela').append(aux_data);
 			  },
 			  type: 'post',
@@ -77,7 +76,6 @@
 			});
 		  }
 		});
-	  
 		</script>
 	  
 	<body>
