@@ -55,16 +55,14 @@
 			  contentType: "application/json",
 			  crossDomain: true,
 			  success: function(data,status){
-				$('#tabela').dynatable({
-				  dataset:{
-					records: data.map((item) => {
-					  item.strain = item.abbreviation;
-					  item.regions = item.loc_identification;
-					  item.rna_family = item.feature_name;
-					  return item;
-					})
-				  }
-				})
+					var aux_data = '';
+					$.each(data,function(key,value){
+						aux_data += '<tr>';
+						aux_data += '<td>'+value.abbreviation+'</td>'
+						aux_data += '</tr>';
+					});
+					console.log(aux_data);
+					$('#tabela').append(aux_data);
 			  },
 			  type: 'post',
 			  error: function (xhr, desc, err) {
@@ -154,19 +152,11 @@
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-12" >
-				<table id="tabela">
-					<thead>
-					  <th>Strain</th>
-					  <th>Regions</span></th>
-					  <th>RNA_family</th>
-					  <th>start</th>
-					  <th>end</th>
-					  <th>bit_score</th>
-						<th>feature_rf</th>
-						<th>Details</th>
-					</thead>
-
-				  </table>
+				<table class="table table-bordered table-striped" id="tabela">
+					<tr>
+						<th>abbreviation</th>
+					</tr>
+				</table>
 			</div>
 		  </div>
 		</div>
