@@ -23,59 +23,65 @@
 
 	</head>
 	<script>
+		let result = []
 
 		$(document).ready(function(){
 		  var selectedValues = null;
 		  var val = [];
-		  $(function(){
 			$('#save').click(function(event){
-			  event.preventDefault();
-			  selectedValues = $('#select-organismos').val();
-			  $(':checkbox:checked').each(function(i){
+				event.preventDefault();
+				selectedValues = $('#select-organismos').val();
+				$(':checkbox:checked').each(function(i){
 				val[i] = $(this).attr('name');
-			  });
-			  console.log(val);
-			  console.log(selectedValues);
-			  sendData()
+				});
+				console.log(val);
+				console.log(selectedValues);
+				sendData()
 			});
-		  });
-		  function sendData (){
-			let data = {
-			  "localization.loc_identification": val,
-			  "organism.abbreviation": selectedValues
+			function sendData (){
+				let data = {
+					"localization.loc_identification": val,
+					"organism.abbreviation": selectedValues
+				}
+				console.log(data)
+				$.support.cors = true
+				$.ajax({
+					url: "http://localhost/edusite/ep-dados.php",
+					data : JSON.stringify(data),
+					dataType: 'JSON',
+					contentType: "application/json",
+					crossDomain: true,
+					success: success,
+					type: 'post',
+					error: function (xhr, desc, err) {
+						alert("error");
+					}
+				});
 			}
-			console.log(data)
-			$.support.cors = true
-			$.ajax({
-			  url: "http://localhost/edusite/ep-dados.php",
-			  data : JSON.stringify(data),
-			  dataType: 'JSON',
-			  contentType: "application/json",
-			  crossDomain: true,
-			  success: function(data,status){
-					var aux_data = '';
-					var nome_botao = "View";
-					$.each(data,function(key,value){
-						aux_data += '<tr>';
-						aux_data += '<td>'+value.abbreviation+'</td>'
-						aux_data += '<td>'+value.loc_identification+'</td>'
-						aux_data += '<td>'+value.start+'</td>'
-						aux_data += '<td>'+value.end+'</td>'
-						aux_data += '<td style="text-align:center;">'+value.strand+'</td>'
-						aux_data += '<td>'+value.feature_name+'</td>'
-						aux_data += '<td>'+value.bit_score+'</td>'
-						aux_data += '<td><button class="btn btn-primary meio">'+nome_botao+'</button></td>'
-						aux_data += '</tr>';
-					});
-					$('#tabela').append(aux_data);
-			  },
-			  type: 'post',
-			  error: function (xhr, desc, err) {
-				alert("error");
-			  }
-			});
-		  }
+			function success(data,status){
+				result = data;
+				var aux_data = '';
+				var nome_botao = "View";
+				$.each(data,function(key,value){
+					aux_data += '<tr>';
+					aux_data += '<td>'+value.abbreviation+'</td>'
+					aux_data += '<td>'+value.loc_identification+'</td>'
+					aux_data += '<td>'+value.start+'</td>'
+					aux_data += '<td>'+value.end+'</td>'
+					aux_data += '<td style="text-align:center;">'+value.strand+'</td>'
+					aux_data += '<td>'+value.feature_name+'</td>'
+					aux_data += '<td>'+value.bit_score+'</td>'
+					aux_data += '<td><button class="btn btn-primary meio" onclick="pegaId('+key+')">'+nome_botao+'</button></td>'
+					aux_data += '</tr>';
+				});
+				$('#tabela').append(aux_data);
+			}
 		});
+
+		function pegaId(key){
+			console.log(result[key]);
+		}
+		
 		</script>
 	  
 	<body>
