@@ -66,10 +66,15 @@
                 <p class="titulo-result">Sequence</p>
             </div>
             <div class="col-md-7" style="width:40%">
-                <p class="spaceleft">AAAAAAGCACCGAATCGGTGCTCACTTTTTCAAGCTGAATACGGACTGGATTAAAAATCACTGCCTTATTTTAACGTGCTGTGCTGTTTCGAATAATTCCAACA</p>
+                <p style="overflow:scroll;max-height:100px"class="spaceleft"><?php
+        echo $resultSQL[0]["sequence"];
+    ?></p>
             </div>
         </div>
     </div>
+    <?php
+        echo json_encode($resultSQL);
+    ?>
     <!-- Footer -->
     <footer id="footer" class="section">
 
