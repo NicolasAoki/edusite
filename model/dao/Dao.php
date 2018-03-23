@@ -27,6 +27,8 @@ class Dao extends database {
     "JOIN feature ON feature.feature_id = loc_feature.id_feature ".
     "JOIN localization ON localization.loc_id = loc_feature.id_loc ".
     "JOIN organism ON feature.organism_id = organism.organism_id ".
+    "JOIN publication ON feature.publication_id = publication.publication_id".
+ /*    "JOIN analysis_type ON feature.analysis_id = analysis_type.analysis_type_id". */
     " $where";
 
 		$horario = $this->selectDB($sql,$params,null);
@@ -41,6 +43,7 @@ class Dao extends database {
     "JOIN feature ON feature.feature_id = loc_feature.id_feature ".
     "JOIN localization ON localization.loc_id = loc_feature.id_loc ".
     "JOIN organism ON feature.organism_id = organism.organism_id ".
+    "JOIN publication ON feature.publication_id = publication.publication_id".
     " $where";
 
 		$horario = $this->selectDB($sql,$params,null);

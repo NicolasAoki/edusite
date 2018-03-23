@@ -28,7 +28,7 @@ class EpController {
         $where .= ($i == count($params)) ? " " : "  AND " ;
       }
     }
-    return $this->Dao->getInfo('abbreviation,loc_identification, feature.start, feature.end, strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id', $where, $values);
+    return $this->Dao->getInfo('abbreviation,loc_identification, feature.start, feature.end, strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id,publication.title', $where, $values);
   }
   public function getDetalhes($params) {
     $this->Dao = new Dao();
