@@ -13,7 +13,7 @@
 
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
- 
+
  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 
@@ -36,7 +36,7 @@
 				});
 				console.log(val);
 				console.log(selectedValues);
-				sendData()
+				sendData();
 			});
 			function sendData (){
 				let data = {
@@ -46,15 +46,15 @@
 				console.log(data)
 				$.support.cors = true
 				$.ajax({
-					url: "http://localhost/edusite/ep-dados.php",
+					url: "http://localhost:4500/ep-dados.php",
 					data : JSON.stringify(data),
 					dataType: 'JSON',
 					contentType: "application/json",
 					crossDomain: true,
 					success: success,
 					type: 'post',
-					error: function (xhr, desc, err) {
-						alert("error");
+					error: function (errorStatus, xhr) {
+						alert("Error"+JSON.stringify(errorStatus));
 					}
 				});
 			}
@@ -71,7 +71,7 @@
 					aux_data += '<td style="text-align:center;">'+value.strand+'</td>'
 					aux_data += '<td>'+value.feature_name+'</td>'
 					aux_data += '<td>'+value.bit_score+'</td>'
-					aux_data += '<td><a class="btn btn-primary meio" href="/edusite/ep-detalhes.php?feature_id='+value.feature_id+'&organism_id='+value.organism_id+'&publication_id='+value.publication_id+'&type_type_id='+value.type_type_id+'&analysis_id='+value.analysis_id+'" ">'+nome_botao+'</a></td>'
+					aux_data += '<td><a class="btn btn-primary meio" href="/ep-detalhes.php?feature_id='+value.feature_id+'&organism_id='+value.organism_id+'&publication_id='+value.publication_id+'&type_type_id='+value.type_type_id+'&analysis_id='+value.analysis_id+'" ">'+nome_botao+'</a></td>'
 					aux_data += '</tr>';
 				});
 				$('#tabela').append(aux_data);
@@ -81,9 +81,9 @@
 		function pegaId(key){
 			console.log(result[key]);
 		}
-		
+
 		</script>
-	  
+
 	<body>
 		<?php
 			include("cabecalho.php");
@@ -151,11 +151,11 @@
 					</div>
 					<div class="col-md-5">
 						<button id="save" class="btn btn-primary">Submit</button>
-						<button class="btn btn-success">redo search</button>
+						<button class="btn btn-success" href="#">redo search</button>
 					</div>
 				</div>
 			</div>
-		
+
 		  </div>
 		</div>
 		<hr>
@@ -171,13 +171,13 @@
 						<th>Strand</th>
 						<th>Feature name</th>
 						<th>Bit Score</th>
-						<th>Details</th>						
+						<th>Details</th>
 					</tr>
 				</table>
 			</div>
 		  </div>
 		</div>
-		
+
 
 		<!-- Footer -->
 		<footer id="footer" class="section">

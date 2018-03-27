@@ -5,7 +5,7 @@
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
-						<a class="logo" href="index.html">
+						<a class="logo" href="index.php">
 							<img src="./img/logo-alt.png" alt="logo">
 						</a>
 					</div>
