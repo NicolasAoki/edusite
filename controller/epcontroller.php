@@ -32,15 +32,17 @@ class EpController {
   }
   public function getDetalhes($params) {
     $this->Dao = new Dao();
-    $where = " WHERE feature.feature_id = ? and feature.organism_id = ? and feature.publication_id = ? and feature.type_type_id = ? and feature.analysis_id = ?";
+    $where = " WHERE feature.feature_id = ? and feature.organism_id = ? and feature.publication_id = ? and feature.type_type_id = ? and feature.analysis_id = ? and feature.start = ? and feature.end = ?";
     $values= [
       $params["feature_id"],
       $params["organism_id"],
       $params["publication_id"],
       $params["type_type_id"],
       $params["analysis_id"],
-    ]; 
-    return $this->Dao->getInfo('*', $where, $values);
+      $params["start"],
+      $params["end"],
+    ];
+    return $this->Dao->getInfo('feature.start', $where, $values);
   }
 }
 

@@ -14,6 +14,8 @@ switch ($method) {
         'publication_id' => $_GET['publication_id'],
         'type_type_id' => $_GET['type_type_id'],
         'analysis_id' => $_GET['analysis_id'],
+        'start' => $_GET['start'],
+        'end' => $_GET['end']
       ];
       header('Content-Type: text/html');
       $resultSQL = $epcontroller->getDetalhes($array);
@@ -21,7 +23,7 @@ switch ($method) {
     }catch (Exception $e){
       echo "$e";
     }
-    
+
   }
   case 'POST': {
 /*     $json = file_get_contents('php://input');
