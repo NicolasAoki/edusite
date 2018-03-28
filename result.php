@@ -43,7 +43,7 @@
                 <p class="titulo-result">More about <?php echo $resultSQL[0]["feature_name"] ?></p>
             </div>
             <div class="col-md-6">
-                <ul class="spaceleft" style="margin-top:50px;">
+                <ul class="spaceleft" style="margin-top:10px;">
                     <li>Genus: <?php echo $resultSQL[0]["genus"] ?></li>
                     <li>Species: <?php echo $resultSQL[0]["specie"] ?></li>
                     <li>feature name: <?php echo $resultSQL[0]["feature_name"] ?></li>
@@ -55,10 +55,9 @@
                     <li>End: <?php echo $resultSQL[0]["end"] ?></li>
                     <li>Strand: <?php echo $resultSQL[0]["strand"] ?></li>
                     <li>identification: <?php echo $resultSQL[0]["loc_identification"] ?> </li>
-                    <li>Function: </li>
                     <li>publication: <?php echo $resultSQL[0]["title"] ?></li>
                     <li>host gene: <?php echo $resultSQL[0]["host_gene"] ?></li>
-                    <li>HGT Region</li>
+                    <li>HGT Region - start - end - color - note_threshold - color - alien hunter</li>
 
                 </ul>
             </div>
@@ -75,18 +74,26 @@
         </div>
         <div class="row" style="word-wrap: break-word;">
             <div class="col-md-10">
+                <p class="titulo-result">Functionality</p>
+            </div>
+            <div class="col-md-7" style="width:40%;margin-top:10px;">
+                <p style="overflow:scroll;max-height:100px"class="spaceleft">
+                    Function: predicted to encode membrane-bound proteins and have been proposed to be a transporter of preQ1, or a related metabolit
+
+                </p>
+            </div>
+        </div>
+                <div class="row" style="word-wrap: break-word;">
+            <div class="col-md-10">
                 <p class="titulo-result">Sequence</p>
             </div>
             <div class="col-md-7" style="width:40%">
                 <p style="overflow:scroll;max-height:100px"class="spaceleft"><?php
-        echo $resultSQL[0]["sequence"];
-    ?></p>
+        echo $resultSQL[0]["sequence"];?></p>
             </div>
         </div>
+
     </div>
-    <?php
-        echo json_encode($resultSQL);
-    ?>
     <!-- Footer -->
     <footer id="footer" class="section">
 
