@@ -42,7 +42,7 @@ class EpController {
       $params["start"],
       $params["end"],
     ];
-    return $this->Dao->getInfo('feature.start', $where, $values);
+    return $this->Dao->getInfo('*', $where, $values);
   }
 }
 

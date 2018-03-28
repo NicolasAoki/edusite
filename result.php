@@ -8,7 +8,7 @@
 				<script type="text/javascript" src="js/jquery.min.js"></script>
 				<script type="text/javascript" src="js/bootstrap.min.js"></script>
 				<script type="text/javascript" src="js/main.js"></script>
-		
+
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -20,7 +20,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<script src="node_modules/jspkg-archive/jquery.dynatable.js"></script>
 		<link rel="stylesheet" type="text/css" href="node_modules/jspkg-archive/jquery.dynatable.css"/>
-		
+
 
 	</head>
     <body>
@@ -40,14 +40,26 @@
     <div class="spaceTop"></div>
         <div class="row">
             <div class="col-md-10">
-                <p class="titulo-result">More about RNaseP_bact_b</p>
+                <p class="titulo-result">More about <?php echo $resultSQL[0]["feature_name"] ?></p>
             </div>
             <div class="col-md-6">
                 <ul class="spaceleft" style="margin-top:50px;">
-                    <li>E-Value: 3.9e-38</li>
-                    <li>bit-score: 132.2</li>
+                    <li>Genus: <?php echo $resultSQL[0]["genus"] ?></li>
+                    <li>Species: <?php echo $resultSQL[0]["specie"] ?></li>
+                    <li>feature name: <?php echo $resultSQL[0]["feature_name"] ?></li>
+                    <li>feature identification: <?php echo $resultSQL[0]["feature_RF"] ?></li>
+                    <li>Value : <?php echo $resultSQL[0]["e_value"] ?></li>
+                    <li>bit-score: <?php echo $resultSQL[0]["bit_score"] ?></li>
                     <li>Analysis type: Mauve</li>
-                    <li>Strand: +</li>
+                    <li>Start: <?php echo $resultSQL[0]["start"] ?></li>
+                    <li>End: <?php echo $resultSQL[0]["end"] ?></li>
+                    <li>Strand: <?php echo $resultSQL[0]["strand"] ?></li>
+                    <li>identification: <?php echo $resultSQL[0]["loc_identification"] ?> </li>
+                    <li>Function: </li>
+                    <li>publication: <?php echo $resultSQL[0]["title"] ?></li>
+                    <li>host gene: <?php echo $resultSQL[0]["host_gene"] ?></li>
+                    <li>HGT Region</li>
+
                 </ul>
             </div>
             <div class= "col-md-5" style="background-color:; border-radius: 5px;">
@@ -57,7 +69,7 @@
                 <div class="col-md-4">
                     <p>Some description about this image <br>(with Zoom in and Zoom out)</p>
                 </div>
-                
+
             </div>
             <button class="btn btn-primary">Fetch results!</button>
         </div>

@@ -24,10 +24,10 @@ class Dao extends database {
 		// $sql = "SELECT $fields FROM feature $where";
     $sql = "SELECT $fields ".
     "FROM loc_feature ".
-    "JOIN feature ON feature.feature_id = loc_feature.id_feature ".
-    "JOIN localization ON localization.loc_id = loc_feature.id_loc ".
-    "JOIN organism ON feature.organism_id = organism.organism_id ".
-    "JOIN publication ON feature.publication_id = publication.publication_id".
+    " INNER JOIN feature ON feature.feature_id = loc_feature.id_feature ".
+    " INNER JOIN localization ON localization.loc_id = loc_feature.id_loc ".
+    " INNER JOIN organism ON feature.organism_id = organism.organism_id ".
+    " INNER JOIN publication ON feature.publication_id = publication.publication_id".
  /*    "JOIN analysis_type ON feature.analysis_id = analysis_type.analysis_type_id". */
     " $where";
 		$horario = $this->selectDB($sql,$params,null);
