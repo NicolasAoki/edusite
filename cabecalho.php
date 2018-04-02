@@ -22,7 +22,7 @@
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
 						<li><a href="index.php">Home</a></li>
-						<li><a href="#">search</a></li>
+						<li><a href="search.php">search</a></li>
 						<li><a href="#">blast</a></li>
 						<li><a href="#">download</a></li>
 						<li><a href="#">about</a></li>

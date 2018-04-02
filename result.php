@@ -29,8 +29,8 @@
     ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-10 text-left">
-                <h1 class="white-text">Details</h1>
+            <div class="col-md-11 text-left">
+                <h1 class="white-text">More about <?php echo $resultSQL[0]["feature_name"] ?></h1>
 
             </div>
         </div>
@@ -40,7 +40,7 @@
     <div class="spaceTop"></div>
         <div class="row">
             <div class="col-md-10">
-                <p class="titulo-result">More about <?php echo $resultSQL[0]["feature_name"] ?></p>
+                <p class="titulo-result"> <?php echo $resultSQL[0]["feature_name"] ?> details</p>
             </div>
             <div class="col-md-6">
                 <ul class="spaceleft" style="margin-top:10px;">
@@ -72,28 +72,33 @@
             </div>
             <button class="btn btn-primary">Fetch results!</button>
         </div>
+        <div class="spaceTop"></div>
         <div class="row" style="word-wrap: break-word;">
-            <div class="col-md-10">
+            <div class="col-md-6">
                 <p class="titulo-result">Functionality</p>
+                <div class="col-md-12" style="width:40%;margin-top:10px;">
+                    <p style="max-height:100px"class="spaceleft">
+                        <?php
+                            echo $resultSQL[0]["feature_function"];
+                        ?>
+                    </p>
+                </div>
             </div>
-            <div class="col-md-7" style="width:40%;margin-top:10px;">
-                <p style="overflow:scroll;max-height:100px"class="spaceleft">
-                    Function: predicted to encode membrane-bound proteins and have been proposed to be a transporter of preQ1, or a related metabolit
-
-                </p>
-            </div>
-        </div>
-                <div class="row" style="word-wrap: break-word;">
-            <div class="col-md-10">
+            <div class="col-md-6">
                 <p class="titulo-result">Sequence</p>
             </div>
-            <div class="col-md-7" style="width:40%">
-                <p style="overflow:scroll;max-height:100px"class="spaceleft"><?php
-        echo $resultSQL[0]["sequence"];?></p>
+                <div class="col-md-7" style="width:40%">
+                    <p style="overflow:scroll;max-height:100px"class="spaceleft">
+                        <?php
+                            echo $resultSQL[0]["sequence"];
+                        ?>
+                    </p>
+                </div>
             </div>
         </div>
-
-    </div>
+        <?php
+           echo json_encode($resultSQL);
+        ?>
     <!-- Footer -->
     <footer id="footer" class="section">
 
