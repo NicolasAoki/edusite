@@ -95,7 +95,26 @@
                     </p>
                 </div>
             </div>
+                    <div class="container">
+          <div class="row">
+            <div class="col-md-12" >
+                <table class="table table-bordered table-striped" id="tabela">
+                    <tr>
+                        <th>abbreviation</th>
+                        <th>Identification</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Strand</th>
+                        <th>Feature name</th>
+                        <th>Bit Score</th>
+                        <th>Details</th>
+                    </tr>
+                </table>
+            </div>
+          </div>
         </div>
+        </div>
+
         <?php
            echo json_encode($resultSQL);
         ?>
