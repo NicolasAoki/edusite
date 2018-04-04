@@ -34,16 +34,25 @@
 				$(':checkbox:checked').each(function(i){
 				val[i] = $(this).attr('name');
 				});
-				console.log(val);
-				console.log(selectedValues);
 				sendData();
 			});
 			function sendData (){
+
 				let data = {
 					"localization.loc_identification": val,
 					"organism.abbreviation": selectedValues
 				}
-				console.log(data)
+				console.log($('#srnaName').val());
+				if ($('#srnaName').val() != ''){
+					data['feature.feature_name'] = $('#srnaName').val()
+				}
+				if ($('#startSequence').val() != ''){
+					data['organism.start'] = $('#startSequence').val()
+				}
+				if ($('#endSequence').val() != ''){
+					data['organism.end'] = $('#endSequence').val()
+				}
+				console.log(data);
 				$.support.cors = true
 				$.ajax({
 					url: "http://localhost:4500/ep-dados.php",
@@ -105,7 +114,7 @@
 				<div class="col-md-6 altura">
 					<form id="myForm">
 						<div class="col-md-5 form-group">
-							<label for="exampleFormControlSelect2">Example multiple select</label>
+							<label for="exampleFormControlSelect2">Search by Genome + Region type</label>
 							<select multiple class="form-control" id="select-organismos">
 							<option>AE009948</option>
 							<option>AL732656</option>
@@ -130,24 +139,18 @@
 					</div>
 					</form>
 				</div>
+
 				<div class="col-md-6">
-					<div class="col-md-6">
-						<input type="text" name="sequence" placeholder="Insert sequence" style="background-color:white;margin-top:10px;">
-						<div style="margin-top:10px;"></div>
-						<label class="btn btn-info" for="my-file-selector">
-								<input id="my-file-selector" type="file" style="display:none;">Choose text file
-						</label>
+					 Search by miRNA (Organism + miRNA )
+					<input type="text" id="srnaName" placeholder="sRNA name Ex:. tracrRNA" style="background-color:white;margin-top:10px;">
 				</div>
-				<div class="col-md-6">
-					<input type="text" name="srnaName" placeholder="sRNA name Ex:. tracrRNA" style="background-color:white;margin-top:10px;">
-				</div>
-				</div>
+
 				<div class="col-md-12 spaceTop">
 					<div class="col-md-2">
-							<input type="text" name="start" placeholder="Start" style="background-color:white;margin-bottom:10px;">
+							<input type="text" id="startSequence" placeholder="Start" style="background-color:white;margin-bottom:10px;">
 					</div>
 					<div class="col-md-2">
-						<input type="text" name="end" placeholder="End" style="background-color:white;margin-bottom:10px;">
+						<input type="text" id="endSequence" placeholder="End" style="background-color:white;margin-bottom:10px;">
 					</div>
 					<div class="col-md-5">
 						<button id="save" class="btn btn-primary">Submit</button>

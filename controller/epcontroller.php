@@ -18,11 +18,15 @@ class EpController {
         $i++;
         if (count($value)) {
           $j = 0;
-          foreach ($value as $key_2 => $value_2) {
-            $where .= ($j == 0) ? $key." IN ( " : " ";
-            $j++;
-            $where .= ($j == count($value)) ? "?)" : "?, " ;
-            array_push($values, $value_2);
+          if ($key === "feature.feature_name") {
+              $where .= $key." like '".$value ."'";
+          } else {
+            foreach ($value as $key_2 => $value_2) {
+              $where .= ($j == 0) ? $key." IN ( " : " ";
+              $j++;
+              $where .= ($j == count($value)) ? "?)" : "?, " ;
+              array_push($values, $value_2);
+            }
           }
         }
         $where .= ($i == count($params)) ? " " : "  AND " ;
