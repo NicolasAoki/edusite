@@ -20,7 +20,14 @@ class EpController {
           $j = 0;
           if ($key === "feature.feature_name") {
               $where .= $key." like '".$value ."'";
-          } else {
+          }
+          else if ($key === "feature.start"){
+              $where .= $key." >= ".$value ;
+          }
+          else if ($key === "feature.end"){
+              $where .= $key." <= ".$value ;
+          }
+          else {
             foreach ($value as $key_2 => $value_2) {
               $where .= ($j == 0) ? $key." IN ( " : " ";
               $j++;

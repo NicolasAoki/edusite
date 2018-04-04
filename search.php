@@ -47,10 +47,10 @@
 					data['feature.feature_name'] = $('#srnaName').val()
 				}
 				if ($('#startSequence').val() != ''){
-					data['organism.start'] = $('#startSequence').val()
+					data['feature.start'] = $('#startSequence').val()
 				}
 				if ($('#endSequence').val() != ''){
-					data['organism.end'] = $('#endSequence').val()
+					data['feature.end'] = $('#endSequence').val()
 				}
 				console.log(data);
 				$.support.cors = true
