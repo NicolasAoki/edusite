@@ -115,12 +115,12 @@
                 <p class="titulo-result">Host Gene</p>
                 <ul>
                     <li>host gene:
+                        <?php echo $resultSQL[0]["abbreviation"] ?>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    <?php echo json_encode($resultSQL) ?>
     <!-- Footer -->
     <footer id="footer" class="section">
 
