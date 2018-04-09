@@ -37,18 +37,18 @@
     </div>
     <div class="spaceTop"></div>
     <div class="container" style="background-color:#E9F0DF">
-    <div class="spaceTop"></div>
-    <div class="row">
-        <div class="col-md-10">
-            <p class="titulo-result"> Species </p>
-            <div class="col-md-8">
-                <ul>
-                    <li>Genus: <?php echo $resultSQL[0]["genus"] ?></li>
-                    <li>Species: <?php echo $resultSQL[0]["specie"] ?></li>
-                </ul>
+        <div class="spaceTop"></div>
+        <div class="row">
+            <div class="col-md-10">
+                <p class="titulo-result"> Species </p>
+                <div class="col-md-8">
+                    <ul>
+                        <li>Genus: <?php echo $resultSQL[0]["genus"] ?></li>
+                        <li>Species: <?php echo $resultSQL[0]["specie"] ?></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
         <div class="row">
             <div class="col-md-10">
                 <p class="titulo-result"> <?php echo $resultSQL[0]["feature_name"] ?> details</p>
@@ -101,12 +101,12 @@
             <div class="col-md-10">
                 <p class="titulo-result">HGT Region</p>
                 <ul>
-                    <li>tool: alien_hunter</li>
-                    <li>start: </li>
-                    <li>end: </li>
-                    <li>value: </li>
-                    <li>threshold: </li>
-                    <li>strand: </li>
+                    <li>tool: <?php echo $resultSQL[0]["tool"] ?> </li>
+                    <li>start: <?php echo $resultSQL[0]["hgtstart"] ?> </li>
+                    <li>end: <?php echo $resultSQL[0]["hgtend"] ?></li>
+                    <li>value: <?php echo $resultSQL[0]["hgtvalue"] ?></li>
+                    <li>threshold: <?php echo $resultSQL[0]["hgtend"] ?></li> </li>
+                    <li>strand: <?php echo $resultSQL[0]["hgtstrand"] ?></li>
                 </ul>
             </div>
         </div>
@@ -114,33 +114,13 @@
             <div class="col-md-10">
                 <p class="titulo-result">Host Gene</p>
                 <ul>
-                    <li>host gene: <?php echo $resultSQL[0]["host_gene"] ?></li>
+                    <li>host gene:
+                    </li>
                 </ul>
             </div>
         </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12" >
-                    <table class="table table-bordered table-striped" id="tabela">
-                        <tr>
-                            <th>abbreviation</th>
-                            <th>Identification</th>
-                            <th>Start</th>
-                            <th>End</th>
-                            <th>Strand</th>
-                            <th>Feature name</th>
-                            <th>Bit Score</th>
-                            <th>Details</th>
-                        </tr>
-                    </table>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <?php
-           echo json_encode($resultSQL);
-        ?>
+    </div>
+    <?php echo json_encode($resultSQL) ?>
     <!-- Footer -->
     <footer id="footer" class="section">
 

@@ -39,7 +39,7 @@ class EpController {
         $where .= ($i == count($params)) ? " " : "  AND " ;
       }
     }
-    return $this->Dao->getInfo('abbreviation,loc_identification, feature.start, feature.end, strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id,publication.title', $where, $values);
+    return $this->Dao->getInfo('organism.abbreviation,localization.loc_identification, feature.start, feature.end, feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id,publication.title', $where, $values);
   }
   public function getDetalhes($params) {
     $this->Dao = new Dao();
@@ -52,8 +52,13 @@ class EpController {
       $params["analysis_id"],
       $params["start"],
       $params["end"],
+      // $params["id_hgt"],
     ];
-    return $this->Dao->getInfo('*', $where, $values);
+    return $this->Dao->getInfo('feature.start,feature.end, hgt.start as hgtstart, hgt.end as hgtend,
+                                organism.abbreviation,localization.loc_identification,
+                                feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,
+                                organism.*,hgt.strand as hgtstrand,hgt.value as hgtvalue, hgt.threshold,
+                                hgt.tool', $where, $values);
   }
 }
 
