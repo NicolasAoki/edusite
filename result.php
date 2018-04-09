@@ -38,27 +38,43 @@
     <div class="spaceTop"></div>
     <div class="container" style="background-color:#E9F0DF">
     <div class="spaceTop"></div>
+    <div class="row">
+        <div class="col-md-10">
+            <p class="titulo-result"> Species </p>
+            <div class="col-md-8">
+                <ul>
+                    <li>Genus: <?php echo $resultSQL[0]["genus"] ?></li>
+                    <li>Species: <?php echo $resultSQL[0]["specie"] ?></li>
+                </ul>
+            </div>
+        </div>
+    </div>
         <div class="row">
             <div class="col-md-10">
                 <p class="titulo-result"> <?php echo $resultSQL[0]["feature_name"] ?> details</p>
             </div>
             <div class="col-md-6">
                 <ul class="spaceleft" style="margin-top:10px;">
-                    <li>Genus: <?php echo $resultSQL[0]["genus"] ?></li>
-                    <li>Species: <?php echo $resultSQL[0]["specie"] ?></li>
                     <li>feature name: <?php echo $resultSQL[0]["feature_name"] ?></li>
                     <li>feature identification: <?php echo $resultSQL[0]["feature_RF"] ?></li>
                     <li>Value : <?php echo $resultSQL[0]["e_value"] ?></li>
                     <li>bit-score: <?php echo $resultSQL[0]["bit_score"] ?></li>
-                    <li>Analysis type: Mauve</li>
                     <li>Start: <?php echo $resultSQL[0]["start"] ?></li>
                     <li>End: <?php echo $resultSQL[0]["end"] ?></li>
                     <li>Strand: <?php echo $resultSQL[0]["strand"] ?></li>
-                    <li>identification: <?php echo $resultSQL[0]["loc_identification"] ?> </li>
-                    <li>publication: <?php echo $resultSQL[0]["title"] ?></li>
-                    <li>host gene: <?php echo $resultSQL[0]["host_gene"] ?></li>
-                    <li>HGT Region - start - end - color - note_threshold - color - alien hunter</li>
-
+                    <li>Analysis type: infernal_Rfam</li>
+                    <li>Function:
+                        <?php
+                            echo $resultSQL[0]["feature_function"];
+                        ?>
+                    </li>
+                    <li>Sequence:
+                        <p style="overflow:scroll;max-height:100px"class="spaceleft">
+                            <?php
+                                echo $resultSQL[0]["sequence"];
+                            ?>
+                        </p>
+                    </li>
                 </ul>
             </div>
             <div class= "col-md-5" style="background-color:; border-radius: 5px;">
@@ -72,47 +88,54 @@
             </div>
             <button class="btn btn-primary">Fetch results!</button>
         </div>
-        <div class="spaceTop"></div>
-        <div class="row" style="word-wrap: break-word;">
-            <div class="col-md-6">
-                <p class="titulo-result">Functionality</p>
-                <div class="col-md-12" style="width:40%;margin-top:10px;">
-                    <p style="max-height:100px"class="spaceleft">
-                        <?php
-                            echo $resultSQL[0]["feature_function"];
-                        ?>
-                    </p>
-                </div>
+        <div class="row">
+            <div class="col-md-10">
+                <p class="titulo-result">Localization</p>
+                <ul>
+                    <li>identification: <?php echo $resultSQL[0]["loc_identification"] ?> </li>
+                    <li>Analysis type: Mauve</li>
+                </ul>
             </div>
-            <div class="col-md-6">
-                <p class="titulo-result">Sequence</p>
-            </div>
-                <div class="col-md-7" style="width:40%">
-                    <p style="overflow:scroll;max-height:100px"class="spaceleft">
-                        <?php
-                            echo $resultSQL[0]["sequence"];
-                        ?>
-                    </p>
-                </div>
-            </div>
-                    <div class="container">
-          <div class="row">
-            <div class="col-md-12" >
-                <table class="table table-bordered table-striped" id="tabela">
-                    <tr>
-                        <th>abbreviation</th>
-                        <th>Identification</th>
-                        <th>Start</th>
-                        <th>End</th>
-                        <th>Strand</th>
-                        <th>Feature name</th>
-                        <th>Bit Score</th>
-                        <th>Details</th>
-                    </tr>
-                </table>
-            </div>
-          </div>
         </div>
+        <div class="row">
+            <div class="col-md-10">
+                <p class="titulo-result">HGT Region</p>
+                <ul>
+                    <li>tool: alien_hunter</li>
+                    <li>start: </li>
+                    <li>end: </li>
+                    <li>value: </li>
+                    <li>threshold: </li>
+                    <li>strand: </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <p class="titulo-result">Host Gene</p>
+                <ul>
+                    <li>host gene: <?php echo $resultSQL[0]["host_gene"] ?></li>
+                </ul>
+            </div>
+        </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12" >
+                    <table class="table table-bordered table-striped" id="tabela">
+                        <tr>
+                            <th>abbreviation</th>
+                            <th>Identification</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Strand</th>
+                            <th>Feature name</th>
+                            <th>Bit Score</th>
+                            <th>Details</th>
+                        </tr>
+                    </table>
+                </div>
+              </div>
+            </div>
         </div>
 
         <?php
