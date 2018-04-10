@@ -115,7 +115,9 @@
                 <p class="titulo-result">Host Gene</p>
                 <ul>
                     <li>host gene:
-                        <?php echo $resultSQL[0]["abbreviation"] ?>
+                        <?php
+                            echo $resultSQL[0]["abbreviation"]
+                        ?>
                     </li>
                 </ul>
             </div>
