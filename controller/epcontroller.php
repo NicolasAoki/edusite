@@ -54,12 +54,11 @@ class EpController {
       $params["end"],
       // $params["id_hgt"],
     ];
-    return $this->Dao->getInfo('feature.start,feature.end, hgt.start as hgtstart, hgt.end as hgtend,
+    return $this->Dao->getInfo('feature.start,feature.end,feature.e_value,feature.feature_RF,
                                 organism.abbreviation,localization.loc_identification,
                                 feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,
-                                organism.*,hgt.strand as hgtstrand,hgt.value as hgtvalue, hgt.threshold,
-                                hgt.tool', $where, $values);
-  }
+                                organism.*', $where, $values);
+  }//,hgt.strand as hgtstrand,hgt.value as hgtvalue, hgt.threshold,hgt.tool, hgt.start as hgtstart, hgt.end as hgtend,
 }
 
 ?>

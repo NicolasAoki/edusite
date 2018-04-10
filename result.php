@@ -97,6 +97,7 @@
                 </ul>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-10">
                 <p class="titulo-result">HGT Region</p>
@@ -116,7 +117,9 @@
                 <ul>
                     <li>host gene:
                         <?php
-                            echo $resultSQL[0]["abbreviation"]
+                            foreach ($resultSQL as $key => $value) {
+                                echo json_encode($value);
+                            }
                         ?>
                     </li>
                 </ul>

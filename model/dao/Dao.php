@@ -28,7 +28,7 @@ class Dao extends database {
     " INNER JOIN localization ON localization.loc_id = loc_feature.id_loc ".
     " INNER JOIN organism ON feature.organism_id = organism.organism_id ".
     " INNER JOIN publication ON feature.publication_id = publication.publication_id ".
-    " INNER JOIN hgt ON hgt.organism_id = organism.organism_id ".
+   /* " INNER JOIN hgt ON hgt.organism_id = organism.organism_id ".*/
     " $where";
 		$horario = $this->selectDB($sql,$params,null);
 		return $horario;
