@@ -12,14 +12,11 @@
   }
   td, th{
     max-width: 200px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 8px;
   }
-  /* #header{
-    background-image:url("img/header-image.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  } */
+  tr:nth-child(odd) {
+    background-color: #f3f3f3;
+  }
   .spaceTop{
       padding-top: 50px;
   }

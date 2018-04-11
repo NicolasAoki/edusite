@@ -40,75 +40,114 @@
         <div class="spaceTop"></div>
         <div class="row">
             <div class="col-md-10">
-                <p class="titulo-result"> Species </p>
-                <div class="col-md-8">
-                    <ul>
-                        <li>Genus: <?php echo $resultSQL[0]["genus"] ?></li>
-                        <li>Species: <?php echo $resultSQL[0]["specie"] ?></li>
-                    </ul>
+                <h2> Species </h2>
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <td><b>Genus</b> </td>
+                            <td><?php echo $resultSQL[0]["genus"] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Species </td>
+                            <td><?php echo $resultSQL[0]["specie"] ?></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-10">
-                <p class="titulo-result"> <?php echo $resultSQL[0]["feature_name"] ?> details</p>
+                <h2> <?php echo $resultSQL[0]["feature_name"] ?> details<h2>
             </div>
             <div class="col-md-6">
-                <ul class="spaceleft" style="margin-top:10px;">
-                    <li>feature name: <?php echo $resultSQL[0]["feature_name"] ?></li>
-                    <li>feature identification: <?php echo $resultSQL[0]["feature_RF"] ?></li>
-                    <li>Value : <?php echo $resultSQL[0]["e_value"] ?></li>
-                    <li>bit-score: <?php echo $resultSQL[0]["bit_score"] ?></li>
-                    <li>Start: <?php echo $resultSQL[0]["start"] ?></li>
-                    <li>End: <?php echo $resultSQL[0]["end"] ?></li>
-                    <li>Strand: <?php echo $resultSQL[0]["strand"] ?></li>
-                    <li>Analysis type: infernal_Rfam</li>
-                    <li>Function:
-                        <?php
-                            echo $resultSQL[0]["feature_function"];
-                        ?>
-                    </li>
-                    <li>Sequence:
-                        <p style="overflow:scroll;max-height:100px"class="spaceleft">
-                            <?php
-                                echo $resultSQL[0]["sequence"];
-                            ?>
-                        </p>
-                    </li>
-                </ul>
+                <table>
+                        <tr>
+                            <td><b>Feature name</b></td>
+                            <td><?php echo $resultSQL[0]["feature_name"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Feature identification</b></td>
+                            <td><?php echo $resultSQL[0]["feature_RF"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Value</b></td>
+                            <td><?php echo $resultSQL[0]["e_value"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>bit-score</b></td>
+                            <td><?php echo $resultSQL[0]["bit_score"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Start</b></td>
+                            <td><?php echo $resultSQL[0]["start"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>End</b></td>
+                            <td><?php echo $resultSQL[0]["end"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Strand</b></td>
+                            <td><?php echo $resultSQL[0]["strand"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Analysis type</b></td>
+                            <td>infernal_Rfam</td>
+                        </tr>
+                        <tr>
+                            <td><b>Function</b></td>
+                            <td><?php echo $resultSQL[0]["feature_function"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Sequence</b></td>
+                            <td style="overflow: hidden"><?php echo $resultSQL[0]["sequence"] ?></td>
+                        </tr>
+                    </table>
             </div>
-            <div class= "col-md-5" style="background-color:; border-radius: 5px;">
-                <div class="col-md-6">
-                    <img src="img/about.png" alt="" style="width:200px;height:200px;">
-                </div>
-                <div class="col-md-4">
-                    <p>Some description about this image <br>(with Zoom in and Zoom out)</p>
-                </div>
-
-            </div>
-            <button class="btn btn-primary">Fetch results!</button>
         </div>
         <div class="row">
-            <div class="col-md-10">
-                <p class="titulo-result">Localization</p>
-                <ul>
-                    <li>identification: <?php echo $resultSQL[0]["loc_identification"] ?> </li>
-                    <li>Analysis type: Mauve</li>
-                </ul>
+            <div class="col-md-6">
+                <h2>Localization</h2>
+                    <table>
+                        <tr>
+                            <td><b>Identification</b></td>
+                            <td><?php echo $resultSQL[0]["loc_identification"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Analysis type</b></td>
+                            <td>Mauve</td>
+                        </tr>
+                    </table>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-md-10">
-                <p class="titulo-result">HGT Region</p>
-                <ul>
-                    <li>tool: <?php echo $resultSQL[0]["tool"] ?> </li>
-                    <li>start: <?php echo $resultSQL[0]["hgtstart"] ?> </li>
-                    <li>end: <?php echo $resultSQL[0]["hgtend"] ?></li>
-                    <li>value: <?php echo $resultSQL[0]["hgtvalue"] ?></li>
-                    <li>threshold: <?php echo $resultSQL[0]["hgtend"] ?></li> </li>
-                    <li>strand: <?php echo $resultSQL[0]["hgtstrand"] ?></li>
-                </ul>
+            <div class="col-md-6">
+                <h2>HGT Region</h2>
+                    <table>
+                        <tr>
+                            <td><b>Tool</b></td>
+                            <td><?php echo $resultSQL[0]["tool"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Start</b></td>
+                            <td><?php echo $resultSQL[0]["hgtstart"] ?> </td>
+                        </tr>
+                        <tr>
+                            <td><b>End</b></td>
+                            <td><?php echo $resultSQL[0]["hgtend"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Value</b></td>
+                            <td><?php echo $resultSQL[0]["hgtvalue"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Threshold</b></td>
+                            <td><?php echo $resultSQL[0]["hgtend"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Strand</b></td>
+                            <td><?php echo $resultSQL[0]["hgtstrand"] ?></td>
+                        </tr>
+                    </table>
             </div>
         </div>
     </div>
