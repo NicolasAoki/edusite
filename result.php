@@ -99,7 +99,7 @@
                         </tr>
                         <tr>
                             <td><b>Sequence</b></td>
-                            <td style="overflow: hidden"><?php echo $resultSQL[0]["sequence"] ?></td>
+                            <td style="overflow: hidden"><?php echo $resultSQL[0]["sequence"] ?><button class="viewSequence">View</button></td>
                         </tr>
                     </table>
             </div>

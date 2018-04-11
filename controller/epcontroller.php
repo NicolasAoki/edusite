@@ -54,7 +54,7 @@ class EpController {
       $params["end"],
       // $params["id_hgt"],
     ];
-    return $this->Dao->getInfo('feature.start,feature.end,feature.e_value,feature.feature_RF,
+    return $this->Dao->getInfo('feature.start,feature.feature_function,feature.end,feature.e_value,feature.feature_RF,
                                 organism.abbreviation,localization.loc_identification,
                                 feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,
                                 organism.*', $where, $values);
