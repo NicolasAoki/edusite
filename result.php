@@ -111,20 +111,6 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-10">
-                <p class="titulo-result">Host Gene</p>
-                <ul>
-                    <li>host gene:
-                        <?php
-                            foreach ($resultSQL as $key => $value) {
-                                echo json_encode($value);
-                            }
-                        ?>
-                    </li>
-                </ul>
-            </div>
-        </div>
     </div>
     <!-- Footer -->
     <footer id="footer" class="section">

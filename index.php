@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,11 +70,9 @@
 
 	<!-- Home -->
 	<div id="home" class="hero-area">
-
 		<!-- Backgound Image -->
 		<div class="bg-image bg-parallax overlay" style="background-image:url(./img/home-background.jpg)"></div>
 		<!-- /Backgound Image -->
-
 		<div class="home-wrapper">
 			<div class="container">
 				<div class="row">
@@ -86,7 +84,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 	<!-- /Home -->
 
@@ -113,9 +110,6 @@
 							<p>Research studies have shown that non-coding RNAs (ncRNAs) can act modulating gene expression in bacteria, as well as coordinating adaptive processes that respond to environmental changes and control the expression of target genes</p>
 						</div>
 					</div>
-					<!-- /feature -->
-
-					<!-- feature -->
 					<div class="feature">
 						<i class="feature-icon fa fa-users"></i>
 						<div class="feature-content">
@@ -124,9 +118,6 @@
 						</div>
 					</div>
 					<!-- /feature -->
-
-				
-
 				</div>
 
 				<div class="col-md-6">
@@ -144,7 +135,7 @@
 	<!-- /About -->
 
 	<!-- Call To Action -->
-	
+
 
 
 
@@ -168,7 +159,7 @@
 				</div>
 				<!-- footer logo -->
 
-		
+
 			</div>
 			<!-- /row -->
 
