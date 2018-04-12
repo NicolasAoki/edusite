@@ -15,7 +15,8 @@ switch ($method) {
         'type_type_id' => $_GET['type_type_id'],
         'analysis_id' => $_GET['analysis_id'],
         'start' => $_GET['start'],
-        'end' => $_GET['end']
+        'end' => $_GET['end'],
+        'loc_identification' => $_GET['loc_identification']
       ];
       header('Content-Type: text/html');
       $resultSQL = $epcontroller->getDetalhes($array);

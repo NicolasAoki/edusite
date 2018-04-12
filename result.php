@@ -151,10 +151,13 @@
             </div>
         </div>
     </div>
+    <?php foreach ($resultSQL as $key => $value) {
+        echo json_encode($value);
+    } ?>
+
     <!-- Footer -->
     <footer id="footer" class="section">
-
-<!-- container -->
+    <!-- container -->
 <div class="container">
 
     <!-- row -->

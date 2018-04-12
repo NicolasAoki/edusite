@@ -80,7 +80,7 @@
 					aux_data += '<td style="text-align:center;">'+value.strand+'</td>'
 					aux_data += '<td>'+value.feature_name+'</td>'
 					aux_data += '<td>'+value.bit_score+'</td>'
-					aux_data += '<td><a class="btn btn-primary meio" href="/ep-detalhes.php?feature_id='+value.feature_id+'&organism_id='+value.organism_id+'&publication_id='+value.publication_id+'&type_type_id='+value.type_type_id+'&analysis_id='+value.analysis_id+'&start='+value.start+'&end='+value.end+'" ">'+nome_botao+'</a></td>'
+					aux_data += '<td><a class="btn btn-primary meio" href="/ep-detalhes.php?feature_id='+value.feature_id+'&organism_id='+value.organism_id+'&publication_id='+value.publication_id+'&type_type_id='+value.type_type_id+'&analysis_id='+value.analysis_id+'&start='+value.start+'&end='+value.end+'&loc_identification='+value.loc_identification+'" ">'+nome_botao+'</a></td>'
 					aux_data += '</tr>';
 				});
 				$('#tabela').append(aux_data);

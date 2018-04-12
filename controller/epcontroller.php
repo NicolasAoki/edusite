@@ -43,7 +43,7 @@ class EpController {
   }
   public function getDetalhes($params) {
     $this->Dao = new Dao();
-    $where = " WHERE feature.feature_id = ? and feature.organism_id = ? and feature.publication_id = ? and feature.type_type_id = ? and feature.analysis_id = ? and feature.start = ? and feature.end = ?";
+    $where = " WHERE feature.feature_id = ? and feature.organism_id = ? and feature.publication_id = ? and feature.type_type_id = ? and feature.analysis_id = ? and feature.start = ? and feature.end = ? and localization.loc_identification = ?";
     $values= [
       $params["feature_id"],
       $params["organism_id"],
@@ -52,6 +52,7 @@ class EpController {
       $params["analysis_id"],
       $params["start"],
       $params["end"],
+      $params["loc_identification"]
       // $params["id_hgt"],
     ];
     return $this->Dao->getInfo('feature.start,feature.feature_function,feature.end,feature.e_value,feature.feature_RF,
