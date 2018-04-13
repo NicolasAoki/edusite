@@ -7,7 +7,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
   case 'GET': {
-    try{
+    if ($_GET['loc_identification'] == 'EXCLUSIVE'){
+      try{
       $array = [
         'feature_id' => $_GET['feature_id'],
         'organism_id' => $_GET['organism_id'],
@@ -21,9 +22,15 @@ switch ($method) {
       header('Content-Type: text/html');
       $resultSQL = $epcontroller->getDetalhes($array);
       include("result.php");
-    }catch (Exception $e){
+      }catch (Exception $e){
       echo "$e";
+       }
+      #($_GET['loc_identification'] == 'CORE' OU 'EXCLUSIVE'
+      else{
+
+      }
     }
+
 
   }
   case 'POST': {
