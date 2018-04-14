@@ -26,9 +26,7 @@ switch ($method) {
       echo "$e";
        }
       #($_GET['loc_identification'] == 'CORE' OU 'EXCLUSIVE'
-      else{
 
-      }
     }
 
 
