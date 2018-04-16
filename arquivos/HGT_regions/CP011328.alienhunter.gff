@@ -1,0 +1,6 @@
+CP011328	artemis	misc_feature	140000	145000	20.649	+	.	ID=misc_feature:140000..145000;colour=255+247+247;algorithm=alien_hunter;note=threshold:+19.337
+CP011328	artemis	misc_feature	187500	200000	34.437	+	.	ID=misc_feature:187500..200000;colour=255+168+168;algorithm=alien_hunter;note=threshold:+19.337
+CP011328	artemis	misc_feature	207500	215000	37.977	+	.	ID=misc_feature:207500..215000;colour=255+148+148;algorithm=alien_hunter;note=threshold:+19.337
+CP011328	artemis	misc_feature	330000	340000	29.179	+	.	ID=misc_feature:330000..340000;colour=255+198+198;algorithm=alien_hunter;note=threshold:+19.337
+CP011328	artemis	misc_feature	1542500	1550000	22.342	+	.	ID=misc_feature:1542500..1550000;colour=255+238+238;algorithm=alien_hunter;note=threshold:+19.337
+CP011328	artemis	misc_feature	1695000	1702500	22.874	+	.	ID=misc_feature:1695000..1702500;colour=255+235+235;algorithm=alien_hunter;note=threshold:+19.337

@@ -18,12 +18,74 @@
 
         <link type="text/css" rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
-        <script src="node_modules/jspkg-archive/jquery.dynatable.js"></script>
-        <link rel="stylesheet" type="text/css" href="node_modules/jspkg-archive/jquery.dynatable.css"/>
     </head>
     <body>
         <?php
             include("cabecalho.php");
         ?>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>Download</h1>
+                </div>
+            </div>
+        </div>
+        <div class="spaceTop"></div>
+           <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                <table>
+                    <th>
+                        <p>Organism</p>
+                    </th>
+                    <th>
+                        <p>HGT Region</p>
+                    </th>
+                    <th>
+                        <p>Features</p>
+                    </th>
+                    <th>
+                        <p>Core</p>
+                    </th>
+                    <th>
+                        <p>Shared</p>
+                    </th>
+                    <th>
+                        <p>Exclusive</p>
+                    </th>
+                    <tr>
+                        <td>
+                            <a href="arquivos/Organismos/CP007571.fasta" download>
+                                <p>CP007571.fasta</p>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="arquivos/HGT_regions/CP007571.alienhunter.gff" download>
+                                <p>CP007571.alienhunter.gff</p>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="arquivos/sRNAs_annotations/CP007571.final.gff" download>
+                                <p>CP007571.final.gff</p>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="arquivos/regions_annotations/CORE_CP007571.gff" download>
+                            <p>CORE_CP007571.gff</p>
+                        </td>
+                        <td>
+                            <a href="arquivos/regions_annotations/SHARED_CP007571.gff" download>
+                            <p>SHARED_CP007571.gff</p>
+                        </td>
+                        <td>
+                            <a href="arquivos/regions_annotations/EXCLUSIVE_CP007571.gff" download>
+                            <p>EXCLUSIVE_CP007571.gff</p>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
