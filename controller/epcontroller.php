@@ -53,13 +53,22 @@ class EpController {
       $params["start"],
       $params["end"],
       $params["loc_identification"]
-      // $params["id_hgt"],
     ];
     return $this->Dao->getInfo('feature.start,feature.feature_function,feature.end,feature.e_value,feature.feature_RF,
                                 organism.abbreviation,localization.loc_identification,
                                 feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,
                                 organism.*', $where, $values);
-  }//,hgt.strand as hgtstrand,hgt.value as hgtvalue, hgt.threshold,hgt.tool, hgt.start as hgtstart, hgt.end as hgtend,
+  }
+  public function getHGT($params) {
+    $this->Dao = new Dao();
+    $where = " WHERE hgt.start <= ? and hgt.end >= ?";
+    $values= [
+      $params["start"],
+      $params["end"]
+    ];
+    echo "$where";
+    return $this->Dao->getTableHGT('hgt.*',$where,$values);
+  }
 }
 
 ?>

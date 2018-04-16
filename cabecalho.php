@@ -1,7 +1,6 @@
 		<!-- Header -->
 		<header id="header">
 			<div class="container">
-
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
@@ -10,14 +9,12 @@
 						</a>
 					</div>
 					<!-- /Logo -->
-
 					<!-- Mobile toggle -->
 					<button class="navbar-toggle">
 						<span></span>
 					</button>
 					<!-- /Mobile toggle -->
 				</div>
-
 				<!-- Navigation -->
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
@@ -30,14 +27,11 @@
 					</ul>
 				</nav>
 				<!-- /Navigation -->
-
 			</div>
 		</header>
 		<!-- /Header -->
-
 		<!-- Hero-area -->
 		<div class="hero-area section" style="height:50px;">
-
 		<!-- Backgound Image -->
 		<div class="bg-image bg-parallax overlay" style="background-image:url(./img/home-background.jpg)"></div>
 		<!-- /Backgound Image -->

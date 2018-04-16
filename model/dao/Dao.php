@@ -33,6 +33,15 @@ class Dao extends database {
 		$horario = $this->selectDB($sql,$params,null);
 		return $horario;
   }
+  public function getTableHGT($fields="*",$where="", $params=null){
+    if(strlen($where)>0) $where = " ".$where;
+    $sql = "SELECT $fields ".
+    "FROM hgt ".
+    " $where";
+    $horario = $this->selectDB($sql,$params,null);
+    echo $sql;
+    return $horario;
+  }
 
 }
 ?>

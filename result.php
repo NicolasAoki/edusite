@@ -51,6 +51,11 @@
                             <td>Species </td>
                             <td><?php echo $resultSQL[0]["specie"] ?></td>
                         </tr>
+                        <tr>
+                            <td>Abbreviation </td>
+                            <td><?php echo $resultSQL[0]["abbreviation"] ?></td>
+                        </tr>
+
                     </table>
                 </div>
             </div>
@@ -125,27 +130,80 @@
                     <table>
                         <tr>
                             <td><b>Tool</b></td>
-                            <td><?php echo $resultSQL[0]["tool"] ?></td>
+                            <td>
+                                <?php
+                                    if ($hgtSQL[0]["tool"] != null)
+                                        echo $hgtSQL[0]["tool"];
+                                    else
+                                        echo " NaN";
+                                ?>
+                            </td>
                         </tr>
                         <tr>
                             <td><b>Start</b></td>
-                            <td><?php echo $resultSQL[0]["hgtstart"] ?> </td>
+                            <td>
+                                <?php
+                                    if ($hgtSQL[0]["start"] != null)
+                                        echo $hgtSQL[0]["start"];
+                                    else
+                                        echo "NaN";
+                                ?>
+                            </td>
                         </tr>
                         <tr>
                             <td><b>End</b></td>
-                            <td><?php echo $resultSQL[0]["hgtend"] ?></td>
+                            <td>
+                                <?php
+                                    if ($hgtSQL[0]["end"] != null)
+                                        echo $hgtSQL[0]["end"];
+                                    else
+                                        echo "NaN";
+                                ?>
+                            </td>
                         </tr>
                         <tr>
                             <td><b>Value</b></td>
-                            <td><?php echo $resultSQL[0]["hgtvalue"] ?></td>
+                            <td>
+                                <?php
+                                    if ($hgtSQL[0]["value"] != null)
+                                        echo $hgtSQL[0]["value"];
+                                    else
+                                        echo "NaN";
+                                ?>
+                            </td>
                         </tr>
                         <tr>
                             <td><b>Threshold</b></td>
-                            <td><?php echo $resultSQL[0]["hgtend"] ?></td>
+                            <td>
+                                <?php
+                                    if ($hgtSQL[0]["threshold"] != null)
+                                        echo $hgtSQL[0]["threshold"];
+                                    else
+                                        echo "NaN";
+                                ?>
+                            </td>
                         </tr>
                         <tr>
                             <td><b>Strand</b></td>
-                            <td><?php echo $resultSQL[0]["hgtstrand"] ?></td>
+                            <td>
+                                <?php
+                                    if ($hgtSQL[0]["strand"] != null)
+                                        echo $hgtSQL[0]["strand"];
+                                    else
+                                        echo "NaN";
+                                ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Colour</b></td>
+                            <td>
+                                <?php
+                                    if ($hgtSQL[0]["colour"] != null)
+                                        echo $hgtSQL[0]["colour"];
+                                    else
+                                        echo "NaN";
+                                ?>
+                            </td>
                         </tr>
                     </table>
             </div>
@@ -154,7 +212,9 @@
     <?php foreach ($resultSQL as $key => $value) {
         echo json_encode($value);
     } ?>
-
+    <?php foreach ($hgtSQL as $key => $value) {
+        echo json_encode($value);
+    } ?>
     <!-- Footer -->
     <footer id="footer" class="section">
     <!-- container -->
