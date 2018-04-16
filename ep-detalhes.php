@@ -22,6 +22,7 @@ switch ($method) {
         $hgt = [
           'start' => $_GET['start'],
           'end' => $_GET['start'],
+          'organism_id' => $_GET['organism_id']
         ];
         header('Content-Type: text/html');
         $resultSQL = $epcontroller->getDetalhes($array);

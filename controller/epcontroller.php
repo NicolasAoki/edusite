@@ -61,10 +61,11 @@ class EpController {
   }
   public function getHGT($params) {
     $this->Dao = new Dao();
-    $where = " WHERE hgt.start <= ? and hgt.end >= ?";
+    $where = " WHERE hgt.start <= ? and hgt.end >= ? and organism_id = ?";
     $values= [
       $params["start"],
-      $params["end"]
+      $params["end"],
+      $params["organism_id"]
     ];
     echo "$where";
     return $this->Dao->getTableHGT('hgt.*',$where,$values);
