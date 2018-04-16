@@ -67,7 +67,6 @@ class EpController {
       $params["end"],
       $params["organism_id"]
     ];
-    echo "$where";
     return $this->Dao->getTableHGT('hgt.*',$where,$values);
   }
 }

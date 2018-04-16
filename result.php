@@ -127,6 +127,12 @@
         <div class="row">
             <div class="col-md-6">
                 <h2>HGT Region</h2>
+                <h3 style="color:red">
+                     <?php
+                        if ($hgtSQL == null)
+                            echo "this feature does not have HGT region";
+                    ?>
+                </h3>
                     <table>
                         <tr>
                             <td><b>Tool</b></td>
@@ -209,12 +215,14 @@
             </div>
         </div>
     </div>
+<!--
     <?php foreach ($resultSQL as $key => $value) {
-        echo json_encode($value);
-    } ?>
+            echo json_encode($value);
+        } ?>
     <?php foreach ($hgtSQL as $key => $value) {
-        echo json_encode($value);
-    } ?>
+            echo json_encode($value);
+        } ?>
+-->
     <!-- Footer -->
     <footer id="footer" class="section">
     <!-- container -->

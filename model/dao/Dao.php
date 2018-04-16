@@ -39,7 +39,6 @@ class Dao extends database {
     "FROM hgt ".
     " $where";
     $horario = $this->selectDB($sql,$params,null);
-    echo $sql;
     return $horario;
   }
 
