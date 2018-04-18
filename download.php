@@ -92,7 +92,6 @@
                         <p>Exclusive</p>
                     </th>
                     <?php
-                    print_r(sizeof($annotation));
                         for ($i=0; $i < sizeof($organismo); $i++){
                             for ($j=0; $j < sizeof($hgt) ; $j++){
                                 for ($k=0; $k < sizeof($srna); $k++){
@@ -102,15 +101,15 @@
                                         $SRNA = substr($srna[$k],0,8);
                                         $ANNOT = substr($annotation[$l], 0,3);
                                         if( ($org === $HGT) && ($org === $SRNA) ){
-                                            print_r("<tr><td><a href='arquivos/Organismos/". $org .".fasta' download><p>". $org ."</p></a></td>");
+                                            print_r("<tr><td><a href='arquivos/Organismos/". $org .".fasta' download><p>". $org .".fasta</p></a></td>");
                                             print_r("<td><a href='arquivos/HGT_regions/". $HGT .".alienhunter.gff' download><p>.gff</p></a></td>");
                                             print_r("<td><a href='arquivos/sRNAs_annotations/". $SRNA .".final.gff' download><p>.gff</p></a></td>");
                                             if($ANNOT == 'COR')
-                                                print_r("<td><a href='arquivos/regions_annotations/". $org .".gff' download><p>". $org ."</p></a></td>");
+                                                print_r("<td><a href='arquivos/regions_annotations/CORE_". $org .".gff' download><p>". $org ."</p></a></td>");
                                             if($ANNOT == 'EXC')
-                                                print_r("<td><a href='arquivos/regions_annotations/". $org .".gff' download><p>". $org ."</p></a></td>");
+                                                print_r("<td><a href='arquivos/regions_annotations/EXCLUSIVE_". $org .".gff' download><p>". $org ."</p></a></td>");
                                             else
-                                                print_r("<td><a href='arquivos/regions_annotations/". $org .".gff' download><p>". $org ."</p></a></td></tr>");
+                                                print_r("<td><a href='arquivos/regions_annotations/SHARED_". $org .".gff' download><p>". $org ."</p></a></td></tr>");
                                             break;
                                         }
                                     }
