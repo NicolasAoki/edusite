@@ -100,8 +100,8 @@
                                     $SRNA = substr($srna[$k],0,8);
                                     if( ($org === $HGT) && ($org === $SRNA) ){
                                         print_r("<tr><td><a href='arquivos/Organismos/'". $org .".fasta' download><p>". $org ."</p></a></td>");
-                                        print_r("<td>" . $HGT . "</td>");
-                                        print_r("<td>" . $SRNA . "</td>");
+                                        print_r("<td><a href='arquivos/HGT_regions/'". $HGT .".alienhunter.gff' download><p>.gff</p></a></td>");
+                                        print_r("<td><a href='arquivos/sRNAs_annotations/'". $SRNA .".final.gff' download><p>.gff</p></a></td>");
                                         print_r("<td> vazio </td>");
                                         print_r("<td> vazio </td>");
                                         print_r("<td> vazio </td></tr>");

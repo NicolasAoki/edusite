@@ -1,7 +1,6 @@
   #footer{
   margin-top:95px;
   }
-
   body{
   /* background-color:white; */
   background:url(img/texture.jpg);
@@ -34,7 +33,7 @@
   }
   th {
     background: rgb(159, 194, 196);
-  }
+ }
   th a {
     color: #fff;
   }
@@ -43,8 +42,13 @@
     text-decoration: underline;
   }
   th, td{
-    text-align: left;
+    text-align: center;
+
   }
+  td {
+  text-align: center;
+  vertical-align: middle;
+}
   .titulo-result{
     background-color: #fff;
     border: 1px solid black;
