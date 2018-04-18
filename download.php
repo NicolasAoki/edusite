@@ -91,45 +91,29 @@
                     <th>
                         <p>Exclusive</p>
                     </th>
-                    <tr>
-                        <td>
-                            <a href="arquivos/Organismos/CP007571.fasta" download>
-                                <p>CP007571.fasta</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="arquivos/HGT_regions/CP007571.alienhunter.gff" download>
-                                <p>CP007571.alienhunter.gff</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="arquivos/sRNAs_annotations/CP007571.final.gff" download>
-                                <p>CP007571.final.gff</p>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="arquivos/regions_annotations/CORE_CP007571.gff" download>
-                            <p>CORE_CP007571.gff</p>
-                        </td>
-                        <td>
-                            <a href="arquivos/regions_annotations/SHARED_CP007571.gff" download>
-                            <p>SHARED_CP007571.gff</p>
-                        </td>
-                        <td>
-                            <a href="arquivos/regions_annotations/EXCLUSIVE_CP007571.gff" download>
-                            <p>EXCLUSIVE_CP007571.gff</p>
-                        </td>
-                    </tr>
+                    <?php
+                        for ($i=0; $i < sizeof($organismo); $i++) {
+                            for ($j=0; $j < sizeof($hgt) ; $j++) {
+                                for ($k=0; $k < sizeof($srna); $k++) {
+                                    $org = substr($organismo[$i],0,8);
+                                    $HGT = substr($hgt[$j],0,8);
+                                    $SRNA = substr($srna[$k],0,8);
+                                    if( ($org === $HGT) && ($org === $SRNA) ){
+                                        print_r("<tr><td><a href='arquivos/Organismos/'". $org .".fasta' download><p>". $org ."</p></a></td>");
+                                        print_r("<td>" . $HGT . "</td>");
+                                        print_r("<td>" . $SRNA . "</td>");
+                                        print_r("<td> vazio </td>");
+                                        print_r("<td> vazio </td>");
+                                        print_r("<td> vazio </td></tr>");
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    ?>
                 </table>
                 </div>
             </div>
         </div>
-
-    <?php
-        echo json_encode($organismo);
-        echo json_encode($hgt);
-        echo json_encode($srna);
-        echo json_encode($annotation);
-    ?>
     </body>
 </html>
