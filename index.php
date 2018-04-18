@@ -56,8 +56,7 @@
 				<ul class="main-menu nav navbar-nav navbar-right">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="search.php">Search</a></li>
-					<li><a href="#">Blast</a></li>
-					<li><a href="#">Download</a></li>
+					<li><a href="download.php">Download</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="team.php">Team</a></li>
 				</ul>

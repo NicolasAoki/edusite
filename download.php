@@ -22,7 +22,45 @@
     <body>
         <?php
             include("cabecalho.php");
+            $organismo = array();
+            $hgt = array();
+            $srna = array();
+            $annotation = array();
+            if ($handle = opendir('arquivos/Organismos/')) {
+            while (false !== ($entry = readdir($handle))) {
+                if ($entry != "." && $entry != "..") {
+                    $organismo[] = $entry;
+                    }
+                }
+                closedir($handle);
+            }
+            if ($handle = opendir('arquivos/HGT_regions/')) {
+            while (false !== ($entry = readdir($handle))) {
+                if ($entry != "." && $entry != "..") {
+                    $hgt[] = $entry;
+                    }
+                }
+                closedir($handle);
+            }
+            if ($handle = opendir('arquivos/sRNAs_annotations/')) {
+            while (false !== ($entry = readdir($handle))) {
+                if ($entry != "." && $entry != "..") {
+                    $srna[] = $entry;
+                    }
+                }
+                closedir($handle);
+            }
+            if ($handle = opendir('arquivos/regions_annotations/')) {
+            while (false !== ($entry = readdir($handle))) {
+                if ($entry != "." && $entry != "..") {
+                    $annotation[] = $entry;
+                    }
+                }
+                closedir($handle);
+            }
+
         ?>
+
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -87,5 +125,11 @@
             </div>
         </div>
 
+    <?php
+        echo json_encode($organismo);
+        echo json_encode($hgt);
+        echo json_encode($srna);
+        echo json_encode($annotation);
+    ?>
     </body>
 </html>
