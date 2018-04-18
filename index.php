@@ -57,7 +57,7 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="search.php">Search</a></li>
 					<li><a href="download.php">Download</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="about.php">About</a></li>
 					<li><a href="team.php">Team</a></li>
 				</ul>
 			</nav>

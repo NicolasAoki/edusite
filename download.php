@@ -80,7 +80,7 @@
                         <p>HGT Region</p>
                     </th>
                     <th>
-                        <p>Features</p>
+                        <p>ncRNAs</p>
                     </th>
                     <th>
                         <p>Core</p>
@@ -92,20 +92,27 @@
                         <p>Exclusive</p>
                     </th>
                     <?php
-                        for ($i=0; $i < sizeof($organismo); $i++) {
-                            for ($j=0; $j < sizeof($hgt) ; $j++) {
-                                for ($k=0; $k < sizeof($srna); $k++) {
-                                    $org = substr($organismo[$i],0,8);
-                                    $HGT = substr($hgt[$j],0,8);
-                                    $SRNA = substr($srna[$k],0,8);
-                                    if( ($org === $HGT) && ($org === $SRNA) ){
-                                        print_r("<tr><td><a href='arquivos/Organismos/'". $org .".fasta' download><p>". $org ."</p></a></td>");
-                                        print_r("<td><a href='arquivos/HGT_regions/'". $HGT .".alienhunter.gff' download><p>.gff</p></a></td>");
-                                        print_r("<td><a href='arquivos/sRNAs_annotations/'". $SRNA .".final.gff' download><p>.gff</p></a></td>");
-                                        print_r("<td> vazio </td>");
-                                        print_r("<td> vazio </td>");
-                                        print_r("<td> vazio </td></tr>");
-                                        break;
+                    print_r(sizeof($annotation));
+                        for ($i=0; $i < sizeof($organismo); $i++){
+                            for ($j=0; $j < sizeof($hgt) ; $j++){
+                                for ($k=0; $k < sizeof($srna); $k++){
+                                    for ($l=0; $l < sizeof($annotation); $l++) {
+                                        $org = substr($organismo[$i],0,8);
+                                        $HGT = substr($hgt[$j],0,8);
+                                        $SRNA = substr($srna[$k],0,8);
+                                        $ANNOT = substr($annotation[$l], 0,3);
+                                        if( ($org === $HGT) && ($org === $SRNA) ){
+                                            print_r("<tr><td><a href='arquivos/Organismos/". $org .".fasta' download><p>". $org ."</p></a></td>");
+                                            print_r("<td><a href='arquivos/HGT_regions/". $HGT .".alienhunter.gff' download><p>.gff</p></a></td>");
+                                            print_r("<td><a href='arquivos/sRNAs_annotations/". $SRNA .".final.gff' download><p>.gff</p></a></td>");
+                                            if($ANNOT == 'COR')
+                                                print_r("<td><a href='arquivos/regions_annotations/". $org .".gff' download><p>". $org ."</p></a></td>");
+                                            if($ANNOT == 'EXC')
+                                                print_r("<td><a href='arquivos/regions_annotations/". $org .".gff' download><p>". $org ."</p></a></td>");
+                                            else
+                                                print_r("<td><a href='arquivos/regions_annotations/". $org .".gff' download><p>". $org ."</p></a></td></tr>");
+                                            break;
+                                        }
                                     }
                                 }
                             }

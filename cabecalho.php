@@ -21,7 +21,7 @@
 						<li><a href="index.php">Home</a></li>
 						<li><a href="search.php">search</a></li>
 						<li><a href="download.php">Download</a></li>
-						<li><a href="#">about</a></li>
+						<li><a href="about.php">about</a></li>
 						<li><a href="team.php">team</a></li>
 					</ul>
 				</nav>
