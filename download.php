@@ -29,7 +29,7 @@
             if ($handle = opendir('arquivos/Organismos/')) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
-                    $organismo[] = $entry;
+                        $organismo[] = $entry;
                     }
                 }
                 closedir($handle);
@@ -37,7 +37,7 @@
             if ($handle = opendir('arquivos/HGT_regions/')) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
-                    $hgt[] = $entry;
+                        $hgt[] = $entry;
                     }
                 }
                 closedir($handle);
@@ -50,15 +50,30 @@
                 }
                 closedir($handle);
             }
-            if ($handle = opendir('arquivos/regions_annotations/')) {
+            if ($handle = opendir('arquivos/CORE/')) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
-                    $annotation[] = $entry;
+                        $CORE[] = $entry;
                     }
                 }
                 closedir($handle);
             }
-
+            if ($handle = opendir('arquivos/SHARED/')) {
+            while (false !== ($entry = readdir($handle))) {
+                if ($entry != "." && $entry != "..") {
+                        $SHARED[] = $entry;
+                    }
+                }
+                closedir($handle);
+            }
+            if ($handle = opendir('arquivos/EXCLUSIVE/')) {
+            while (false !== ($entry = readdir($handle))) {
+                if ($entry != "." && $entry != "..") {
+                        $EXCLUSIVE[] = $entry;
+                    }
+                }
+                closedir($handle);
+            }
         ?>
 
         <div class="container">
@@ -92,31 +107,16 @@
                         <p>Exclusive</p>
                     </th>
                     <?php
-
-                        for ($i=0; $i < sizeof($organismo); $i++){
-                            for ($j=0; $j < sizeof($hgt) ; $j++){
-                                for ($k=0; $k < sizeof($srna); $k++){
-                                    for ($l=0; $l < sizeof($annotation); $l++) {
-                                        $org = substr($organismo[$i],0,8);
-                                        $HGT = substr($hgt[$j],0,8);
-                                        $SRNA = substr($srna[$k],0,8);
-                                        $ANNOT = substr($annotation[$l], 0,3);
-                                        if(($org === $HGT) && ($org === $SRNA)){
-                                            print_r("<tr><td><a href='arquivos/Organismos/". $org .".fasta' download><p>". $org .".fasta</p></a></td>");
-                                            print_r("<td><a href='arquivos/HGT_regions/". $HGT .".alienhunter.gff' download><p>.gff</p></a></td>");
-                                            print_r("<td><a href='arquivos/sRNAs_annotations/". $SRNA .".final.gff' download><p>.gff</p></a></td>");
-                                            if($ANNOT == 'COR')
-                                                print_r("<td><a href='arquivos/regions_annotations/CORE_". $org .".gff' download><p>". $org ."</p></a></td>");
-                                            if($ANNOT == 'EXC')
-                                                print_r("<td><a href='arquivos/regions_annotations/EXCLUSIVE_". $org .".gff' download><p>". $org ."</p></a></td>");
-                                            else
-                                                print_r("<td><a href='arquivos/regions_annotations/SHARED_". $org .".gff' download><p>". $org ."</p></a></td></tr>");
-                                            break;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                        $i = 0;
+                         while($i < sizeof($organismo)){
+                            print_r("<tr><td><a href='arquivos/Organismos/". $organismo[$i] ."' download><p>". $organismo[$i] ."</p></a></td>");
+                            print_r("<td><a href='arquivos/HGT_regions/". $hgt[$i] .".alienhunter.gff' download><p>.gff</p></a></td>");
+                            print_r("<td><a href='arquivos/sRNAs_annotations/". $srna[$i] .".final.gff' download><p>.gff</p></a></td>");
+                            print_r("<td><a href='arquivos/regions_annotations/CORE_". $CORE[$i] .".gff' download><p>". $CORE[$i] ."</p></a></td>");
+                            print_r("<td><a href='arquivos/regions_annotations/EXCLUSIVE_". $EXCLUSIVE[$i] .".gff' download><p>". $EXCLUSIVE[$i] ."</p></a></td>");
+                            print_r("<td><a href='arquivos/regions_annotations/SHARED_". $SHARED[$i] .".gff' download><p>". $SHARED[$i] ."</p></a></td></tr>");
+                            $i++;
+                         }
                     ?>
                 </table>
                 </div>
