@@ -92,6 +92,7 @@
                         <p>Exclusive</p>
                     </th>
                     <?php
+
                         for ($i=0; $i < sizeof($organismo); $i++){
                             for ($j=0; $j < sizeof($hgt) ; $j++){
                                 for ($k=0; $k < sizeof($srna); $k++){
@@ -100,7 +101,7 @@
                                         $HGT = substr($hgt[$j],0,8);
                                         $SRNA = substr($srna[$k],0,8);
                                         $ANNOT = substr($annotation[$l], 0,3);
-                                        if( ($org === $HGT) && ($org === $SRNA) ){
+                                        if(($org === $HGT) && ($org === $SRNA)){
                                             print_r("<tr><td><a href='arquivos/Organismos/". $org .".fasta' download><p>". $org .".fasta</p></a></td>");
                                             print_r("<td><a href='arquivos/HGT_regions/". $HGT .".alienhunter.gff' download><p>.gff</p></a></td>");
                                             print_r("<td><a href='arquivos/sRNAs_annotations/". $SRNA .".final.gff' download><p>.gff</p></a></td>");
