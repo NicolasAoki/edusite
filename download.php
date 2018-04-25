@@ -106,6 +106,9 @@
                     <th>
                         <p>Exclusive</p>
                     </th>
+                    <th>
+                        <p>Fetch</p>
+                    </th>
                     <?php
                         $i = 0;
                          while($i < sizeof($organismo)){
@@ -114,7 +117,8 @@
                             print_r("<td><a href='arquivos/sRNAs_annotations/". $srna[$i] ."' download><p>.gff</p></a></td>");
                             print_r("<td><a href='arquivos/regions_annotations/CORE/". $CORE[$i] ."' download><p>.gff</p></a></td>");
                             print_r("<td><a href='arquivos/regions_annotations/EXCLUSIVE/". $EXCLUSIVE[$i] ."' download><p>.gff</p></a></td>");
-                            print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download><p>.gff</p></a></td></tr>");
+                            print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download><p>.gff</p></a></td>");
+                            print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download><button>Fetch All</button></a></td></tr>");
                             $i++;
                          }
                     ?>
