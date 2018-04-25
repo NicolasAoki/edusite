@@ -46,6 +46,7 @@
         <div class="container">
             <div class="row" style="background-color: #dce7ca">
                 <div class="col-md-6">
+                    <h2>Regions Annotation</h2>
                     <p>Select Organism</p>
                     <select class="selectpicker" data-live-search="true">
                         <option data-tokens="AE009948">AE009948</option>
@@ -55,8 +56,15 @@
                     <div id="pieChart"></div>
                 </div>
                 <div class="col-md-6">
-                    <div style="margin-top: 66px"></div>
-                    <div id="pieChart1"></div>
+                    <h2>features on HGT Regions</h2>
+                    <p>Select feature</p>
+                    <select class="selectpicker" data-live-search="true">
+                        <option data-tokens="FMN">FMN</option>
+                        <option data-tokens="PreQ1">PreQ1</option>
+                        <option data-tokens="L10_leader">L10_leader</option>
+                    </select>
+                    <div style="margin-top: 130px"></div>
+                    <div id="chart"></div>
                 </div>
             </div>
         </div>
@@ -193,96 +201,27 @@
             },
             "callbacks": {}
         });
-            var pie1 = new d3pie("pieChart1", {
-            "header": {
-                "title": {
-                    "text": "AE009948",
-                    "fontSize": 24,
-                    "font": "open sans"
-                },
-                "subtitle": {
-                    "text": "features on HGT region",
-                    "color": "#999999",
-                    "fontSize": 12,
-                    "font": "open sans"
-                },
-                "titleSubtitlePadding": 9
+        </script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="node_modules/c3-0.5.4/c3.min.js"></script>
+        <script type="text/javascript">
+            var chart = c3.generate({
+            bindto: '#chart',
+            data: {
+                columns: [
+                    ['Core', 30, 200, 100, 100, 150, 250],
+                    ['Shared', 10, 100, 50, 90, 300, 150],
+                    ['Exclusive', 70, 10, 60, 30, 50, 125]
+                ],
+                type: 'bar'
             },
-            "footer": {
-                "color": "#999999",
-                "fontSize": 10,
-                "font": "open sans",
-                "location": "bottom-left"
-            },
-            "size": {
-                "canvasWidth": 597,
-                "pieInnerRadius": "62%",
-                "pieOuterRadius": "81%"
-            },
-            "data": {
-                "sortOrder": "value-desc",
-                "content": [
-                    {
-                        "label": "FMN",
-                        "value": 50,
-                        "color": "#64a61f"
-                    },
-                    {
-                        "label": "L10_leader",
-                        "value": 20,
-                        "color": "#7b6688"
-                    },
-                    {
-                        "label": "tmRNA",
-                        "value": 15,
-                        "color": "#2181c1"
-                    },
-                    {
-                        "label": "PreQ1",
-                        "value": 30,
-                        "color": "#ffffff"
-                    }
-                ]
-            },
-            "labels": {
-                "outer": {
-                    "pieDistance": 32
-                },
-                "inner": {
-                    "hideWhenLessThanPercentage": 0
-                },
-                "mainLabel": {
-                    "fontSize": 20
-                },
-                "percentage": {
-                    "color": "#ffffff",
-                    "decimalPlaces": 0
-                },
-                "value": {
-                    "color": "#adadad",
-                    "fontSize": 11
-                },
-                "lines": {
-                    "enabled": true
-                },
-                "truncation": {
-                    "enabled": true
+            bar: {
+                width: {
+                    ratio: 0.5 // this makes bar width 50% of length between ticks
                 }
-            },
-            "effects": {
-                "pullOutSegmentOnClick": {
-                    "effect": "linear",
-                    "speed": 400,
-                    "size": 8
-                }
-            },
-            "misc": {
-                "gradient": {
-                    "enabled": true,
-                    "percentage": 100
-                }
-            },
-            "callbacks": {}
+                // or
+                //width: 100 // this makes bar width 100px
+            }
         });
         </script>
 
