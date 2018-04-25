@@ -50,7 +50,7 @@
                 }
                 closedir($handle);
             }
-            if ($handle = opendir('arquivos/CORE/')) {
+            if ($handle = opendir('arquivos/regions_annotations/CORE/')) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
                         $CORE[] = $entry;
@@ -58,7 +58,7 @@
                 }
                 closedir($handle);
             }
-            if ($handle = opendir('arquivos/SHARED/')) {
+            if ($handle = opendir('arquivos/regions_annotations/SHARED/')) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
                         $SHARED[] = $entry;
@@ -66,7 +66,7 @@
                 }
                 closedir($handle);
             }
-            if ($handle = opendir('arquivos/EXCLUSIVE/')) {
+            if ($handle = opendir('arquivos/regions_annotations/EXCLUSIVE/')) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
                         $EXCLUSIVE[] = $entry;
@@ -110,11 +110,11 @@
                         $i = 0;
                          while($i < sizeof($organismo)){
                             print_r("<tr><td><a href='arquivos/Organismos/". $organismo[$i] ."' download><p>". $organismo[$i] ."</p></a></td>");
-                            print_r("<td><a href='arquivos/HGT_regions/". $hgt[$i] .".alienhunter.gff' download><p>.gff</p></a></td>");
-                            print_r("<td><a href='arquivos/sRNAs_annotations/". $srna[$i] .".final.gff' download><p>.gff</p></a></td>");
-                            print_r("<td><a href='arquivos/regions_annotations/CORE_". $CORE[$i] .".gff' download><p>". $CORE[$i] ."</p></a></td>");
-                            print_r("<td><a href='arquivos/regions_annotations/EXCLUSIVE_". $EXCLUSIVE[$i] .".gff' download><p>". $EXCLUSIVE[$i] ."</p></a></td>");
-                            print_r("<td><a href='arquivos/regions_annotations/SHARED_". $SHARED[$i] .".gff' download><p>". $SHARED[$i] ."</p></a></td></tr>");
+                            print_r("<td><a href='arquivos/HGT_regions/". $hgt[$i] ."' download><p>.gff</p></a></td>");
+                            print_r("<td><a href='arquivos/sRNAs_annotations/". $srna[$i] ."' download><p>.gff</p></a></td>");
+                            print_r("<td><a href='arquivos/regions_annotations/CORE/". $CORE[$i] ."' download><p>.gff</p></a></td>");
+                            print_r("<td><a href='arquivos/regions_annotations/EXCLUSIVE/". $EXCLUSIVE[$i] ."' download><p>.gff</p></a></td>");
+                            print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download><p>.gff</p></a></td></tr>");
                             $i++;
                          }
                     ?>
