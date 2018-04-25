@@ -6,10 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>StreptoRNA</title>
-                <script type="text/javascript" src="js/jquery.min.js"></script>
-                <script type="text/javascript" src="js/bootstrap.min.js"></script>
-                <script type="text/javascript" src="js/main.js"></script>
-                <!-- Latest compiled and minified CSS -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- Latest compiled and minified CSS -->
+                <!-- Load c3.css -->
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
 
         <!-- Latest compiled and minified JavaScript -->
@@ -53,17 +55,11 @@
                     <div id="pieChart"></div>
                 </div>
                 <div class="col-md-6">
-                    <p>Select Feature</p>
-                    <select class="selectpicker" data-live-search="true">
-                        <option data-tokens="tmRNA">tmRNA</option>
-                        <option data-tokens="FMN">FMN</option>
-                        <option data-tokens="L10_leader">L10_leader</option>
-                    </select>
+                    <div style="margin-top: 66px"></div>
                     <div id="pieChart1"></div>
                 </div>
             </div>
         </div>
-
         <!-- Footer -->
         <footer id="footer" class="section">
 
@@ -105,11 +101,11 @@
         <!-- /Footer -->
 
         <!-- preloader -->
+
         <div id='preloader'><div class='preloader'></div></div>
-        <!-- /preloader -->
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
-        <script src="js/d3pie.min.js"></script>
+<script src="js/d3pie.min.js"></script>
         <script>
         var pie = new d3pie("pieChart", {
             "header": {
@@ -200,12 +196,12 @@
             var pie1 = new d3pie("pieChart1", {
             "header": {
                 "title": {
-                    "text": "tmRNA",
+                    "text": "AE009948",
                     "fontSize": 24,
                     "font": "open sans"
                 },
                 "subtitle": {
-                    "text": "Overlapped features on HGT region",
+                    "text": "features on HGT region",
                     "color": "#999999",
                     "fontSize": 12,
                     "font": "open sans"
@@ -227,19 +223,24 @@
                 "sortOrder": "value-desc",
                 "content": [
                     {
-                        "label": "AE009948",
+                        "label": "FMN",
                         "value": 50,
                         "color": "#64a61f"
                     },
                     {
-                        "label": "CP000114",
+                        "label": "L10_leader",
                         "value": 20,
                         "color": "#7b6688"
                     },
                     {
-                        "label": "CP003810",
+                        "label": "tmRNA",
                         "value": 15,
                         "color": "#2181c1"
+                    },
+                    {
+                        "label": "PreQ1",
+                        "value": 30,
+                        "color": "#ffffff"
                     }
                 ]
             },
