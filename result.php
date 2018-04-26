@@ -215,14 +215,6 @@
             </div>
         </div>
     </div>
-<!--
-    <?php foreach ($resultSQL as $key => $value) {
-            echo json_encode($value);
-        } ?>
-    <?php foreach ($hgtSQL as $key => $value) {
-            echo json_encode($value);
-        } ?>
--->
     <!-- Footer -->
     <footer id="footer" class="section">
     <!-- container -->

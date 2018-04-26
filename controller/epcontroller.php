@@ -69,6 +69,10 @@ class EpController {
     ];
     return $this->Dao->getTableHGT('hgt.*',$where,$values);
   }
+  public function getOrganisms(){
+    $this->Dao = new Dao();
+    return $this->Dao->getTableOrganism();
+  }
 }
 
 ?>

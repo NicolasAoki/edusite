@@ -4,33 +4,29 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>StreptoRNA</title>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-        <!-- Latest compiled and minified CSS -->
-                <!-- Load c3.css -->
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-
-        <!-- Latest compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-
-        <!-- (Optional) Latest compiled and minified JavaScript translation files -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
-
-
         <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
-
         <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-
         <link rel="stylesheet" href="css/font-awesome.min.css">
-
-
         <link type="text/css" rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     </head>
+    <script type="text/javascript">
+
+        var request = $.ajax({
+                url: "/ep-selectbox.php",
+                type: 'get'
+            });
+            request.done(function(resposta) {
+            console.log(resposta)
+        });
+    </script>
     <body>
         <?php
             include('cabecalho.php');
@@ -107,7 +103,9 @@
 
         </footer>
         <!-- /Footer -->
-
+        <?php
+            echo (json_encode($selectValues));
+        ?>
         <!-- preloader -->
 
         <div id='preloader'><div class='preloader'></div></div>
@@ -208,12 +206,24 @@
             var chart = c3.generate({
             bindto: '#chart',
             data: {
+                x : 'x',
                 columns: [
+                    ['x', 'AE009948','CP000114','AL732656','CP003810','CP003919','FO393392'],
                     ['Core', 30, 200, 100, 100, 150, 250],
                     ['Shared', 10, 100, 50, 90, 300, 150],
                     ['Exclusive', 70, 10, 60, 30, 50, 125]
                 ],
-                type: 'bar'
+                type: 'bar',
+            },
+            axis:{
+                x:{
+                    type:'category',
+                    tick: {
+                        rotate: 0,
+                        multiline: false
+                    },
+                    height:30
+                }
             },
             bar: {
                 width: {

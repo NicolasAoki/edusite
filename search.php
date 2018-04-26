@@ -4,20 +4,15 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<title>StreptoRNA</title>
-				<script type="text/javascript" src="js/jquery.min.js"></script>
-				<script type="text/javascript" src="js/bootstrap.min.js"></script>
-				<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+ 		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
-
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
-
- <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
 		<link rel="stylesheet" href="css/font-awesome.min.css">
-
-
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 
@@ -26,8 +21,8 @@
 		let result = []
 
 		$(document).ready(function(){
-		  var selectedValues = null;
-		  var val = [];
+		 	var selectedValues = null;
+		 	var val = [];
 			$('#save').click(function(event){
 				event.preventDefault();
 				selectedValues = $('#select-organismos').val();
@@ -55,7 +50,7 @@
 				console.log(data);
 				$.support.cors = true
 				$.ajax({
-					url: "http://localhost:4500/ep-dados.php",
+					url: "/ep-dados.php",
 					data : JSON.stringify(data),
 					dataType: 'JSON',
 					contentType: "application/json",

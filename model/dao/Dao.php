@@ -41,6 +41,10 @@ class Dao extends database {
     $horario = $this->selectDB($sql,$params,null);
     return $horario;
   }
-
+  public function getTableOrganism(){
+    $sql = "SELECT organism.abbreviation FROM organism";
+    $horario = $this->selectDB($sql,null);
+    return $horario;
+  }
 }
 ?>
