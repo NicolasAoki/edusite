@@ -23,9 +23,6 @@
                 url: "/ep-selectbox.php",
                 type: 'get'
             });
-            request.done(function(resposta) {
-            console.log(resposta)
-        });
     </script>
     <body>
         <?php
@@ -45,9 +42,9 @@
                     <h2>Regions Annotation</h2>
                     <p>Select Organism</p>
                     <select class="selectpicker" data-live-search="true">
-                        <option data-tokens="AE009948">AE009948</option>
-                        <option data-tokens="CP000114">CP000114</option>
-                        <option data-tokens="CP003810">CP003810</option>
+                        <?php
+                            echo "<option data-tokens= " . $selectValues[0]['abbreviation'] ." > " . $selectValues[0]['abbreviation'] . "</option>";
+                        ?>
                     </select>
                     <div id="pieChart"></div>
                 </div>
@@ -104,7 +101,8 @@
         </footer>
         <!-- /Footer -->
         <?php
-            echo (json_encode($selectValues));
+            echo(json_encode($selectValues));
+            echo "teste";
         ?>
         <!-- preloader -->
 
