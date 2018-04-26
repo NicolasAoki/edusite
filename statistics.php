@@ -43,7 +43,11 @@
                     <p>Select Organism</p>
                     <select class="selectpicker" data-live-search="true">
                         <?php
-                            echo "<option data-tokens= " . $selectValues[0]['abbreviation'] ." > " . $selectValues[0]['abbreviation'] . "</option>";
+                            $i = 0;
+                            while($i < 27){
+                                echo "<option data-tokens= " . $selectValues[$i]['abbreviation'] ." > " . $selectValues[$i]['abbreviation'] . "</option>";
+                                $i++;
+                            }
                         ?>
                     </select>
                     <div id="pieChart"></div>
