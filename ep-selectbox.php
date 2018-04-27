@@ -9,6 +9,7 @@ switch ($method) {
   case 'GET': {
     try{
       $selectValues = $epcontroller->getOrganisms();
+      $selectFeatures = $epcontroller->getFeatures();
       include("statistics.php");
     }catch(Exception $e){
       echo "$e";

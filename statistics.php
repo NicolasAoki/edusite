@@ -41,10 +41,10 @@
                 <div class="col-md-6">
                     <h2>Regions Annotation</h2>
                     <p>Select Organism</p>
-                    <select class="selectpicker" data-live-search="true">
+                    <select class="selectpicker" data-size="5" data-live-search="true">
                         <?php
                             $i = 0;
-                            while($i < 27){
+                            while($i < sizeof($selectValues)){
                                 echo "<option data-tokens= " . $selectValues[$i]['abbreviation'] ." > " . $selectValues[$i]['abbreviation'] . "</option>";
                                 $i++;
                             }
@@ -55,10 +55,14 @@
                 <div class="col-md-6">
                     <h2>features on HGT Regions</h2>
                     <p>Select feature</p>
-                    <select class="selectpicker" data-live-search="true">
-                        <option data-tokens="FMN">FMN</option>
-                        <option data-tokens="PreQ1">PreQ1</option>
-                        <option data-tokens="L10_leader">L10_leader</option>
+                    <select class="selectpicker" data-size="5" data-live-search="true">
+                        <?php
+                            $i = 0;
+                            while($i < sizeof($selectFeatures)){
+                                echo "<option data-tokens= " . $selectFeatures[$i]['feature_name'] ." > " . $selectFeatures[$i]['feature_name'] . "</option>";
+                                $i++;
+                            }
+                        ?>
                     </select>
                     <div style="margin-top: 130px"></div>
                     <div id="chart"></div>
@@ -104,107 +108,106 @@
 
         </footer>
         <!-- /Footer -->
-        <?php
-            echo(json_encode($selectValues));
-            echo "teste";
-        ?>
         <!-- preloader -->
 
         <div id='preloader'><div class='preloader'></div></div>
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
 <script src="js/d3pie.min.js"></script>
+<?php echo "
         <script>
-        var pie = new d3pie("pieChart", {
-            "header": {
-                "title": {
-                    "text": "AE009948",
-                    "fontSize": 24,
-                    "font": "open sans"
-                },
-                "subtitle": {
-                    "text": "Regions annotation",
-                    "color": "#999999",
-                    "fontSize": 12,
-                    "font": "open sans"
-                },
-                "titleSubtitlePadding": 9
-            },
-            "footer": {
-                "color": "#999999",
-                "fontSize": 10,
-                "font": "open sans",
-                "location": "bottom-left"
-            },
-            "size": {
-                "canvasWidth": 597,
-                "pieInnerRadius": "62%",
-                "pieOuterRadius": "81%"
-            },
-            "data": {
-                "sortOrder": "value-desc",
-                "content": [
-                    {
-                        "label": "Core",
-                        "value": 50,
-                        "color": "#64a61f"
+            var pie = new d3pie('pieChart', {
+                'header': {
+                    'title': {
+                        'text': 'AE009948',
+                        'fontSize': 24,
+                        'font': 'open sans'
                     },
-                    {
-                        "label": "Shared",
-                        "value": 20,
-                        "color": "#7b6688"
+                    'subtitle': {
+                        'text': 'Regions annotation',
+                        'color': '#999999',
+                        'fontSize': 12,
+                        'font': 'open sans'
                     },
-                    {
-                        "label": "Exclusive",
-                        "value": 15,
-                        "color": "#2181c1"
+                    'titleSubtitlePadding': 9
+                },
+                'footer': {
+                    'color': '#999999',
+                    'fontSize': 10,
+                    'font': 'open sans',
+                    'location': 'bottom-left'
+                },
+                'size': {
+                    'canvasWidth': 597,
+                    'pieInnerRadius': '62%',
+                    'pieOuterRadius': '81%'
+                },
+                'data': {
+                    'sortOrder': 'value-desc',
+                    'content': [
+                        {
+                            'label': 'Core',
+                            'value': 50,
+                            'color': '#64a61f'
+                        },
+                        {
+                            'label': 'Shared',
+                            'value': 20,
+                            'color': '#7b6688'
+                        },
+                        {
+                            'label': 'Exclusive',
+                            'value': 15,
+                            'color': '#2181c1'
+                        }
+                    ]
+                },
+                'labels': {
+                    'outer': {
+                        'pieDistance': 32
+                    },
+                    'inner': {
+                        'hideWhenLessThanPercentage': 3
+                    },
+                    'mainLabel': {
+                        'fontSize': 20
+                    },
+                    'percentage': {
+                        'color': '#ffffff',
+                        'decimalPlaces': 0
+                    },
+                    'value': {
+                        'color': '#adadad',
+                        'fontSize': 11
+                    },
+                    'lines': {
+                        'enabled': true
+                    },
+                    'truncation': {
+                        'enabled': true
                     }
-                ]
-            },
-            "labels": {
-                "outer": {
-                    "pieDistance": 32
                 },
-                "inner": {
-                    "hideWhenLessThanPercentage": 3
+                'effects': {
+                    'pullOutSegmentOnClick': {
+                        'effect': 'linear',
+                        'speed': 400,
+                        'size': 8
+                    }
                 },
-                "mainLabel": {
-                    "fontSize": 20
+                'misc': {
+                    'gradient': {
+                        'enabled': true,
+                        'percentage': 100
+                    }
                 },
-                "percentage": {
-                    "color": "#ffffff",
-                    "decimalPlaces": 0
-                },
-                "value": {
-                    "color": "#adadad",
-                    "fontSize": 11
-                },
-                "lines": {
-                    "enabled": true
-                },
-                "truncation": {
-                    "enabled": true
-                }
-            },
-            "effects": {
-                "pullOutSegmentOnClick": {
-                    "effect": "linear",
-                    "speed": 400,
-                    "size": 8
-                }
-            },
-            "misc": {
-                "gradient": {
-                    "enabled": true,
-                    "percentage": 100
-                }
-            },
-            "callbacks": {}
-        });
+                'callbacks': {}
+            });
         </script>
+    "?>
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="node_modules/c3-0.5.4/c3.min.js"></script>
-        <script type="text/javascript">
+
+        <script type='text/javascript'>
             var chart = c3.generate({
             bindto: '#chart',
             data: {

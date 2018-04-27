@@ -46,5 +46,10 @@ class Dao extends database {
     $horario = $this->selectDB($sql,null);
     return $horario;
   }
+    public function getTableFeatures(){
+    $sql = "SELECT distinct feature.feature_name FROM feature";
+    $horario = $this->selectDB($sql,null);
+    return $horario;
+  }
 }
 ?>
