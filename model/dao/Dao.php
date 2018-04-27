@@ -46,10 +46,28 @@ class Dao extends database {
     $horario = $this->selectDB($sql,null);
     return $horario;
   }
-    public function getTableFeatures(){
+  public function getTableFeatures(){
     $sql = "SELECT distinct feature.feature_name FROM feature";
     $horario = $this->selectDB($sql,null);
     return $horario;
+  }
+  public function countRegions(){
+    $organismos = $this->getTableOrganism();
+    foreach ($organismos as $key => $value) {
+      $sql = "SELECT COUNT(localization.loc_identification) as EXCLUSIVE FROM localization ".
+      "WHERE localization.host_gene like '" . $value['abbreviation'] . "' and localization.loc_identification ".
+      "like 'EXCLUSIVE'";
+      $horario = $this->selectDB($sql,null);
+      $regionsAnnotation = array(
+        $value['abbreviation'] => array(
+            'CORE' => '10',
+            'EXCLUSIVE' => $horario,
+            'SHARED' => '20'
+          )
+        );
+    }
+    echo var_dump($horario[0]);
+    return $regionsAnnotation;
   }
 }
 ?>

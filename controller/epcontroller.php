@@ -73,9 +73,13 @@ class EpController {
     $this->Dao = new Dao();
     return $this->Dao->getTableOrganism();
   }
-    public function getFeatures(){
+  public function getFeatures(){
     $this->Dao = new Dao();
     return $this->Dao->getTableFeatures();
+  }
+  public function getRegions(){
+    $this->Dao = new Dao();
+    return $this->Dao->countRegions();
   }
 }
 

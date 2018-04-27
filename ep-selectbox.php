@@ -10,6 +10,7 @@ switch ($method) {
     try{
       $selectValues = $epcontroller->getOrganisms();
       $selectFeatures = $epcontroller->getFeatures();
+      $regionsInfo = $epcontroller->getRegions();
       include("statistics.php");
     }catch(Exception $e){
       echo "$e";
