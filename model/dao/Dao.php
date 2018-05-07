@@ -53,18 +53,28 @@ class Dao extends database {
   }
   public function countRegions(){
     $organismos = $this->getTableOrganism();
+    $regionsAnnotation = array();
     foreach ($organismos as $key => $value) {
-      $sql = "SELECT COUNT(localization.loc_identification) as EXCLUSIVE FROM localization ".
+      //Conta todas regioes Exclusive de cada organismo
+      $sqlExclusive = "SELECT COUNT(localization.loc_identification) as EXCLUSIVE FROM localization ".
       "WHERE localization.host_gene like '" . $value['abbreviation'] . "' and localization.loc_identification ".
       "like 'EXCLUSIVE'";
-      $horario = $this->selectDB($sql,null);
-      $regionsAnnotation = array(
-        $value['abbreviation'] => array(
-            'CORE' => '10',
-            'EXCLUSIVE' => $horario,
-            'SHARED' => '20'
-          )
-        );
+      //Conta todas regioes Core de cada organismo
+      $sqlCore = "SELECT COUNT(localization.loc_identification) as CORE FROM localization ".
+      "WHERE localization.host_gene like '" . $value['abbreviation'] . "' and localization.loc_identification ".
+      "like 'CORE'";
+      //Conta todas regioes Shared de cada organismo
+      $sqlShared = "SELECT COUNT(localization.loc_identification) as SHARED FROM localization ".
+      "WHERE localization.host_gene like '" . $value['abbreviation'] . "' and localization.loc_identification ".
+      "like 'SHARED'";
+      $shared = $this->selectDB($sqlShared,null);
+      $exclusive = $this->selectDB($sqlExclusive,null);
+      $core = $this->selectDB($sqlCore,null);
+      $regionsAnnotation[$value['abbreviation']] = array(
+          'CORE' => $core[0]['CORE'],
+          'EXCLUSIVE' => $exclusive[0]['EXCLUSIVE'],
+          'SHARED' => $shared[0]['SHARED']
+      );
     }
     return $regionsAnnotation;
   }

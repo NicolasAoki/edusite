@@ -204,8 +204,93 @@
         function run() {
             var select = document.getElementById("graphPie");
             answer = select.options[select.selectedIndex].value;
-            e = document.getElementById("p0_title");
-            e.textContent = answer;
+            document.getElementById("pieChart").innerHTML = "";
+            var pie = new d3pie('pieChart', {
+                'header': {
+                    'title': {
+                        'text': answer,
+                        'fontSize': 24,
+                        'font': 'open sans'
+                    },
+                    'subtitle': {
+                        'text': 'Regions annotation',
+                        'color': '#999999',
+                        'fontSize': 12,
+                        'font': 'open sans'
+                    },
+                    'titleSubtitlePadding': 9
+                },
+                'footer': {
+                    'color': '#999999',
+                    'fontSize': 10,
+                    'font': 'open sans',
+                    'location': 'bottom-left'
+                },
+                'size': {
+                    'canvasWidth': 597,
+                    'pieInnerRadius': '62%',
+                    'pieOuterRadius': '81%'
+                },
+                'data': {
+                    'sortOrder': 'value-desc',
+                    'content': [
+                        {
+                            'label': 'Core',
+                            'value': 50,
+                            'color': '#64a61f'
+                        },
+                        {
+                            'label': 'Shared',
+                            'value': 20,
+                            'color': '#7b6688'
+                        },
+                        {
+                            'label': 'Exclusive',
+                            'value': 15,
+                            'color': '#2181c1'
+                        }
+                    ]
+                },
+                'labels': {
+                    'outer': {
+                        'pieDistance': 32
+                    },
+                    'inner': {
+                        'hideWhenLessThanPercentage': 3
+                    },
+                    'mainLabel': {
+                        'fontSize': 20
+                    },
+                    'percentage': {
+                        'color': '#ffffff',
+                        'decimalPlaces': 0
+                    },
+                    'value': {
+                        'color': '#adadad',
+                        'fontSize': 11
+                    },
+                    'lines': {
+                        'enabled': true
+                    },
+                    'truncation': {
+                        'enabled': true
+                    }
+                },
+                'effects': {
+                    'pullOutSegmentOnClick': {
+                        'effect': 'linear',
+                        'speed': 400,
+                        'size': 8
+                    }
+                },
+                'misc': {
+                    'gradient': {
+                        'enabled': true,
+                        'percentage': 100
+                    }
+                },
+                'callbacks': {}
+            });
         }
     </script>
 
