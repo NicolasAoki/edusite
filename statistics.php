@@ -239,8 +239,5 @@
             }
         });
         </script>
-    <?php
-        echo json_encode($regionsInfo);
-    ?>
     </body>
 </html>

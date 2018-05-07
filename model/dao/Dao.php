@@ -66,7 +66,6 @@ class Dao extends database {
           )
         );
     }
-    echo var_dump($horario[0]);
     return $regionsAnnotation;
   }
 }
