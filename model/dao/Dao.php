@@ -70,6 +70,7 @@ class Dao extends database {
       $shared = $this->selectDB($sqlShared,null);
       $exclusive = $this->selectDB($sqlExclusive,null);
       $core = $this->selectDB($sqlCore,null);
+      //Push no array contendo as informacoes de cada genoma
       $regionsAnnotation[$value['abbreviation']] = array(
           'CORE' => $core[0]['CORE'],
           'EXCLUSIVE' => $exclusive[0]['EXCLUSIVE'],

@@ -114,6 +114,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
     <script src="js/d3pie.min.js"></script>
     <script>
+        <?php echo "var regions = ".json_encode($regionsInfo).";"  ?>
+        console.log(regions.AE009948.CORE);
         var answer;
         var pie = new d3pie('pieChart', {
             'header': {
@@ -146,17 +148,17 @@
                 'content': [
                     {
                         'label': 'Core',
-                        'value': 50,
+                        'value': 458,
                         'color': '#64a61f'
                     },
                     {
                         'label': 'Shared',
-                        'value': 20,
+                        'value': 67,
                         'color': '#7b6688'
                     },
                     {
                         'label': 'Exclusive',
-                        'value': 15,
+                        'value': 0,
                         'color': '#2181c1'
                     }
                 ]
@@ -236,17 +238,17 @@
                     'content': [
                         {
                             'label': 'Core',
-                            'value': 50,
+                            'value': parseInt(regions[answer].CORE),
                             'color': '#64a61f'
                         },
                         {
                             'label': 'Shared',
-                            'value': 20,
+                            'value': parseInt(regions[answer].SHARED),
                             'color': '#7b6688'
                         },
                         {
                             'label': 'Exclusive',
-                            'value': 15,
+                            'value': parseInt(regions[answer].EXCLUSIVE),
                             'color': '#2181c1'
                         }
                     ]
