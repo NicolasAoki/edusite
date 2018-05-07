@@ -32,5 +32,111 @@
             </div>
         </div>
         <div class="spaceTop"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <table>
+                        <th>
+                            <p>Data</p>
+                        </th>
+                        <th>
+                            <p>Info</p>
+                        </th>
+                        <tr>
+                            <td>Species</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>ncRNAS</td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table>
+                        <th>
+                            <p>Data</p>
+                        </th>
+                        <th>
+                            <p>Info</p>
+                        </th>
+                        <tr>
+                            <td>Core</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Shared</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Exclusive</td>
+                            <td>10</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "col-md-3">
+                    <table>
+                        <th>
+                            <p>Tools Used</p>
+                        </th>
+                        <th>
+                            <p>Info</p>
+                        </th>
+                        <tr>
+                            <td>Infernal</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>Artemis</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>Mauve</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Alien Hunter</td>
+                            <td>14</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-3">
+                    <table>
+                        <th>
+                            <p>Tools Used</p>
+                        </th>
+                        <tr>
+                            <td>Infernal</td>
+                        </tr>
+                        <tr>
+                            <td>Artemis</td>
+                        </tr>
+                        <tr>
+                            <td>Mauve</td>
+                        </tr>
+                        <tr>
+                            <td>Alien Hunter</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table>
+                        <th>
+                            <p>HGT Regions</p>
+                        </th>
+                        <th>
+                            <p>Quantity</p>
+                        </th>
+                        <tr>
+                            <td>AE009948</td>
+                            <td>10</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
