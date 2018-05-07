@@ -54,7 +54,7 @@
                 <div class="col-md-6">
                     <h2>features on HGT Regions</h2>
                     <p>Select feature</p>
-                    <select class="selectpicker" data-size="5" data-live-search="true">
+                    <select class="selectpicker" onchange="runChart()" id="graphChart" data-size="5" data-live-search="true">
                         <?php
                             $i = 0;
                             while($i < sizeof($selectFeatures)){
@@ -115,7 +115,6 @@
     <script src="js/d3pie.min.js"></script>
     <script>
         <?php echo "var regions = ".json_encode($regionsInfo).";"  ?>
-        console.log(regions.AE009948.CORE);
         var answer;
         var pie = new d3pie('pieChart', {
             'header': {
@@ -312,6 +311,9 @@
                 ],
                 type: 'bar',
             },
+            title: {
+                  text: 'tmRNA'
+                },
             axis:{
                 x:{
                     type:'category',
@@ -330,6 +332,45 @@
                 //width: 100 // this makes bar width 100px
             }
         });
+        function runChart() {
+            var select = document.getElementById("graphChart");
+            answer = select.options[select.selectedIndex].value;
+            console.log(answer);
+            document.getElementById("chart").innerHTML = ""
+            var chart = c3.generate({
+            bindto: '#chart',
+            data: {
+                x : 'x',
+                columns: [
+                    ['x', 'AE009948','CP000114','AL732656','CP003810','CP003919','FO393392'],
+                    ['Core', 30, 200, 100, 100, 150, 250],
+                    ['Shared', 10, 100, 50, 90, 300, 150],
+                    ['Exclusive', 70, 10, 60, 30, 50, 125]
+                ],
+                type: 'bar',
+            },
+            title: {
+                  text: answer
+                },
+            axis:{
+                x:{
+                    type:'category',
+                    tick: {
+                        rotate: 0,
+                        multiline: false
+                    },
+                    height:30
+                }
+            },
+            bar: {
+                width: {
+                    ratio: 0.5 // this makes bar width 50% of length between ticks
+                }
+                // or
+                //width: 100 // this makes bar width 100px
+            }
+        });
+        }
         </script>
     </body>
 </html>
