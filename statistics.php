@@ -18,7 +18,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     </head>
     <script type="text/javascript">
-
         var request = $.ajax({
                 url: "/ep-selectbox.php",
                 type: 'get'
@@ -41,7 +40,7 @@
                 <div class="col-md-6">
                     <h2>Regions Annotation</h2>
                     <p>Select Organism</p>
-                    <select class="selectpicker" data-size="5" data-live-search="true">
+                    <select class="selectpicker" onchange="run()" id="graphPie" data-size="5" data-live-search="true">
                         <?php
                             $i = 0;
                             while($i < sizeof($selectValues)){
@@ -110,100 +109,106 @@
         <!-- /Footer -->
         <!-- preloader -->
 
-        <div id='preloader'><div class='preloader'></div></div>
+    <div id='preloader'><div class='preloader'></div></div>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
-<script src="js/d3pie.min.js"></script>
-<?php echo "
-        <script>
-            var pie = new d3pie('pieChart', {
-                'header': {
-                    'title': {
-                        'text': 'AE009948',
-                        'fontSize': 24,
-                        'font': 'open sans'
-                    },
-                    'subtitle': {
-                        'text': 'Regions annotation',
-                        'color': '#999999',
-                        'fontSize': 12,
-                        'font': 'open sans'
-                    },
-                    'titleSubtitlePadding': 9
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
+    <script src="js/d3pie.min.js"></script>
+    <script>
+        var answer;
+        var pie = new d3pie('pieChart', {
+            'header': {
+                'title': {
+                    'text': 'AE009948',
+                    'fontSize': 24,
+                    'font': 'open sans'
                 },
-                'footer': {
+                'subtitle': {
+                    'text': 'Regions annotation',
                     'color': '#999999',
-                    'fontSize': 10,
-                    'font': 'open sans',
-                    'location': 'bottom-left'
+                    'fontSize': 12,
+                    'font': 'open sans'
                 },
-                'size': {
-                    'canvasWidth': 597,
-                    'pieInnerRadius': '62%',
-                    'pieOuterRadius': '81%'
-                },
-                'data': {
-                    'sortOrder': 'value-desc',
-                    'content': [
-                        {
-                            'label': 'Core',
-                            'value': 50,
-                            'color': '#64a61f'
-                        },
-                        {
-                            'label': 'Shared',
-                            'value': 20,
-                            'color': '#7b6688'
-                        },
-                        {
-                            'label': 'Exclusive',
-                            'value': 15,
-                            'color': '#2181c1'
-                        }
-                    ]
-                },
-                'labels': {
-                    'outer': {
-                        'pieDistance': 32
+                'titleSubtitlePadding': 9
+            },
+            'footer': {
+                'color': '#999999',
+                'fontSize': 10,
+                'font': 'open sans',
+                'location': 'bottom-left'
+            },
+            'size': {
+                'canvasWidth': 597,
+                'pieInnerRadius': '62%',
+                'pieOuterRadius': '81%'
+            },
+            'data': {
+                'sortOrder': 'value-desc',
+                'content': [
+                    {
+                        'label': 'Core',
+                        'value': 50,
+                        'color': '#64a61f'
                     },
-                    'inner': {
-                        'hideWhenLessThanPercentage': 3
+                    {
+                        'label': 'Shared',
+                        'value': 20,
+                        'color': '#7b6688'
                     },
-                    'mainLabel': {
-                        'fontSize': 20
-                    },
-                    'percentage': {
-                        'color': '#ffffff',
-                        'decimalPlaces': 0
-                    },
-                    'value': {
-                        'color': '#adadad',
-                        'fontSize': 11
-                    },
-                    'lines': {
-                        'enabled': true
-                    },
-                    'truncation': {
-                        'enabled': true
+                    {
+                        'label': 'Exclusive',
+                        'value': 15,
+                        'color': '#2181c1'
                     }
+                ]
+            },
+            'labels': {
+                'outer': {
+                    'pieDistance': 32
                 },
-                'effects': {
-                    'pullOutSegmentOnClick': {
-                        'effect': 'linear',
-                        'speed': 400,
-                        'size': 8
-                    }
+                'inner': {
+                    'hideWhenLessThanPercentage': 3
                 },
-                'misc': {
-                    'gradient': {
-                        'enabled': true,
-                        'percentage': 100
-                    }
+                'mainLabel': {
+                    'fontSize': 20
                 },
-                'callbacks': {}
-            });
-        </script>
-    "?>
+                'percentage': {
+                    'color': '#ffffff',
+                    'decimalPlaces': 0
+                },
+                'value': {
+                    'color': '#adadad',
+                    'fontSize': 11
+                },
+                'lines': {
+                    'enabled': true
+                },
+                'truncation': {
+                    'enabled': true
+                }
+            },
+            'effects': {
+                'pullOutSegmentOnClick': {
+                    'effect': 'linear',
+                    'speed': 400,
+                    'size': 8
+                }
+            },
+            'misc': {
+                'gradient': {
+                    'enabled': true,
+                    'percentage': 100
+                }
+            },
+            'callbacks': {}
+        });
+        function run() {
+            var select = document.getElementById("graphPie");
+            answer = select.options[select.selectedIndex].value;
+            e = document.getElementById("p0_title");
+            e.textContent = answer;
+        }
+    </script>
+
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="node_modules/c3-0.5.4/c3.min.js"></script>
 
