@@ -66,49 +66,30 @@
                     <div style="margin-top: 130px"></div>
                     <div id="chart"></div>
                 </div>
-            </div>
+
         </div>
         <!-- Footer -->
         <footer id="footer" class="section">
-
-            <!-- container -->
             <div class="container">
-
-                <!-- row -->
                 <div class="row">
                 </div>
-                <!-- /row -->
-
-                <!-- row -->
                 <div id="bottom-footer" class="row">
-
-                    <!-- social -->
                     <div class="col-md-4 col-md-push-8">
                         <ul class="footer-social">
                             <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
-                    <!-- /social -->
-
-                    <!-- copyright -->
                     <div class="col-md-8 col-md-pull-4">
                         <div class="footer-copyright">
                             <span>&copy; Copyright 2018. All Rights Reserved. </span>
                         </div>
                     </div>
-                    <!-- /copyright -->
-
                 </div>
-                <!-- row -->
-
             </div>
-            <!-- /container -->
-
         </footer>
-        <!-- /Footer -->
-        <!-- preloader -->
 
+    <!-- preloader -->
     <div id='preloader'><div class='preloader'></div></div>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
@@ -304,10 +285,10 @@
             data: {
                 x : 'x',
                 columns: [
-                    ['x', 'AE009948','CP000114','AL732656','CP003810','CP003919','FO393392'],
-                    ['Core', 30, 200, 100, 100, 150, 250],
-                    ['Shared', 10, 100, 50, 90, 300, 150],
-                    ['Exclusive', 70, 10, 60, 30, 50, 125]
+                    ['x', 'AE009948','AL732656','CP000114','CP003810','CP003919','CP006910','CP007482','CP007565','CP007570','CP007571','CP007572','CP007631','CP007632','CP010319','CP010867','CP011325','CP011326','CP011327','CP011328','CP011329','CP012419','CP013202','FO393392','HF952104','HF952105','HF952106','HG939456'],
+                    ['Core', 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250],
+                    ['Shared', 10, 100, 50, 90, 300, 150, 100, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100],
+                    ['Exclusive', 70, 10, 60, 30, 50, 125, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100, 100]
                 ],
                 type: 'bar',
             },
