@@ -79,5 +79,10 @@ class Dao extends database {
     }
     return $regionsAnnotation;
   }
+  public function hgtGroup(){
+    $sql = "SELECT abbreviation,COUNT(abbreviation) as Count FROM hgt join organism where hgt.organism_id = organism.organism_id group by abbreviation;";
+    $horario = $this->selectDB($sql,null);
+    return $horario;
+  }
 }
 ?>

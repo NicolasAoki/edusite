@@ -20,6 +20,12 @@
         <link type="text/css" rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
+    <script type="text/javascript">
+    var request = $.ajax({
+            url: "/ep-statistics.php",
+            type: 'get'
+        });
+    </script>
     <body>
         <?php
             include('cabecalho.php');
@@ -48,7 +54,7 @@
                         </tr>
                         <tr>
                             <td>ncRNAS</td>
-                            <td>30</td>
+                            <td>40</td>
                         </tr>
                     </table>
                 </div>
@@ -75,6 +81,7 @@
                     </table>
                 </div>
             </div>
+            <div class="spaceTop"></div>
             <div class="row">
                 <div class = "col-md-3">
                     <table>
@@ -124,16 +131,20 @@
                 <div class="col-md-6">
                     <table>
                         <th>
-                            <p>HGT Regions</p>
+                            <p>Species</p>
                         </th>
                         <th>
-                            <p>Quantity</p>
+                            <p>Number of HGT Regions</p>
                         </th>
-                        <tr>
-                            <td>AE009948</td>
-                            <td>10</td>
-                        </tr>
-
+                        <?php
+                        //tabela hgt count
+                            foreach ($resultTableHgt as $value) {
+                                echo "<tr>";
+                                echo "<td> ". $value['abbreviation'] ." </td>";
+                                echo "<td> ". $value['Count'] ." </td>";
+                                echo "</tr>";
+                            }
+                        ?>
                     </table>
                 </div>
             </div>

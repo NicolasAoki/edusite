@@ -22,7 +22,7 @@
 						<li><a href="search.php">search</a></li>
 						<li><a href="download.php">Download</a></li>
 						<li><a href="ep-selectbox.php">View</a></li>
-						<li><a href="statistics.php">Statistics</a></li>
+						<li><a href="ep-statistics.php">Statistics</a></li>
 						<li><a href="about.php">about</a></li>
 						<li><a href="team.php">team</a></li>
 					</ul>

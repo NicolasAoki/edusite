@@ -81,6 +81,10 @@ class EpController {
     $this->Dao = new Dao();
     return $this->Dao->countRegions();
   }
+  public function getHgtGroupBy(){
+    $this->Dao = new Dao();
+    return $this->Dao->hgtGroup();
+  }
 }
 
 ?>
