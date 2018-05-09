@@ -115,14 +115,15 @@
                         </th>
                         <?php
                         //tabela hgt count
-                                foreach ($resultTableHgt as $result) {
-                                    echo "<tr>";
-                                    echo "<td> ". $b = $result['abbreviation'] ." </td>";
-                                    echo "<td> ". $result['Count'] ." </td>";
-                                    $a = json_encode($regionsInfo[AE009948]);
-                                    echo "<td> ". $a ." </td>";
-                                    echo "</tr>";
-                                }
+                            foreach ($resultTableHgt as $result) {
+                                echo "<tr>";
+                                echo "<td> ". $b = $result['abbreviation'] ." </td>";
+                                echo "<td> ". $result['Count'] ." </td>";
+                                echo $b;
+                                //$c = str_replace(' ', '', $b);
+                                echo "<td> ". json_encode($regionsInfo[CP003919]) ." </td>";
+                                echo "</tr>";
+                            }
                         ?>
                     </table>
                 </div>
