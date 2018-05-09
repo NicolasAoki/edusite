@@ -9,6 +9,7 @@ switch ($method) {
   case 'GET': {
     try{
       $resultTableHgt = $epcontroller->getHgtGroupBy();
+      $regionsInfo = $epcontroller->getRegions();
       include("statistics.php");
     }catch(Exception $e){
       echo "$e";

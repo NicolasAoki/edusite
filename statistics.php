@@ -64,51 +64,25 @@
                             <p>Data</p>
                         </th>
                         <th>
-                            <p>Info</p>
+                            <p>Total</p>
                         </th>
                         <tr>
                             <td>Core</td>
-                            <td>10</td>
+                            <td>12366</td>
                         </tr>
                         <tr>
                             <td>Shared</td>
-                            <td>10</td>
+                            <td>11281</td>
                         </tr>
                         <tr>
                             <td>Exclusive</td>
-                            <td>10</td>
+                            <td>997</td>
                         </tr>
                     </table>
                 </div>
             </div>
             <div class="spaceTop"></div>
             <div class="row">
-                <div class = "col-md-3">
-                    <table>
-                        <th>
-                            <p>Tools Used</p>
-                        </th>
-                        <th>
-                            <p>Info</p>
-                        </th>
-                        <tr>
-                            <td>Infernal</td>
-                            <td>11</td>
-                        </tr>
-                        <tr>
-                            <td>Artemis</td>
-                            <td>12</td>
-                        </tr>
-                        <tr>
-                            <td>Mauve</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>Alien Hunter</td>
-                            <td>14</td>
-                        </tr>
-                    </table>
-                </div>
                 <div class="col-md-3">
                     <table>
                         <th>
@@ -128,7 +102,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-9">
                     <table>
                         <th>
                             <p>Species</p>
@@ -136,14 +110,19 @@
                         <th>
                             <p>Number of HGT Regions</p>
                         </th>
+                        <th>
+                            <p>Region</p>
+                        </th>
                         <?php
                         //tabela hgt count
-                            foreach ($resultTableHgt as $value) {
-                                echo "<tr>";
-                                echo "<td> ". $value['abbreviation'] ." </td>";
-                                echo "<td> ". $value['Count'] ." </td>";
-                                echo "</tr>";
-                            }
+                                foreach ($resultTableHgt as $result) {
+                                    echo "<tr>";
+                                    echo "<td> ". $b = $result['abbreviation'] ." </td>";
+                                    echo "<td> ". $result['Count'] ." </td>";
+                                    $a = json_encode($regionsInfo[AE009948]);
+                                    echo "<td> ". $a ." </td>";
+                                    echo "</tr>";
+                                }
                         ?>
                     </table>
                 </div>
