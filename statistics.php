@@ -83,26 +83,7 @@
             </div>
             <div class="spaceTop"></div>
             <div class="row">
-                <div class="col-md-3">
-                    <table>
-                        <th>
-                            <p>Tools Used</p>
-                        </th>
-                        <tr>
-                            <td>Infernal</td>
-                        </tr>
-                        <tr>
-                            <td>Artemis</td>
-                        </tr>
-                        <tr>
-                            <td>Mauve</td>
-                        </tr>
-                        <tr>
-                            <td>Alien Hunter</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-md-9">
+                <div class="col-md-12">
                     <table>
                         <th>
                             <p>Species</p>
@@ -119,8 +100,8 @@
                                 echo "<tr>";
                                 echo "<td> ". $b = $result['abbreviation'] ." </td>";
                                 echo "<td> ". $result['Count'] ." </td>";
-                                echo $b;
-                                //$c = str_replace(' ', '', $b);
+                                //echo $c ="'".$b."'";
+                                $c = str_replace(' ', '', $c);
                                 echo "<td> ". json_encode($regionsInfo[CP003919]) ." </td>";
                                 echo "</tr>";
                             }
