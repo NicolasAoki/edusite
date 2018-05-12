@@ -42,16 +42,16 @@
             <div class="row">
             <table class="table table-bordered table-hover table-condensed">
                 <tbody><tr>
-                    <td>Strain</td>
-                    <td>Accession Number</td>
-                    <td>Core</td>
-                    <td>Exclusive</td>
-                    <td>SHARED</td>
-                    <td>Total sRNA</td>
-                    <td>TOTAL CORE REGIONS</td>
-                    <td>TOTAL EXCLUSIVE REGIONS</td>
-                    <td>TOTAL SHARED REGIONS</td>
-                    <td>Source</td>
+                    <th>Strain</td>
+                    <th>Accession Number</td>
+                    <th>Core</td>
+                    <th>Exclusive</td>
+                    <th>SHARED</td>
+                    <th>Total sRNA</td>
+                    <th>TOTAL CORE REGIONS</td>
+                    <th>TOTAL EXCLUSIVE REGIONS</td>
+                    <th>TOTAL SHARED REGIONS</td>
+                    <th>Source</td>
                 </tr>
                 <tr>
                     <td>GD201008-001</td>
@@ -378,7 +378,7 @@
                     <td>Tilapia Brain</td>
                 </tr>
             </tbody>
-</table>
+        </table>
             <!--     <div class="col-md-6">
                 <table>
                     <th>
