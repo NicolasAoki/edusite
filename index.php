@@ -16,18 +16,54 @@
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-	<?php
-		include('cabecalho.php');
-	?>
-	<!-- About -->
-	        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1>StreptoRNAdb</h1>
-                </div>
-            </div>
-        </div>
-	<div id="about" class="section">
+		<!-- Header -->
+		<header id="header">
+			<div class="container">
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.php">
+							<img src="./img/logo-alt.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+				<!-- Navigation -->
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.php">Home</a></li>
+						<li><a href="search.php">search</a></li>
+						<li><a href="download.php">Download</a></li>
+						<li><a href="ep-selectbox.php">View</a></li>
+						<li><a href="ep-statistics.php">Statistics</a></li>
+						<li><a href="about.php">about</a></li>
+						<li><a href="team.php">team</a></li>
+					</ul>
+				</nav>
+				<!-- /Navigation -->
+			</div>
+		</header>
+		<!-- /Header -->
+		<!-- Hero-area -->
+		<div class="hero-area section" style="height:50px;">
+		<!-- Backgound Image -->
+		<div class="bg-image bg-parallax overlay" style="background-image:url(./img/home-background.jpg);"></div>
+		<!-- /Backgound Image -->
+
+		<div class="container">
+	        <div class="row">
+	        	<div class="col-md-8">
+	        	    <h1>StreptoRNAdb</h1>
+	    	    </div>
+		    </div>
+	    </div>
+    </div>
+
 
 		<!-- container -->
 		<div class="container">
@@ -36,11 +72,6 @@
 			<div class="row">
 
 				<div class="col-md-6">
-					<div class="section-header">
-						<h2>Welcome to Streptococcus Agalactiae data Website</h2>
-						<p class="lead">Annotation and distribution of ncRNA families in genomes of Streptococcus agalactiae*</p>
-					</div>
-
 					<!-- feature -->
 					<div class="feature">
 						<i class="feature-icon fa fa-flask"></i>
@@ -60,14 +91,14 @@
 				</div>
 				<div class="col-md-6">
 					<div class="about-img">
-						<img src="./img/about.png" alt="">
+						<img src="./img/about.png" alt="" style="width:55%;margin-left: 80px;">
 					</div>
 				</div>
 			</div>
 			<!-- row -->
 		</div>
 		<!-- container -->
-	</div>
+
 	<!-- /About -->
 	<!-- Footer -->
 
