@@ -11,7 +11,7 @@ switch ($method) {
       $selectValues = $epcontroller->getOrganisms();
       $selectFeatures = $epcontroller->getFeatures();
       $regionsInfo = $epcontroller->getRegions();
-      include("view.php");
+      include("graphics.php");
     }catch(Exception $e){
       echo "$e";
     }

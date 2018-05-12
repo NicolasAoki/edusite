@@ -120,27 +120,32 @@
 						</div>
 					<div class="col-md-5" style="margin-top:29px;">
 						<div class="form-check">
-						<input type="checkbox" class="form-check-input" name="SHARED" id="checkbox1">
-						<label class="form-check-label" for="exampleCheck1">Shared</label>
+							<input type="checkbox" class="form-check-input" name="SHARED" id="checkbox1">
+							<label class="form-check-label" for="exampleCheck1">Shared</label>
 						</div>
 						<div class="form-check">
-						<input type="checkbox" class="form-check-input" name="CORE" id="checkbox2">
-						<label class="form-check-label" for="exampleCheck1">Core</label>
+							<input type="checkbox" class="form-check-input" name="CORE" id="checkbox2">
+							<label class="form-check-label" for="exampleCheck1">Core</label>
 						</div>
 						<div class="form-check">
-						<input type="checkbox" class="form-check-input" name="EXCLUSIVE" id="checkbox3">
-						<label class="form-check-label" for="exampleCheck1">Exclusive</label>
+							<input type="checkbox" class="form-check-input" name="EXCLUSIVE" id="checkbox3">
+							<label class="form-check-label" for="exampleCheck1">Exclusive</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" name="HGT" id="checkbox4">
+							<label class="form-check-label" for="exampleCheck1">HGT</label>
 						</div>
 					</div>
 					</form>
 				</div>
 
 				<div class="col-md-6">
-					 Search by miRNA (Organism + miRNA )
-					<input type="text" id="srnaName" placeholder="sRNA name Ex:. tracrRNA" style="background-color:white;margin-top:10px;">
+					 <p><b>By ncRNA</b></p>
+					<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="background-color:white;margin-top:10px;">
 				</div>
 
 				<div class="col-md-12 spaceTop">
+					<p><b>Genomic location</b></p>
 					<div class="col-md-2">
 							<input type="text" id="startSequence" placeholder="Start" style="background-color:white;margin-bottom:10px;">
 					</div>

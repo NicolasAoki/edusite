@@ -100,7 +100,7 @@
                         </tr>
                         <tr>
                             <td><b>Function</b></td>
-                            <td><?php echo $resultSQL[0]["feature_function"] ?></td>
+                            <td style="word-wrap: break-word;"><?php echo $resultSQL[0]["feature_function"] ?></td>
                         </tr>
                         <tr>
                             <td><b>Sequence</b></td>
