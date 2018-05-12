@@ -23,9 +23,9 @@
             <link rel="stylesheet" type="text/css" href="style.css"/>
 
         </head>
-        <?php
-			include("cabecalho.php");
-		?>
+            <?php
+    			include("cabecalho.php");
+    		?>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 text-left">
@@ -36,34 +36,99 @@
 
         </div>
         <div class="spaceTop"></div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="img/post01.jpg">
+        <div class="container-fluid spaceleftTeam">
+         <div class="row">
+                <div class="col-md-2">
+                    <img class="teamImage" src="img/paschoal.jpeg">
                 </div>
-
-                <div class="col-md-6">
-                    <img src="img/post02.jpg">
+                <div class="col-md-2">
+                    <p><b>Name:</p>
+                    <p>Status:</p>
+                    <p>Interests:</p>
+                    <br><p>Institution:</p>
+                    <p>Background:</p>
+                    <p>Email:</b></p>
+                </div>
+                <div class="col-md-8">
+                    <p>Alexandre Rossi Paschoal</p>
+                    <p>Adjunct Professor</p>
+                    <p> Pattern recognition and machine learning, computational RNAs biology (noncoding RNAs), bioinformatics and comparative genomics</p>
+                    <p>The Federal University of Technology - Paraná - Brazil (UTFPR) </p>
+                    <p>Ph.D. in Bioinformatics - University of São Paulo (USP) [2012]</p>
+                    <p>paschoal@utfpr.edu.br</p>
                 </div>
             </div>
+            <hr>
             <div class="row">
-                <div class="col-md-6">
-                    <img src="img/post01.jpg">
+                <div class="col-md-2">
+                    <img class="teamImage" src="img/ivan.jpeg">
                 </div>
-                <div class="col-md-6">
-                    <img src="img/post02.jpg">
+                <div class="col-md-2">
+                    <p><b>Name:</p>
+                    <p>Status:</p>
+                    <p>Interests:</p>
+                    <p>Institution:</p>
+                    <br><p>Background:</p>
+                    <br><p>Email:</b></p>
+                </div>
+                <div class="col-md-8">
+                    <p>Ivan Rodrigo Wolf</p>
+                    <p>P.h.D. Student</p>
+                    <p>Systems Biology, Machine Learning and Bioinformatics</p>
+                    <p>São Paulo State University (UNESP), Biosciences Institute, Campus Botucatu - São Paulo State - Brazil</p>
+                    <p>Master degree in Genetics and Molecular Biology - State University of Londrina (UEL) - Paraná State - Brazil [2016]</p>
+                    <p>ivan.wolf@unesp.br</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="teamImage" src="img/laurival.jpeg">
+                </div>
+                <div class="col-md-2">
+                    <p><b>Name:</p>
+                    <p>Status:</p>
+                    <p>Interests:</p>
+                    <p>Institution:</p>
+                    <p>Background:</p>
+                    <br><p>Email:</b></p>
+                </div>
+                <div class="col-md-5">
+                    <p> Laurival Antônio Vilas boas.</p>
+                    <p> Adjunct Professor </p>
+                    <p> Genomics and molecular biology of microrganism. </p>
+                    <p> Universidade estadual de Londrina - UEL</p>
+                    <p> Ph.D. in genetics and molecular biology. Universidade estadual de sao paulo - UNESP [2002]</p>
+                    <p> laurival.vboas@gmail.com</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="teamImage" src="img/nicolas.jpg">
+                </div>
+                <div class="col-md-2">
+                    <p><b>Name:</p>
+                    <p>Status:</p>
+                    <p>Interests:</p>
+                    <p>Institution:</p>
+                    <p>Email:</b></p>
+                </div>
+                <div class="col-md-8">
+                    <p>Nicolas Gil de Souza Aoki</p>
+                    <p>Bachelor's degree in Software Engineer</p>
+                    <p>Computational RNAs biology (noncoding RNAs), software development</p>
+                    <p>The Federal University of Technology - Paraná - Brazil (UTFPR)</p>
+                    <p>nicolasaoki@alunos.utfpr.edu.br</p>
                 </div>
             </div>
         </div>
     	<!-- Footer -->
 		<footer id="footer" class="section">
-
                 <!-- container -->
                 <div class="container">
-
                     <!-- row -->
                     <div class="row">
-
                         <!-- footer logo -->
                         <div class="col-md-6">
                             <div class="footer-logo">
@@ -73,11 +138,8 @@
                             </div>
                         </div>
                         <!-- footer logo -->
-
-
                     </div>
                     <!-- /row -->
-
                     <!-- row -->
                     <div id="bottom-footer" class="row">
 
@@ -89,7 +151,6 @@
                             </ul>
                         </div>
                         <!-- /social -->
-
                         <!-- copyright -->
                         <div class="col-md-8 col-md-pull-4">
                             <div class="footer-copyright">
@@ -103,15 +164,11 @@
 
                 </div>
                 <!-- /container -->
-
             </footer>
             <!-- /Footer -->
-
             <!-- preloader -->
             <div id='preloader'><div class='preloader'></div></div>
             <!-- /preloader -->
-
-
             <!-- jQuery Plugins -->
             <script type="text/javascript" src="js/jquery.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.min.js"></script>
