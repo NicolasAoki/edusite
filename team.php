@@ -37,25 +37,23 @@
         </div>
         <div class="spaceTop"></div>
         <div class="container-fluid spaceleftTeam">
-         <div class="row">
+        <div class="row">
                 <div class="col-md-2">
-                    <img class="teamImage" src="img/paschoal.jpeg">
+                    <img class="teamImage" src="img/nicolas.jpg">
                 </div>
                 <div class="col-md-2">
                     <p><b>Name:</p>
                     <p>Status:</p>
                     <p>Interests:</p>
-                    <br><p>Institution:</p>
-                    <p>Background:</p>
+                    <p>Institution:</p>
                     <p>Email:</b></p>
                 </div>
                 <div class="col-md-8">
-                    <p>Alexandre Rossi Paschoal</p>
-                    <p>Adjunct Professor</p>
-                    <p> Pattern recognition and machine learning, computational RNAs biology (noncoding RNAs), bioinformatics and comparative genomics</p>
-                    <p>The Federal University of Technology - Paraná - Brazil (UTFPR) </p>
-                    <p>Ph.D. in Bioinformatics - University of São Paulo (USP) [2012]</p>
-                    <p>paschoal@utfpr.edu.br</p>
+                    <p>Nicolas Gil de Souza Aoki</p>
+                    <p>Bachelor's degree in Software Engineer</p>
+                    <p>Computational RNAs biology (noncoding RNAs) and software development</p>
+                    <p>Federal University of Technology - Paraná - Brazil (UTFPR)</p>
+                    <p>nicolasaoki@alunos.utfpr.edu.br</p>
                 </div>
             </div>
             <hr>
@@ -103,25 +101,27 @@
                 </div>
             </div>
             <hr>
-            <div class="row">
-                <div class="col-md-2">
-                    <img class="teamImage" src="img/nicolas.jpg">
-                </div>
-                <div class="col-md-2">
-                    <p><b>Name:</p>
-                    <p>Status:</p>
-                    <p>Interests:</p>
-                    <p>Institution:</p>
-                    <p>Email:</b></p>
-                </div>
-                <div class="col-md-8">
-                    <p>Nicolas Gil de Souza Aoki</p>
-                    <p>Bachelor's degree in Software Engineer</p>
-                    <p>Computational RNAs biology (noncoding RNAs), software development</p>
-                    <p>The Federal University of Technology - Paraná - Brazil (UTFPR)</p>
-                    <p>nicolasaoki@alunos.utfpr.edu.br</p>
-                </div>
+                     <div class="row">
+            <div class="col-md-2">
+                <img class="teamImage" src="img/paschoal.jpeg">
             </div>
+            <div class="col-md-2">
+                <p><b>Name:</p>
+                <p>Status:</p>
+                <p>Interests:</p>
+                <br><p>Institution:</p>
+                <p>Background:</p>
+                <p>Email:</b></p>
+            </div>
+            <div class="col-md-8">
+                <p>Alexandre Rossi Paschoal</p>
+                <p>Adjunct Professor</p>
+                <p> Pattern recognition and machine learning, computational RNAs biology (noncoding RNAs), bioinformatics and comparative genomics</p>
+                <p>Federal University of Technology - Paraná - Brazil (UTFPR) </p>
+                <p>Ph.D. in Bioinformatics - University of São Paulo (USP) [2012]</p>
+                <p>paschoal@utfpr.edu.br</p>
+            </div>
+        </div>
         </div>
     	<!-- Footer -->
 		<footer id="footer" class="section">
