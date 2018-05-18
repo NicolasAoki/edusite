@@ -38,10 +38,6 @@ switch ($method) {
 
   }
   case 'POST': {
-/*     $json = file_get_contents('php://input');
-    $data = json_decode($json, true);
-    header('Content-Type: application/json');
-    echo json_encode($epcontroller->getInfo($data)); */
     break;
   }
   default: {

@@ -23,9 +23,8 @@ class Dao extends database {
 		if(strlen($where)>0) $where = " ".$where;
 		// $sql = "SELECT $fields FROM feature $where";
     $sql = "SELECT $fields ".
-    "FROM loc_feature ".
-    " INNER JOIN feature ON feature.feature_id = loc_feature.id_feature ".
-    " INNER JOIN localization ON localization.loc_id = loc_feature.id_loc ".
+    "FROM feature ".
+    " INNER JOIN localization ON localization.loc_id = feature.feature_id ".
     " INNER JOIN organism ON feature.organism_id = organism.organism_id ".
     " INNER JOIN publication ON feature.publication_id = publication.publication_id ".
    /* " INNER JOIN hgt ON hgt.organism_id = organism.organism_id ".*/

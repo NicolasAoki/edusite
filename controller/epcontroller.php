@@ -55,7 +55,7 @@ class EpController {
       $params["loc_identification"]
     ];
     return $this->Dao->getInfo('feature.start,feature.feature_function,feature.end,feature.e_value,feature.feature_RF,
-                                organism.abbreviation,localization.loc_identification,
+                                organism.abbreviation,localization.loc_identification,localization.start,localization.end,
                                 feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,
                                 organism.*', $where, $values);
   }
