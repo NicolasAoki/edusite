@@ -87,7 +87,17 @@
 		}
 
 		</script>
-
+		<script>
+			$(document).ready(function(){
+			    $('#bttRNA').on('click', function(event) {
+			         $('#srnaName').toggle('show');
+			    });
+			    $('#localization').on('click', function(event) {
+			         $('#startSequence').toggle('show');
+			         $('#endSequence').toggle('show');
+			    });
+			});
+		</script>
 	<body>
 		<?php
 			include("cabecalho.php");
@@ -100,12 +110,10 @@
 				</div>
 			</div>
 		</div>
-
-		</div>
 		<!-- /Hero-area -->
 		<div class="spaceTop"></div>
-		<div class="container">
-		  <div class="row" style="background-color:#E0E4CC;border-radius:5px;">
+		<div class="container" style="background-color:#E0E4CC;">
+		  <div class="row" style="border-radius:5px;">
 				<div class="col-md-6 altura">
 					<form id="myForm">
 						<div class="col-md-5 form-group">
@@ -138,19 +146,28 @@
 					</div>
 					</form>
 				</div>
+			</div>
 
-				<div class="col-md-6">
-					 <p><b>By ncRNA</b></p>
-					<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="background-color:white;margin-top:10px;">
+			<div class="row">
+				<div class="col-md-1">
+					<button type="button" id="bttRNA" class="btn btn-info">+</button>
 				</div>
-
+				<div class="col-md-4">
+					 <p><b>By ncRNA</b></p>
+					<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="display: none;background-color:white;margin-top:10px;">
+				</div>
+			</div>
+			<div class="row">
 				<div class="col-md-12 spaceTop">
+					<div class="col-md-1">
+						<button type="button" id="localization" class="btn btn-info">+</button>
+					</div>
 					<p><b>Genomic location</b></p>
 					<div class="col-md-2">
-							<input type="text" id="startSequence" placeholder="Start" style="background-color:white;margin-bottom:10px;">
+							<input type="text" id="startSequence" placeholder="Start" style="display: none;background-color:white;margin-bottom:10px;">
 					</div>
 					<div class="col-md-2">
-						<input type="text" id="endSequence" placeholder="End" style="background-color:white;margin-bottom:10px;">
+						<input type="text" id="endSequence" placeholder="End" style="display: none;background-color:white;margin-bottom:10px;">
 					</div>
 					<div class="col-md-5">
 						<button id="save" class="btn btn-primary">Submit</button>
@@ -158,8 +175,6 @@
 					</div>
 				</div>
 			</div>
-
-		  </div>
 		</div>
 		<hr>
 		<div class="container">

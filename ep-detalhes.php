@@ -32,10 +32,7 @@ switch ($method) {
       echo "$e";
        }
       #($_GET['loc_identification'] == 'CORE' OU 'EXCLUSIVE'
-
     }
-
-
   }
   case 'POST': {
     break;
