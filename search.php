@@ -146,17 +146,19 @@
 					</div>
 					</form>
 				</div>
+				<div class="col-md-6">
+					<div class="col-md-1" style="margin-top: 46px">
+						<button type="button" id="bttRNA" class="btn btn-info">+</button>
+					</div>
+					<div class="col-md-4">
+						 <p><b>By ncRNA</b></p>
+						<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="display: none;background-color:white;margin-top:10px;">
+					</div>
+				</div>
+
+
 			</div>
 
-			<div class="row">
-				<div class="col-md-1">
-					<button type="button" id="bttRNA" class="btn btn-info">+</button>
-				</div>
-				<div class="col-md-4">
-					 <p><b>By ncRNA</b></p>
-					<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="display: none;background-color:white;margin-top:10px;">
-				</div>
-			</div>
 			<div class="row">
 				<div class="col-md-12 spaceTop">
 					<div class="col-md-1">
