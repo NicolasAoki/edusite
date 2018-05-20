@@ -82,3 +82,7 @@
         margin-top:-150px;
     }
   }
+  .imagemAbbreviation{
+    max-width: 100%;
+    border: 3px solid;
+  }

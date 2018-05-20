@@ -35,8 +35,8 @@
             </div>
         </div>
         <div class="spaceTop"></div>
-        <div class="container">
-            <div class="row" style="background-color: #dce7ca">
+        <div class="container" style="background-color: #dce7ca">
+            <div class="row" >
                 <div class="col-md-6">
                     <h2>Regions Annotation</h2>
                     <p>Select Organism</p>
@@ -51,7 +51,16 @@
                     </select>
                     <div id="pieChart"></div>
                 </div>
-                <div class="col-md-6">
+                    <h2>Organism Info</h2>
+                <div class="col-md-5" style="margin-top: 90px;">
+                    <p>click to zoom in</p>
+                    <a href="img/File_S4/AE009948.png" target="_blank">
+                        <img class="imagemAbbreviation" src="img/File_S4/AE009948.png">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
                     <h2>features on HGT Regions</h2>
                     <p>Select feature</p>
                     <select class="selectpicker" onchange="runChart()" id="graphChart" data-size="5" data-live-search="true">
@@ -65,8 +74,7 @@
                     </select>
                     <div style="margin-top: 130px"></div>
                     <div id="chart"></div>
-                </div>
-
+            </div>
         </div>
         <!-- Footer -->
         <footer id="footer" class="section">

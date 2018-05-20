@@ -34,21 +34,22 @@
         <div class="spaceTop"></div>
         <div class="container spaceleftTeam">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <p>
-                    Streptococcus agalactiae, also known as Group B (GBS), is a Gram-positive bacterium that colonizes the gastrointestinal and
+                    &emsp; Streptococcus agalactiae, also known as Group B (GBS), is a Gram-positive bacterium that colonizes the gastrointestinal and
                     genitourinary tract of humans. This opportunistic, harmless bacterium has also been isolated from various animals,
                     such as fish and cattle. Non-coding RNAs (ncRNAs) act as modulators of gene expression in bacteria, as already
-                     detected in GBS related species, such as Streptococcus pneumoniae and Streptococcus pyogenes. Nonetheless, little
-                     is known about the genomic distribution of ncRNAs in S. agalactiae. Here, we present a comparative analysis of 27
-                      S. agalactiae genomes, whereby more than 5 thousand genomic regions where identified and classified as Core,
-                       Exclusive, and Shared genome sequences. These findings enabled us to identify a minimum/maximum of 25/25,
-                       2/54 and 1/10 of ncRNAs when considered by region: the Core, Shared, and Exclusive, respectively. Notwithstanding,
-                        we encountered an ncRNA number variation in the Shared and Exclusive regions, which is an indicative of the
-                         genomic complexity of this bacterium. The knowledge about the genomic coordinates of these ncRNAs may
-                         facilitate the selection of targets and provide directions for planning further studies. The data obtained
-                         endorse the existence of an "open" pan-genome of S. agalactiae. Therefore, the original concept of pan-genome
-                         could to be expanded to encompass the full range of functional transcripts, featuring a "Pan-Rnome".
+                    detected in GBS related species, such as Streptococcus pneumoniae and Streptococcus pyogenes. Nonetheless, little
+                    is known about the genomic distribution of ncRNAs in S. agalactiae. Here, we present a comparative analysis of 27
+                    S. agalactiae genomes, whereby more than 5 thousand genomic regions where identified and classified as Core,
+                    Exclusive, and Shared genome sequences.
+                    <br>&emsp; These findings enabled us to identify a minimum/maximum of 25/25,
+                    2/54 and 1/10 of ncRNAs when considered by region: the Core, Shared, and Exclusive, respectively. Notwithstanding,
+                    we encountered an ncRNA number variation in the Shared and Exclusive regions, which is an indicative of the
+                    genomic complexity of this bacterium. The knowledge about the genomic coordinates of these ncRNAs may
+                    facilitate the selection of targets and provide directions for planning further studies. The data obtained
+                    endorse the existence of an "open" pan-genome of S. agalactiae. Therefore, the original concept of pan-genome
+                    could to be expanded to encompass the full range of functional transcripts, featuring a "Pan-Rnome".
                     </p>
                 </div>
             </div>

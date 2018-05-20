@@ -36,12 +36,12 @@
         </div>
     </div>
     <div class="spaceTop"></div>
-    <div class="container" style="background-color:#E9F0DF">
+    <div class="container" style="background-color:#E9F0DF;">
         <div class="spaceTop"></div>
         <div class="row">
-            <div class="col-md-10">
-                <h2> Species </h2>
+            <div class="col-md-12">
                 <div class="col-md-6">
+                    <h2> Species </h2>
                     <table>
                         <tr>
                             <td><b>Genus</b> </td>
@@ -58,13 +58,24 @@
 
                     </table>
                 </div>
+            <div class="col-md-6">
+                <h2>Localization</h2>
+                    <table>
+                        <tr>
+                            <td><b>Identification</b></td>
+                            <td><?php echo $resultSQL[0]["loc_identification"] ?></td>
+                        </tr>
+                        <tr>
+                            <td><b>Analysis type</b></td>
+                            <td>Mauve</td>
+                        </tr>
+                    </table>
+            </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-10">
-                <h2> <?php echo $resultSQL[0]["feature_name"] ?> details<h2>
-            </div>
+        <div class="row spaceTop">
             <div class="col-md-6">
+                <h2> <?php echo $resultSQL[0]["feature_name"] ?> details<h2>
                 <table>
                         <tr>
                             <td><b>Feature name</b></td>
@@ -108,31 +119,8 @@
                         </tr>
                     </table>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Localization</h2>
-                    <table>
-                        <tr>
-                            <td><b>Identification</b></td>
-                            <td><?php echo $resultSQL[0]["loc_identification"] ?></td>
-                        </tr>
-                        <tr>
-                            <td><b>Analysis type</b></td>
-                            <td>Mauve</td>
-                        </tr>
-                    </table>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
+                    <div class="col-md-6">
                 <h2>HGT Region</h2>
-                <h3 style="color:red">
-                     <?php
-                        if ($hgtSQL == null)
-                            echo "this feature does not have HGT region";
-                    ?>
-                </h3>
                     <table>
                         <tr>
                             <td><b>Tool</b></td>
@@ -212,6 +200,12 @@
                             </td>
                         </tr>
                     </table>
+                                    <h3 style="color:red">
+                     <?php
+                        if ($hgtSQL == null)
+                            echo "this feature does not have HGT region";
+                    ?>
+                </h3>
             </div>
         </div>
     </div>
