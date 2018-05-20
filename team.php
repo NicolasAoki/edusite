@@ -1,4 +1,4 @@
-<html>
+    <html>
     <body>
         <head>
 
@@ -41,7 +41,7 @@
                 <div class="col-md-2">
                     <img class="teamImage" src="img/nicolas.jpg">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 indiceInfo">
                     <p><b>Name:</p>
                     <p>Status:</p>
                     <p>Interests:</p>
@@ -53,7 +53,7 @@
                     <p>Bachelor's degree in Software Engineer</p>
                     <p>Computational RNAs biology (noncoding RNAs) and software development</p>
                     <p>Federal University of Technology - Paraná - Brazil (UTFPR)</p>
-                    <p>nicolasaoki@alunos.utfpr.edu.br</p>
+                    <img src="img/nicolas_email.png" class="imageEmail" alt="Email Nicolas Aoki">
                 </div>
             </div>
             <hr>
@@ -61,7 +61,7 @@
                 <div class="col-md-2">
                     <img class="teamImage" src="img/ivan.jpeg">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 indiceInfo">
                     <p><b>Name:</p>
                     <p>Status:</p>
                     <p>Interests:</p>
@@ -75,7 +75,7 @@
                     <p>Systems Biology, Machine Learning and Bioinformatics</p>
                     <p>São Paulo State University (UNESP), Biosciences Institute, Campus Botucatu - São Paulo State - Brazil</p>
                     <p>Master degree in Genetics and Molecular Biology - State University of Londrina (UEL) - Paraná State - Brazil [2016]</p>
-                    <p>ivan.wolf@unesp.br</p>
+                    <img src="img/ivan_email.png" class="imageEmail" alt="Email Ivan Rodrigo">
                 </div>
             </div>
             <hr>
@@ -83,7 +83,7 @@
                 <div class="col-md-2">
                     <img class="teamImage" src="img/laurival.jpeg">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 indiceInfo">
                     <p><b>Name:</p>
                     <p>Status:</p>
                     <p>Interests:</p>
@@ -97,7 +97,7 @@
                     <p> Genomics and molecular biology of microrganism. </p>
                     <p> Universidade estadual de Londrina - UEL</p>
                     <p> Ph.D. in genetics and molecular biology. Universidade estadual de sao paulo - UNESP [2002]</p>
-                    <p> laurival.vboas@gmail.com</p>
+                    <img src="img/laurival_email.png" class="imageEmail" alt="Laurival Antônio Email">
                 </div>
             </div>
             <hr>
@@ -105,7 +105,7 @@
             <div class="col-md-2">
                 <img class="teamImage" src="img/paschoal.jpeg">
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 indiceInfo">
                 <p><b>Name:</p>
                 <p>Status:</p>
                 <p>Interests:</p>
@@ -119,7 +119,7 @@
                 <p> Pattern recognition and machine learning, computational RNAs biology (noncoding RNAs), bioinformatics and comparative genomics</p>
                 <p>Federal University of Technology - Paraná - Brazil (UTFPR) </p>
                 <p>Ph.D. in Bioinformatics - University of São Paulo (USP) [2012]</p>
-                <p>paschoal@utfpr.edu.br</p>
+                <img src="img/paschoal_email.png" class="imageEmail" alt="Alexandre Paschoal Email">
             </div>
         </div>
         </div>

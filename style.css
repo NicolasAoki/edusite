@@ -3,8 +3,8 @@
   }
   body{
   /* background-color:white; */
-  background:url(img/texture.jpg);
-  background-size:100% auto;
+    background:url(img/texture.jpg);
+    background-size: cover;
   }
   h2{
     font-family: "Lucida Console", Monaco, monospace;
@@ -72,4 +72,13 @@
   }
    .spaceleftTeam{
     margin-left:190px;
+  }
+  .imageEmail{
+    margin-left:-8px;
+  }
+  @media only screen and (max-width: 900px) {
+    .indiceInfo {
+        visibility: hidden;
+        margin-top:-150px;
+    }
   }
