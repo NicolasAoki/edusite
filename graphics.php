@@ -95,7 +95,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
     <script src="js/d3pie.min.js"></script>
     <script>
-        <?php echo "var regions = ".json_encode($regionsInfo).";"  ?>
+        <?php
+            echo "var regions = ".json_encode($regionsInfo).";";
+            echo "var abbreviation = " .json_encode($selectValues).";";
+        ?>
         var answer;
         var pie = new d3pie('pieChart', {
             'header': {
@@ -185,12 +188,14 @@
         });
         function run() {
             var select = document.getElementById("graphPie");
-            answer = select.options[select.selectedIndex].value;
+            answer = select.options[select.selectedIndex].index;
+            titulo = select.options[select.selectedIndex].value;
+            atual = answer+1;
             document.getElementById("pieChart").innerHTML = "";
             var pie = new d3pie('pieChart', {
                 'header': {
                     'title': {
-                        'text': answer,
+                        'text': titulo,
                         'fontSize': 24,
                         'font': 'open sans'
                     },
@@ -218,17 +223,17 @@
                     'content': [
                         {
                             'label': 'Core',
-                            'value': parseInt(regions[answer].CORE),
+                            'value': parseInt(regions[atual].CORE),
                             'color': '#64a61f'
                         },
                         {
                             'label': 'Shared',
-                            'value': parseInt(regions[answer].SHARED),
+                            'value': parseInt(regions[atual].SHARED),
                             'color': '#7b6688'
                         },
                         {
                             'label': 'Exclusive',
-                            'value': parseInt(regions[answer].EXCLUSIVE),
+                            'value': parseInt(regions[atual].EXCLUSIVE),
                             'color': '#2181c1'
                         }
                     ]
@@ -316,7 +321,6 @@
         function runChart() {
             var select = document.getElementById("graphChart");
             answer = select.options[select.selectedIndex].value;
-            console.log(answer);
             document.getElementById("chart").innerHTML = ""
             var chart = c3.generate({
             bindto: '#chart',

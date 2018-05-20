@@ -41,17 +41,17 @@
     <div class="spaceTop"></div>
         <div class="row spaceleft">
             <div class="col-md-11">
-            <table class="table table-bordered table-hover table-condensed">
+            <table class="table table-bordered table-hover table-condensed spaceleft">
 <tbody><tr>
-<td>Strain</td>
-<td>Accession Number</td>
-<td>Core</td>
-<td>Exclusive</td>
-<td>SHARED</td>
-<td>Total sRNA</td>
-<td>TOTAL CORE REGIONS</td>
-<td>TOTAL EXCLUSIVE REGIONS</td>
-<td>TOTAL SHARED REGIONS</td>
+<th>Strain</th>
+<th>Accession Number</th>
+<th>Core</th>
+<th>Exclusive</th>
+<th>SHARED</th>
+<th>Total sRNA</th>
+<th>TOTAL CORE REGIONS</th>
+<th>TOTAL EXCLUSIVE REGIONS</th>
+<th>TOTAL SHARED REGIONS</th>
 </tr>
 <tr>
 <td>GD201008-001</td>
