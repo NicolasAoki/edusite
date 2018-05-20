@@ -56,21 +56,21 @@ class Dao extends database {
     foreach ($organismos as $key => $value) {
       //Conta todas regioes Exclusive de cada organismo
       $sqlExclusive = "SELECT COUNT(localization.loc_identification) as EXCLUSIVE FROM localization ".
-      "WHERE localization.host_gene like '" . $value['abbreviation'] . "' and localization.loc_identification ".
+      "WHERE localization.organism_id = " . $key . " and localization.loc_identification ".
       "like 'EXCLUSIVE'";
       //Conta todas regioes Core de cada organismo
       $sqlCore = "SELECT COUNT(localization.loc_identification) as CORE FROM localization ".
-      "WHERE localization.host_gene like '" . $value['abbreviation'] . "' and localization.loc_identification ".
+      "WHERE localization.organism_id = " . $key . " and localization.loc_identification ".
       "like 'CORE'";
       //Conta todas regioes Shared de cada organismo
       $sqlShared = "SELECT COUNT(localization.loc_identification) as SHARED FROM localization ".
-      "WHERE localization.host_gene like '" . $value['abbreviation'] . "' and localization.loc_identification ".
+      "WHERE localization.organism_id = " . $key . " and localization.loc_identification ".
       "like 'SHARED'";
       $shared = $this->selectDB($sqlShared,null);
       $exclusive = $this->selectDB($sqlExclusive,null);
       $core = $this->selectDB($sqlCore,null);
       //Push no array contendo as informacoes de cada genoma
-      $regionsAnnotation[$value['abbreviation']] = array(
+      $regionsAnnotation[$key] = array(
           'CORE' => $core[0]['CORE'],
           'EXCLUSIVE' => $exclusive[0]['EXCLUSIVE'],
           'SHARED' => $shared[0]['SHARED']
