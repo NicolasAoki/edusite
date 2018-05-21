@@ -252,7 +252,8 @@
         //verifica se o seletor HGT esta selecionado
         //se nao, a tabela e seus elementos sao setados como display none
         var item = <?php echo $hgtVisibility; ?>;
-        if(item == 1){
+        console.log(item);
+        if(item == 0){
             var a = document.getElementsByClassName("hgt_table");
             for (var i=0;i<a.length;i+=1){
               a[i].style.display = 'none';
