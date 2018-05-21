@@ -7,7 +7,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
   case 'GET': {
-    if ($_GET['loc_identification'] == 'EXCLUSIVE'){
+    /*if($_GET['loc_identification'] == 'EXCLUSIVE'){*/
       try{
         $array = [
           'feature_id' => $_GET['feature_id'],
@@ -29,10 +29,9 @@ switch ($method) {
         $hgtSQL = $epcontroller->getHGT($hgt);
         include("result.php");
       }catch (Exception $e){
-      echo "$e";
-       }
+        echo "$e";
+      }
       #($_GET['loc_identification'] == 'CORE' OU 'EXCLUSIVE'
-    }
   }
   case 'POST': {
     break;

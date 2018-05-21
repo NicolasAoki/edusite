@@ -42,10 +42,15 @@
             <div class="col-md-12">
                 <div class="col-md-6">
                     <h2> Species </h2>
+
                     <table>
                         <tr>
                             <td><b>Genus</b> </td>
-                            <td><?php echo $resultSQL[0]["genus"] ?></td>
+                            <td><?php
+                                    echo $resultSQL[0]["genus"];
+                                    echo $hgt_choice;
+                                ?>
+                            </td>
                         </tr>
                         <tr>
                             <td>Species </td>

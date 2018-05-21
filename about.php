@@ -34,9 +34,15 @@
         <div class="spaceTop"></div>
         <div class="container spaceleftTeam">
             <div class="row">
-                <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2>Annotation and distribution of ncRNA families in genomes of Streptococcus <i>agalactiae</i></h2>
+                    </div>
+                </div>
+                <div class="col-md-10"   style="background-color: #f3f3f3; border-radius: 5px;">
+                    <div style="margin-top: 30px;"></div>
                     <p>
-                    &emsp; Streptococcus agalactiae, also known as Group B (GBS), is a Gram-positive bacterium that colonizes the gastrointestinal and
+                    &emsp; Streptococcus <i>agalactiae</i>, also known as Group B (GBS), is a Gram-positive bacterium that colonizes the gastrointestinal and
                     genitourinary tract of humans. This opportunistic, harmless bacterium has also been isolated from various animals,
                     such as fish and cattle. Non-coding RNAs (ncRNAs) act as modulators of gene expression in bacteria, as already
                     detected in GBS related species, such as Streptococcus pneumoniae and Streptococcus pyogenes. Nonetheless, little

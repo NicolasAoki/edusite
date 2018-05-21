@@ -26,11 +26,11 @@ class Dao extends database {
     "FROM feature ".
     " INNER JOIN localization ON localization.loc_id = feature.feature_id ".
     " INNER JOIN organism ON feature.organism_id = organism.organism_id ".
-    " INNER JOIN publication ON feature.publication_id = publication.publication_id ".
+/*    " INNER JOIN publication ON feature.publication_id = publication.publication_id ".*/
    /* " INNER JOIN hgt ON hgt.organism_id = organism.organism_id ".*/
     " $where";
 		$horario = $this->selectDB($sql,$params,null);
-		return $horario;
+    return $horario;
   }
   public function getTableHGT($fields="*",$where="", $params=null){
     if(strlen($where)>0) $where = " ".$where;

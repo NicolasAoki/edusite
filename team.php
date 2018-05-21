@@ -132,7 +132,7 @@
                         <!-- footer logo -->
                         <div class="col-md-6">
                             <div class="footer-logo">
-                                <a class="logo" href="index.html">
+                                <a class="logo" href="index.php">
                                     <img src="./img/logo-alt.png" alt="logo">
                                 </a>
                             </div>

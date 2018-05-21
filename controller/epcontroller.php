@@ -34,12 +34,13 @@ class EpController {
               $where .= ($j == count($value)) ? "?)" : "?, " ;
               array_push($values, $value_2);
             }
+            echo $where;
           }
         }
         $where .= ($i == count($params)) ? " " : "  AND " ;
       }
     }
-    return $this->Dao->getInfo('organism.abbreviation,localization.loc_identification, feature.start, feature.end, feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id,publication.title', $where, $values);
+    return $this->Dao->getInfo('organism.abbreviation,localization.loc_identification, feature.start, feature.end, feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id', $where, $values);
   }
   public function getDetalhes($params) {
     $this->Dao = new Dao();
