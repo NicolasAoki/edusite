@@ -36,12 +36,20 @@
             <div class="row">
                 <div class="row">
                     <div class="col-md-10">
-                        <h2>Annotation and distribution of ncRNA families in genomes of Streptococcus <i>agalactiae</i></h2>
+                        <img src="img/pipeline.png" alt="Pipeline website" style="width:60%;margin-left: 150px;">
+                        <figcaption>Fig. - Diagram representing how the data was manipulated. Step 1 - Information
+                                    acquired through online 3rd party databases (NCBI) and software tools to gather
+                                    data(bedtools). Step 2 - Organized all data into more specific information
+                                    to ease the process of retrieving wanted infos. Step 3 - Developed website to
+                                    increase user experience. Step 4 - Added graphic view to analise data from another
+                                    perspective.
+                        </figcaption>
+                        <h2 class="spaceTop">Annotation and distribution of ncRNA families in genomes of Streptococcus <i>agalactiae</i></h2>
                     </div>
                 </div>
-                <div class="col-md-10" style="background-color: #f3f3f3; border-radius: 5px;">
+                <div class="col-md-10">
                     <div style="margin-top: 30px;"></div>
-                    <p>
+                    <p style="font-size: 18px;">
                     &emsp; Streptococcus <i>agalactiae</i>, also known as Group B (GBS), is a Gram-positive bacterium that colonizes the gastrointestinal and
                     genitourinary tract of humans. This opportunistic, harmless bacterium has also been isolated from various animals,
                     such as fish and cattle. Non-coding RNAs (ncRNAs) act as modulators of gene expression in bacteria, as already
