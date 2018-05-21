@@ -12,6 +12,7 @@ switch ($method) {
   case 'POST': {
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
+    $hgt_selected = 0;
     header('Content-Type: application/json');
     echo json_encode($epcontroller->getInfo($data));
     break;

@@ -66,6 +66,11 @@
 				result = data;
 				var aux_data = '';
 				var nome_botao = "View";
+				var hgt = $('#checkbox4').is(':checked');
+				var aux = 0;
+				if(hgt){
+					aux = 1;
+				}
 				$.each(data,function(key,value){
 					aux_data += '<tr>';
 					aux_data += '<td>'+value.abbreviation+'</td>'
@@ -75,7 +80,7 @@
 					aux_data += '<td style="text-align:center;">'+value.strand+'</td>'
 					aux_data += '<td>'+value.feature_name+'</td>'
 					aux_data += '<td>'+value.bit_score+'</td>'
-					aux_data += '<td><a class="btn btn-primary meio" href="/ep-detalhes.php?feature_id='+value.feature_id+'&organism_id='+value.organism_id+'&publication_id='+value.publication_id+'&type_type_id='+value.type_type_id+'&analysis_id='+value.analysis_id+'&start='+value.start+'&end='+value.end+'&loc_identification='+value.loc_identification+'" ">'+nome_botao+'</a></td>'
+					aux_data += '<td><a class="btn btn-primary meio" href="/ep-detalhes.php?feature_id='+value.feature_id+'&organism_id='+value.organism_id+'&publication_id='+value.publication_id+'&type_type_id='+value.type_type_id+'&analysis_id='+value.analysis_id+'&start='+value.start+'&end='+value.end+'&loc_identification='+value.loc_identification+'&hgt_selected='+aux+'" ">'+nome_botao+'</a></td>'
 					aux_data += '</tr>';
 				});
 				$('#tabela').append(aux_data);
@@ -112,18 +117,40 @@
 		</div>
 		<!-- /Hero-area -->
 		<div class="spaceTop"></div>
-		<div class="container" style="background-color:#E0E4CC;">
+		<div class="container" style="background-color: #e6e4d7">
 		  <div class="row" style="border-radius:5px;">
 				<div class="col-md-6 altura">
 					<form id="myForm">
 						<div class="col-md-5 form-group">
 							<label for="exampleFormControlSelect2">Search by Genome + Region type</label>
 							<select multiple class="form-control" id="select-organismos">
-							<option>AE009948</option>
-							<option>AL732656</option>
-							<option>CP000114</option>
-							<option>CP003810</option>
-							<option>CP003919</option>
+								<option>AE009948</option>
+								<option>AL732656</option>
+								<option>CP000114</option>
+								<option>CP003810</option>
+								<option>CP003919</option>
+								<option>CP006910</option>
+								<option>CP007482</option>
+								<option>CP007565</option>
+								<option>CP007570</option>
+								<option>CP007571</option>
+								<option>CP007572</option>
+								<option>CP007631</option>
+								<option>CP007632</option>
+								<option>CP010319</option>
+								<option>CP010867</option>
+								<option>CP011325</option>
+								<option>CP011326</option>
+								<option>CP011327</option>
+								<option>CP011328</option>
+								<option>CP011329</option>
+								<option>CP012419</option>
+								<option>CP013202</option>
+								<option>FO393392</option>
+								<option>HF952104</option>
+								<option>HF952105</option>
+								<option>HF952106</option>
+								<option>HG939456</option>
 							</select>
 						</div>
 					<div class="col-md-5" style="margin-top:29px;">
@@ -139,14 +166,14 @@
 							<input type="checkbox" class="form-check-input" name="EXCLUSIVE" id="checkbox3">
 							<label class="form-check-label" for="exampleCheck1">Exclusive</label>
 						</div>
-						<div class="form-check">
+						<div class="form-check" id="hgt_select">
 							<input type="checkbox" class="form-check-input" name="HGT" id="checkbox4">
 							<label class="form-check-label" for="exampleCheck1">HGT</label>
 						</div>
 					</div>
 					</form>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6" style="margin-left: -100px;">
 					<div class="col-md-1" style="margin-top: 46px">
 						<button type="button" id="bttRNA" class="btn btn-info">+</button>
 					</div>
@@ -171,9 +198,9 @@
 					<div class="col-md-2">
 						<input type="text" id="endSequence" placeholder="End" style="display: none;background-color:white;margin-bottom:10px;">
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-5" style="margin-bottom: 20px;">
 						<button id="save" class="btn btn-primary">Submit</button>
-						<button class="btn btn-success" href="#">redo search</button>
+						<button class="btn btn-success" onClick="window.location.reload()"">redo search</button>
 					</div>
 				</div>
 			</div>

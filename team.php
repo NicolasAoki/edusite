@@ -49,7 +49,7 @@
                     <p>Email:</b></p>
                 </div>
                 <div class="col-md-8">
-                    <p>Nicolas Gil de Souza Aoki</p>
+                    <p>Nicolas Gil de Souza Aoki [<i><a href="http://lattes.cnpq.br/0053712858933325">Lattes</a></i>]</p>
                     <p>Bachelor's degree in Software Engineer</p>
                     <p>Computational RNAs biology (noncoding RNAs) and software development</p>
                     <p>Federal University of Technology - Paraná - Brazil (UTFPR)</p>
@@ -70,7 +70,7 @@
                     <br><p>Email:</b></p>
                 </div>
                 <div class="col-md-7">
-                    <p>Ivan Rodrigo Wolf</p>
+                    <p>Ivan Rodrigo Wolf [<i><a href="http://lattes.cnpq.br/3950552964920247">Lattes</a></i>]</p>
                     <p>P.h.D. Student</p>
                     <p>Systems Biology, Machine Learning and Bioinformatics</p>
                     <p>São Paulo State University (UNESP), Biosciences Institute, Campus Botucatu - São Paulo State - Brazil</p>
@@ -92,7 +92,7 @@
                     <br><p>Email:</b></p>
                 </div>
                 <div class="col-md-5">
-                    <p> Laurival Antônio Vilas boas.</p>
+                    <p> Laurival Antônio Vilas boas [<i><a href="http://lattes.cnpq.br/6053806923630324">Lattes</a></i>]</p>
                     <p> Adjunct Professor </p>
                     <p> Genomics and molecular biology of microrganism. </p>
                     <p> Universidade estadual de Londrina - UEL</p>
@@ -114,7 +114,7 @@
                 <p>Email:</b></p>
             </div>
             <div class="col-md-7">
-                <p>Alexandre Rossi Paschoal</p>
+                <p>Alexandre Rossi Paschoal [<i><a href="http://lattes.cnpq.br/5834088144837137">Lattes</a></i>]</p>
                 <p>Adjunct Professor</p>
                 <p> Pattern recognition and machine learning, computational RNAs biology (noncoding RNAs), bioinformatics and comparative genomics</p>
                 <p>Federal University of Technology - Paraná - Brazil (UTFPR) </p>

@@ -9,6 +9,7 @@ switch ($method) {
   case 'GET': {
     /*if($_GET['loc_identification'] == 'EXCLUSIVE'){*/
       try{
+        $hgtVisibility = $_GET['hgt_selected'];
         $array = [
           'feature_id' => $_GET['feature_id'],
           'organism_id' => $_GET['organism_id'],

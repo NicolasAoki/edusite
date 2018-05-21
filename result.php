@@ -18,10 +18,6 @@
 
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<script src="node_modules/jspkg-archive/jquery.dynatable.js"></script>
-		<link rel="stylesheet" type="text/css" href="node_modules/jspkg-archive/jquery.dynatable.css"/>
-
-
 	</head>
     <body>
     <?php
@@ -125,8 +121,8 @@
                     </table>
             </div>
                     <div class="col-md-6">
-                <h2>HGT Region</h2>
-                    <table>
+                <h2 class="hgt_table">HGT Region</h2>
+                    <table class="hgt_table">
                         <tr>
                             <td><b>Tool</b></td>
                             <td>
@@ -205,7 +201,7 @@
                             </td>
                         </tr>
                     </table>
-                                    <h3 style="color:red">
+                    <h3 class="hgt_table" style="color:red">
                      <?php
                         if ($hgtSQL == null)
                             echo "this feature does not have HGT region";
@@ -252,7 +248,17 @@
     <div id='preloader'><div class='preloader'></div></div>
     <!-- /preloader -->
 
-
+    <script>
+        //verifica se o seletor HGT esta selecionado
+        //se nao, a tabela e seus elementos sao setados como display none
+        var item = <?php echo $hgtVisibility; ?>;
+        if(item == 1){
+            var a = document.getElementsByClassName("hgt_table");
+            for (var i=0;i<a.length;i+=1){
+              a[i].style.display = 'none';
+            }
+        }
+    </script>
     </body>
 
 </html>
