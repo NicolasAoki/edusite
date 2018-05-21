@@ -117,11 +117,11 @@
 		</div>
 		<!-- /Hero-area -->
 		<div class="spaceTop"></div>
-		<div class="container" style="background-color: #e6e4d7">
+		<div class="container">
 		  <div class="row" style="border-radius:5px;">
-				<div class="col-md-6 altura">
+				<div class="col-md-4 altura" style="background-color: #e6e4d7">
 					<form id="myForm">
-						<div class="col-md-5 form-group">
+						<div class="col-md-6 form-group">
 							<label for="exampleFormControlSelect2">Search by Genome + Region type</label>
 							<select multiple class="form-control" id="select-organismos">
 								<option>AE009948</option>
@@ -173,11 +173,11 @@
 					</div>
 					</form>
 				</div>
-				<div class="col-md-6" style="margin-left: -100px;">
+				<div class="col-md-6">
 					<div class="col-md-1" style="margin-top: 46px">
 						<button type="button" id="bttRNA" class="btn btn-info">+</button>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4" >
 						 <p><b>By ncRNA</b></p>
 						<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="display: none;background-color:white;margin-top:10px;">
 					</div>
