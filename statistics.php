@@ -40,8 +40,8 @@
 <!-- table table-bordered table-hover table-condensed -->
     <div class="spaceTop"></div>
         <div class="row spaceleft">
-            <div class="col-md-11">
-            <table class="table table-bordered table-hover table-condensed spaceleft">
+            <div class="col-md-11" style="margin-left: 50px;">
+            <table class="table table-bordered table-hover table-condensed">
 <tbody><tr>
 <th>Strain</th>
 <th>Accession Number</th>
@@ -351,42 +351,40 @@
 <td>729</td>
 </tr>
 </tbody></table>
-                <!-- <table>
-                    <th>
-                        <p>Species</p>
-                    </th>
-                    <th>
-                        <p>Strain</p>
-                    </th>
-                    <th>
-                        <p>Number of HGT Regions</p>
-                    </th>
-                    <th>
-                        <p>Core</p>
-                    </th>
-                    <th>
-                        <p>Exclusive</p>
-                    </th>
-                    <th>
-                        <p>Shared</p>
-                    </th>
-                    <th>
-                        <p>Total ncRNA</p>
-                    </th>
-                    <?php
-                    //tabela hgt count
-                        $i = 0;
-                        foreach ($resultTableHgt as $result) {
-                            echo "<tr>";
-                            echo "<td> ". $b = $result['abbreviation'] ." </td>";
-                            echo "<td> ". $result['Count'] ." </td>";
-                            //echo $c ="'".$b."'";
-                            $c = str_replace(' ', '', $c);
-                            echo "<td> ". json_encode($regionsInfo[$i++]) ." </td>";
-                            echo "</tr>";
-                        }
-                    ?>
-                </table> -->
+   <!--          <table class="table table-bordered table-hover table-condensed spaceleft">
+           <th>
+               <p>Species</p>
+           </th>
+           <th>
+               <p>Strain</p>
+           </th>
+           <th>
+               <p>Number of HGT Regions</p>
+           </th>
+           <th>
+               <p>Core</p>
+           </th>
+           <th>
+               <p>Exclusive</p>
+           </th>
+           <th>
+               <p>Shared</p>
+           </th>
+           <th>
+               <p>Total ncRNA</p>
+           </th>
+           <?php
+           //tabela hgt count
+               $i = 1;
+               foreach ($resultTableHgt as $result) {
+                   echo "<tr>";
+                   echo "<td> ". $result['abbreviation'] ." </td>";
+                   echo "<td> ". $result['Count'] ." </td>";
+                   echo "<td> ". json_encode($regionsInfo[$i++]) ." </td>";
+                   echo "</tr>";
+               }
+           ?>
+       </table> -->
                 </div>
             </div>
         </div>

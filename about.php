@@ -39,7 +39,7 @@
                         <h2>Annotation and distribution of ncRNA families in genomes of Streptococcus <i>agalactiae</i></h2>
                     </div>
                 </div>
-                <div class="col-md-10"   style="background-color: #f3f3f3; border-radius: 5px;">
+                <div class="col-md-10" style="background-color: #f3f3f3; border-radius: 5px;">
                     <div style="margin-top: 30px;"></div>
                     <p>
                     &emsp; Streptococcus <i>agalactiae</i>, also known as Group B (GBS), is a Gram-positive bacterium that colonizes the gastrointestinal and
@@ -62,18 +62,9 @@
         </div>
                 <!-- Footer -->
         <footer id="footer" class="section">
-
             <!-- container -->
             <div class="container">
-
-                <!-- row -->
-                <div class="row">
-                </div>
-                <!-- /row -->
-
-                <!-- row -->
                 <div id="bottom-footer" class="row">
-
                     <!-- social -->
                     <div class="col-md-4 col-md-push-8">
                         <ul class="footer-social">
@@ -82,7 +73,6 @@
                         </ul>
                     </div>
                     <!-- /social -->
-
                     <!-- copyright -->
                     <div class="col-md-8 col-md-pull-4">
                         <div class="footer-copyright">
@@ -90,16 +80,12 @@
                         </div>
                     </div>
                     <!-- /copyright -->
-
                 </div>
                 <!-- row -->
-
             </div>
             <!-- /container -->
-
         </footer>
         <!-- /Footer -->
-
         <!-- preloader -->
         <div id='preloader'><div class='preloader'></div></div>
         <!-- /preloader -->

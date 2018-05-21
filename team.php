@@ -36,8 +36,8 @@
 
         </div>
         <div class="spaceTop"></div>
-        <div class="container-fluid spaceleftTeam">
-        <div class="row">
+        <div class="container-fluid spaceleftTeam" style="background-color: #f3f3f3; border-radius: 5px;">
+        <div class="row" style="margin-top: 10px;">
                 <div class="col-md-2">
                     <img class="teamImage" src="img/nicolas.jpg">
                 </div>
@@ -69,7 +69,7 @@
                     <br><p>Background:</p>
                     <br><p>Email:</b></p>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <p>Ivan Rodrigo Wolf</p>
                     <p>P.h.D. Student</p>
                     <p>Systems Biology, Machine Learning and Bioinformatics</p>
@@ -113,7 +113,7 @@
                 <p>Background:</p>
                 <p>Email:</b></p>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <p>Alexandre Rossi Paschoal</p>
                 <p>Adjunct Professor</p>
                 <p> Pattern recognition and machine learning, computational RNAs biology (noncoding RNAs), bioinformatics and comparative genomics</p>

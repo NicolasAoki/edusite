@@ -8,8 +8,22 @@ class EpController {
 
   public function getInfo($params) {
     $this->Dao = new Dao();
-    $where = null;
+    $where = " WHERE ";
     $values = null;
+/*    foreach ($params as $itemSelected => $itensMarcados) {
+      if(count($itensMarcados)){
+        if($itemSelected === "feature.feature_name"){
+          $where . = " AND " . $itemSelected . " LIKE " . $itensMarcados;
+        }else if($itemSelected === "feature.start"){
+          $where . = " AND " . $itemSelected . " >= " . $itensMarcados;
+        }else if($itemSelected === "feature.end"){
+          $where . = " AND " . $itemSelected . " <= " . $itensMarcados;
+        }else if($itemSelected === "localization.loc_identification"){
+          $where . = " AND localization.loc_identification like " . $itemSelected;
+        }
+      }
+    return $this->Dao->getInfo('organism.abbreviation,localization.loc_identification, feature.start, feature.end, feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id', $where, $values);
+    }*/
     if (count($params)) {
       $where = 'WHERE ';
       $values = array();
@@ -34,7 +48,6 @@ class EpController {
               $where .= ($j == count($value)) ? "?)" : "?, " ;
               array_push($values, $value_2);
             }
-            echo $where;
           }
         }
         $where .= ($i == count($params)) ? " " : "  AND " ;

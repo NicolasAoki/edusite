@@ -51,13 +51,6 @@
                     </select>
                     <div id="pieChart"></div>
                 </div>
-                    <h2>Organism Info</h2>
-                <div class="col-md-5" style="margin-top: 90px;">
-                    <p>click to zoom in</p>
-                    <a href="img/File_S4/AE009948.png" target="_blank">
-                        <img class="imagemAbbreviation" src="img/File_S4/AE009948.png">
-                    </a>
-                </div>
             </div>
             <div class="row">
               <div class="col-md-12">
