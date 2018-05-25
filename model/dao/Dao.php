@@ -84,5 +84,10 @@ class Dao extends database {
     $horario = $this->selectDB($sql,null);
     return $horario;
   }
+  public function getManyOrganisms($where){
+    $sql = "SELECT * FROM feature inner join organism inner join localization " . $where;
+    $horario = $this->selectDB($sql,null);
+    return $horario;
+  }
 }
 ?>

@@ -87,6 +87,11 @@ class EpController {
     $this->Dao = new Dao();
     return $this->Dao->hgtGroup();
   }
+  public function getAllOrganismData($params){
+    $this->Dao = new Dao();
+    $where = 'WHERE organism.abbreviation like ' . " $params  " .' AND localization.organism_id = feature.organism_id AND organism.organism_id = localization.organism_id AND feature.start >= localization.start AND localization.end >= feature.start order by localization.loc_identification';
+    return $this->Dao->getManyOrganisms($where);
+  }
 }
 
 ?>
