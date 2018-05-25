@@ -42,351 +42,268 @@
         <div class="row spaceleft">
             <div class="col-md-11" style="margin-left: 50px;">
             <table class="table table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Strain</th>
+<th title="Field #2">Accession Number</th>
+<th title="Field #3">Core</th>
+<th title="Field #4">Exclusive</th>
+<th title="Field #5">SHARED</th>
+<th title="Field #6">Total sRNA</th>
+</tr></thead>
 <tbody><tr>
-<th>Strain</th>
-<th>Accession Number</th>
-<th>Core</th>
-<th>Exclusive</th>
-<th>SHARED</th>
-<th>Total sRNA</th>
-<th>TOTAL CORE REGIONS</th>
-<th>TOTAL EXCLUSIVE REGIONS</th>
-<th>TOTAL SHARED REGIONS</th>
-</tr>
-<tr>
 <td>GD201008-001</td>
-<td><a href="/search.php">CP003810</a></td>
-<td>25</td>
-<td>0</td>
-<td>36</td>
-<td>61</td>
-<td>452</td>
-<td>5</td>
-<td>1130</td>
+<td>CP003810</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">36</td>
+<td align="right">61</td>
 </tr>
 <tr>
 <td>GBS6</td>
 <td>CP007572</td>
-<td>25</td>
-<td>6</td>
-<td>54</td>
-<td>85</td>
-<td>452</td>
-<td>42</td>
-<td>1133</td>
+<td align="right">25</td>
+<td align="right">6</td>
+<td align="right">54</td>
+<td align="right">85</td>
 </tr>
 <tr>
 <td>GBS2-NM</td>
 <td>CP007571</td>
-<td>25</td>
-<td>3</td>
-<td>46</td>
-<td>74</td>
-<td>452</td>
-<td>20</td>
-<td>1136</td>
+<td align="right">25</td>
+<td align="right">3</td>
+<td align="right">46</td>
+<td align="right">74</td>
 </tr>
 <tr>
 <td>GBS1-NY</td>
 <td>CP007570</td>
-<td>25</td>
-<td>10</td>
-<td>54</td>
-<td>89</td>
-<td>452</td>
-<td>43</td>
-<td>1108</td>
+<td align="right">25</td>
+<td align="right">10</td>
+<td align="right">54</td>
+<td align="right">89</td>
 </tr>
 <tr>
 <td>HN016</td>
 <td>CP011325</td>
-<td>25</td>
-<td>0</td>
-<td>36</td>
-<td>61</td>
-<td>452</td>
-<td>10</td>
-<td>1156</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">36</td>
+<td align="right">61</td>
 </tr>
 <tr>
 <td>YM001</td>
 <td>CP011326</td>
-<td>25</td>
-<td>2</td>
-<td>34</td>
-<td>61</td>
-<td>452</td>
-<td>4</td>
-<td>1086</td>
+<td align="right">25</td>
+<td align="right">2</td>
+<td align="right">34</td>
+<td align="right">61</td>
 </tr>
 <tr>
 <td>GX064</td>
 <td>CP011327</td>
-<td>25</td>
-<td>3</td>
-<td>29</td>
-<td>57</td>
-<td>452</td>
-<td>8</td>
-<td>1131</td>
+<td align="right">25</td>
+<td align="right">3</td>
+<td align="right">29</td>
+<td align="right">57</td>
 </tr>
 <tr>
 <td>2603V/R</td>
 <td>AE009948</td>
-<td>25</td>
-<td>0</td>
-<td>10</td>
-<td>35</td>
-<td>452</td>
-<td>66</td>
-<td>1202</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">35</td>
 </tr>
 <tr>
 <td>A909</td>
 <td>CP000114</td>
-<td>25</td>
-<td>1</td>
-<td>7</td>
-<td>33</td>
-<td>452</td>
-<td>40</td>
-<td>1281</td>
+<td align="right">25</td>
+<td align="right">1</td>
+<td align="right">7</td>
+<td align="right">33</td>
 </tr>
 <tr>
 <td>NEM316</td>
 <td>AL732656</td>
-<td>25</td>
-<td>2</td>
-<td>5</td>
-<td>32</td>
-<td>452</td>
-<td>82</td>
-<td>996</td>
+<td align="right">25</td>
+<td align="right">2</td>
+<td align="right">5</td>
+<td align="right">32</td>
 </tr>
 <tr>
 <td>09mas018883</td>
 <td>HF952104</td>
-<td>25</td>
-<td>1</td>
-<td>6</td>
-<td>32</td>
-<td>452</td>
-<td>21</td>
-<td>1248</td>
+<td align="right">25</td>
+<td align="right">1</td>
+<td align="right">6</td>
+<td align="right">32</td>
 </tr>
 <tr>
 <td>ILRI112</td>
 <td>HF952106</td>
-<td>25</td>
-<td>4</td>
-<td>3</td>
-<td>32</td>
-<td>452</td>
-<td>56</td>
-<td>986</td>
+<td align="right">25</td>
+<td align="right">4</td>
+<td align="right">3</td>
+<td align="right">32</td>
 </tr>
 <tr>
 <td>ILRI005</td>
 <td>HF952105</td>
-<td>25</td>
-<td>3</td>
-<td>3</td>
-<td>31</td>
-<td>452</td>
-<td>78</td>
-<td>1041</td>
+<td align="right">25</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">31</td>
 </tr>
 <tr>
 <td>COH1</td>
 <td>HG939456</td>
-<td>25</td>
-<td>0</td>
-<td>13</td>
-<td>38</td>
-<td>452</td>
-<td>68</td>
-<td>1131</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">38</td>
 </tr>
 <tr>
 <td>NGBS061</td>
 <td>CP007631</td>
-<td>25</td>
-<td>1</td>
-<td>8</td>
-<td>34</td>
-<td>452</td>
-<td>80</td>
-<td>1383</td>
+<td align="right">25</td>
+<td align="right">1</td>
+<td align="right">8</td>
+<td align="right">34</td>
 </tr>
 <tr>
 <td>NGBS572</td>
 <td>CP007632</td>
-<td>25</td>
-<td>0</td>
-<td>13</td>
-<td>38</td>
-<td>452</td>
-<td>60</td>
-<td>1094</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">38</td>
 </tr>
 <tr>
 <td>CNCTC_10/84</td>
 <td>CP006910</td>
-<td>25</td>
-<td>2</td>
-<td>2</td>
-<td>29</td>
-<td>452</td>
-<td>80</td>
-<td>875</td>
+<td align="right">25</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">29</td>
 </tr>
 <tr>
 <td>SS1</td>
 <td>CP010867</td>
-<td>25</td>
-<td>0</td>
-<td>6</td>
-<td>31</td>
-<td>452</td>
-<td>5</td>
-<td>1224</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">31</td>
 </tr>
 <tr>
 <td>H002</td>
 <td>CP011329</td>
-<td>25</td>
-<td>0</td>
-<td>7</td>
-<td>32</td>
-<td>452</td>
-<td>48</td>
-<td>1096</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">32</td>
 </tr>
 <tr>
 <td>GBS85147</td>
 <td>CP010319</td>
-<td>25</td>
-<td>3</td>
-<td>4</td>
-<td>32</td>
-<td>452</td>
-<td>56</td>
-<td>966</td>
+<td align="right">25</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">32</td>
 </tr>
 <tr>
 <td>SG-M1</td>
 <td>CP012419</td>
-<td>25</td>
-<td>1</td>
-<td>4</td>
-<td>30</td>
-<td>452</td>
-<td>49</td>
-<td>1222</td>
+<td align="right">25</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">30</td>
 </tr>
 <tr>
 <td>GBS_ST-1</td>
 <td>CP013202</td>
-<td>25</td>
-<td>0</td>
-<td>8</td>
-<td>33</td>
-<td>452</td>
-<td>44</td>
-<td>1259</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">8</td>
+<td align="right">33</td>
 </tr>
 <tr>
 <td>SA20-06</td>
 <td>CP003919</td>
-<td>25</td>
-<td>0</td>
-<td>2</td>
-<td>27</td>
-<td>452</td>
-<td>22</td>
-<td>631</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">27</td>
 </tr>
 <tr>
 <td>138P</td>
 <td>CP007482</td>
-<td>25</td>
-<td>0</td>
-<td>2</td>
-<td>27</td>
-<td>452</td>
-<td>3</td>
-<td>710</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">27</td>
 </tr>
 <tr>
 <td>138spar</td>
 <td>CP007565</td>
-<td>25</td>
-<td>0</td>
-<td>2</td>
-<td>27</td>
-<td>452</td>
-<td>3</td>
-<td>691</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">27</td>
 </tr>
 <tr>
 <td>2-22</td>
 <td>FO393392</td>
-<td>25</td>
-<td>0</td>
-<td>2</td>
-<td>27</td>
-<td>452</td>
-<td>1</td>
-<td>714</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">27</td>
 </tr>
 <tr>
 <td>GX026</td>
 <td>CP011328</td>
-<td>25</td>
-<td>0</td>
-<td>2</td>
-<td>27</td>
-<td>452</td>
-<td>2</td>
-<td>729</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">27</td>
 </tr>
 </tbody></table>
-   <!--          <table class="table table-bordered table-hover table-condensed spaceleft">
-           <th>
-               <p>Species</p>
-           </th>
-           <th>
-               <p>Strain</p>
-           </th>
-           <th>
-               <p>Number of HGT Regions</p>
-           </th>
-           <th>
-               <p>Core</p>
-           </th>
-           <th>
-               <p>Exclusive</p>
-           </th>
-           <th>
-               <p>Shared</p>
-           </th>
-           <th>
-               <p>Total ncRNA</p>
-           </th>
-           <?php
-           //tabela hgt count
-               $i = 1;
-               foreach ($resultTableHgt as $result) {
-                   echo "<tr>";
-                   echo "<td> ". $result['abbreviation'] ." </td>";
-                   echo "<td> ". $result['Count'] ." </td>";
-                   echo "<td> ". json_encode($regionsInfo[$i++]) ." </td>";
-                   echo "</tr>";
-               }
-           ?>
-       </table> -->
-                </div>
+             <!--  <table class="table table-bordered table-hover table-condensed spaceleft">
+                     <th>
+                         <p>Species</p>
+                     </th>
+                     <th>
+                         <p>Strain</p>
+                     </th>
+                     <th>
+                         <p>Number of HGT Regions</p>
+                     </th>
+                     <th>
+                         <p>Core</p>
+                     </th>
+                     <th>
+                         <p>Exclusive</p>
+                     </th>
+                     <th>
+                         <p>Shared</p>
+                     </th>
+                     <th>
+                         <p>Total ncRNA</p>
+                     </th>
+                     <?php
+                     //tabela hgt count
+                         $i = 1;
+                         foreach ($resultTableHgt as $result) {
+                             echo "<tr>";
+                             echo "<td> ". $result['abbreviation'] ." </td>";
+                             echo "<td> ". $result['Count'] ." </td>";
+                             echo "<td> ". json_encode($regionsInfo[$i++]) ." </td>";
+                             echo "</tr>";
+                         }
+                     ?>
+                 </table>
+               </div> -->
             </div>
         </div>
+          <!-- preloader -->
+        <div id='preloader'><div class='preloader'></div></div>
     </body>
 </html>
