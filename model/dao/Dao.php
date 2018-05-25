@@ -24,11 +24,12 @@ class Dao extends database {
 		// $sql = "SELECT $fields FROM feature $where";
     $sql = "SELECT $fields ".
     "FROM feature ".
-    " INNER JOIN localization ON localization.loc_id = feature.feature_id ".
-    " INNER JOIN organism ON feature.organism_id = organism.organism_id ".
+    " INNER JOIN localization ".
+    " INNER JOIN organism  ".
 /*    " INNER JOIN publication ON feature.publication_id = publication.publication_id ".*/
    /* " INNER JOIN hgt ON hgt.organism_id = organism.organism_id ".*/
     " $where";
+    #echo $sql;
 		$horario = $this->selectDB($sql,$params,null);
     return $horario;
   }

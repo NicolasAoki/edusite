@@ -10,22 +10,8 @@ class EpController {
     $this->Dao = new Dao();
     $where = " WHERE ";
     $values = null;
-/*    foreach ($params as $itemSelected => $itensMarcados) {
-      if(count($itensMarcados)){
-        if($itemSelected === "feature.feature_name"){
-          $where . = " AND " . $itemSelected . " LIKE " . $itensMarcados;
-        }else if($itemSelected === "feature.start"){
-          $where . = " AND " . $itemSelected . " >= " . $itensMarcados;
-        }else if($itemSelected === "feature.end"){
-          $where . = " AND " . $itemSelected . " <= " . $itensMarcados;
-        }else if($itemSelected === "localization.loc_identification"){
-          $where . = " AND localization.loc_identification like " . $itemSelected;
-        }
-      }
-    return $this->Dao->getInfo('organism.abbreviation,localization.loc_identification, feature.start, feature.end, feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id', $where, $values);
-    }*/
     if (count($params)) {
-      $where = 'WHERE ';
+      $where = 'WHERE localization.organism_id = feature.organism_id AND organism.organism_id = localization.organism_id AND ';
       $values = array();
       $i = 0;
       foreach ($params as $key => $value) {
@@ -53,6 +39,8 @@ class EpController {
         $where .= ($i == count($params)) ? " " : "  AND " ;
       }
     }
+    #echo $where;
+    $where .= " AND feature.start >= localization.start AND localization.end >= feature.start";
     return $this->Dao->getInfo('organism.abbreviation,localization.loc_identification, feature.start, feature.end, feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id', $where, $values);
   }
   public function getDetalhes($params) {
