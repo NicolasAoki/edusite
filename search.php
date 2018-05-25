@@ -124,9 +124,9 @@
 		<div class="spaceTop"></div>
 		<div class="container">
 		  <div class="row" style="border-radius:5px;">
-				<div class="col-md-4 altura" style="background-color: #e6e4d7">
+				<div class="col-md-12 altura" style="background-color: #e6e4d7">
 					<form id="myForm">
-						<div class="col-md-6 form-group">
+						<div class="col-md-3 form-group">
 							<label for="exampleFormControlSelect2">Search by Genome + Region type</label>
 							<select multiple class="form-control" id="select-organismos">
 								<option>AE009948</option>
@@ -158,7 +158,7 @@
 								<option>HG939456</option>
 							</select>
 						</div>
-					<div class="col-md-5" style="margin-top:29px;">
+					<div class="col-md-2" style="margin-top:29px;">
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input" name="SHARED" id="checkbox1">
 							<label class="form-check-label" for="exampleCheck1">Shared</label>
@@ -177,21 +177,21 @@
 						</div>
 					</div>
 					</form>
-				</div>
-				<div class="col-md-6">
-					<div class="col-md-1" style="margin-top: 46px">
-						<button type="button" id="bttRNA" class="btn btn-info">+</button>
-					</div>
-					<div class="col-md-4" >
-						 <p><b>By ncRNA</b></p>
-						<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="display: none;background-color:white;margin-top:10px;">
-					</div>
+						<div class="col-md-5">
+							<div class="col-md-2" style="margin-top: 46px">
+								<button type="button" id="bttRNA" class="btn btn-info">+</button>
+							</div>
+							<div class="col-md-5" >
+								 <p><b>By ncRNA</b></p>
+								<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="display: none;background-color:white;margin-top:10px;">
+							</div>
+						</div>
 				</div>
 
 
 			</div>
 
-			<div class="row">
+			<div class="row" style="background-color: #e6e4d7">
 				<div class="col-md-12 spaceTop">
 					<div class="col-md-1">
 						<button type="button" id="localization" class="btn btn-info">+</button>
