@@ -55,7 +55,7 @@
 </tr>
 <tr>
 <td>GD201008-001</td>
-<td>CP003810</td>
+<td><a href="/search.php">CP003810</a></td>
 <td>25</td>
 <td>0</td>
 <td>36</td>
