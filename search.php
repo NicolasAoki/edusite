@@ -218,7 +218,7 @@
 					</div>
 					<div class="col-md-5" style="margin-bottom: 20px;">
 						<button id="save" class="btn btn-primary">Submit</button>
-						<button class="btn btn-success" onClick="window.location.reload()"">redo search</button>
+						<!-- <button class="btn btn-success" onClick="window.location.reload()"">redo search</button> -->
 					</div>
 				</div>
 			</div>
