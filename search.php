@@ -76,6 +76,17 @@
 				if(hgt){
 					aux = 1;
 				}
+				aux_data += '<table class="table table-bordered table-striped" id="tabela">'
+				aux_data += '<tr>';
+				aux_data += '<th>abbreviation</th>'
+				aux_data += '<th>Identification</th>'
+				aux_data += '<th>Start</th>'
+				aux_data += '<th>End</th>'
+				aux_data += '<th>Strand</th>'
+				aux_data += '<th>Feature name</th>'
+				aux_data += '<th>Bit Score</th>'
+				aux_data += '<th>Details</th>'
+				aux_data += '</tr>'
 				$.each(data,function(key,value){
 					aux_data += '<tr>';
 					aux_data += '<td>'+value.abbreviation+'</td>'
@@ -88,7 +99,9 @@
 					aux_data += '<td><a class="btn btn-primary meio" href="/ep-detalhes.php?feature_id='+value.feature_id+'&organism_id='+value.organism_id+'&publication_id='+value.publication_id+'&type_type_id='+value.type_type_id+'&analysis_id='+value.analysis_id+'&start='+value.start+'&end='+value.end+'&loc_identification='+value.loc_identification+'&hgt_selected='+aux+'" ">'+nome_botao+'</a></td>'
 					aux_data += '</tr>';
 				});
-				$('#tabela').append(aux_data);
+				aux_data += '</table>'
+				//$('#tabela').append(aux_data);
+				$('#tabela').replaceWith(aux_data);
 			}
 		});
 
@@ -215,7 +228,7 @@
 		  <div class="row">
 			<div class="col-md-12" >
 				<table class="table table-bordered table-striped" id="tabela">
-					<tr>
+					<!-- <tr>
 						<th>abbreviation</th>
 						<th>Identification</th>
 						<th>Start</th>
@@ -224,7 +237,7 @@
 						<th>Feature name</th>
 						<th>Bit Score</th>
 						<th>Details</th>
-					</tr>
+					</tr> -->
 				</table>
 			</div>
 		  </div>
