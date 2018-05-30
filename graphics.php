@@ -305,7 +305,7 @@
                 x:{
                     type:'category',
                     tick: {
-                        rotate: 30,
+                        rotate: -30,
                         multiline: false
                     },
                     height:100
