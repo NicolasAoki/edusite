@@ -54,7 +54,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                    <h2>features on HGT Regions</h2>
+                    <h2>Regions count per</h2>
                     <p>Select feature</p>
                     <select class="selectpicker" onchange="runChart()" id="graphChart" data-size="5" data-live-search="true">
                         <?php
@@ -358,5 +358,6 @@
         });
         }
         </script>
+
     </body>
 </html>
