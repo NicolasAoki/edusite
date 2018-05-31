@@ -40,233 +40,7 @@
 <!-- table table-bordered table-hover table-condensed -->
     <div class="spaceTop"></div>
         <div class="row spaceleft">
-            <div class="col-md-11" style="margin-left: 50px;">
-            <table class="table table-bordered table-hover table-condensed">
-<thead><tr><th title="Field #1">Strain</th>
-<th title="Field #2">Accession Number</th>
-<th title="Field #3">Core</th>
-<th title="Field #4">Exclusive</th>
-<th title="Field #5">SHARED</th>
-<th title="Field #6">Total sRNA</th>
-</tr></thead>
-<tbody><tr>
-<td>GD201008-001</td>
-<td>CP003810</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">36</td>
-<td align="right">61</td>
-</tr>
-<tr>
-<td>GBS6</td>
-<td>CP007572</td>
-<td align="right">25</td>
-<td align="right">6</td>
-<td align="right">54</td>
-<td align="right">85</td>
-</tr>
-<tr>
-<td>GBS2-NM</td>
-<td>CP007571</td>
-<td align="right">25</td>
-<td align="right">3</td>
-<td align="right">46</td>
-<td align="right">74</td>
-</tr>
-<tr>
-<td>GBS1-NY</td>
-<td>CP007570</td>
-<td align="right">25</td>
-<td align="right">10</td>
-<td align="right">54</td>
-<td align="right">89</td>
-</tr>
-<tr>
-<td>HN016</td>
-<td>CP011325</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">36</td>
-<td align="right">61</td>
-</tr>
-<tr>
-<td>YM001</td>
-<td>CP011326</td>
-<td align="right">25</td>
-<td align="right">2</td>
-<td align="right">34</td>
-<td align="right">61</td>
-</tr>
-<tr>
-<td>GX064</td>
-<td>CP011327</td>
-<td align="right">25</td>
-<td align="right">3</td>
-<td align="right">29</td>
-<td align="right">57</td>
-</tr>
-<tr>
-<td>2603V/R</td>
-<td>AE009948</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">10</td>
-<td align="right">35</td>
-</tr>
-<tr>
-<td>A909</td>
-<td>CP000114</td>
-<td align="right">25</td>
-<td align="right">1</td>
-<td align="right">7</td>
-<td align="right">33</td>
-</tr>
-<tr>
-<td>NEM316</td>
-<td>AL732656</td>
-<td align="right">25</td>
-<td align="right">2</td>
-<td align="right">5</td>
-<td align="right">32</td>
-</tr>
-<tr>
-<td>09mas018883</td>
-<td>HF952104</td>
-<td align="right">25</td>
-<td align="right">1</td>
-<td align="right">6</td>
-<td align="right">32</td>
-</tr>
-<tr>
-<td>ILRI112</td>
-<td>HF952106</td>
-<td align="right">25</td>
-<td align="right">4</td>
-<td align="right">3</td>
-<td align="right">32</td>
-</tr>
-<tr>
-<td>ILRI005</td>
-<td>HF952105</td>
-<td align="right">25</td>
-<td align="right">3</td>
-<td align="right">3</td>
-<td align="right">31</td>
-</tr>
-<tr>
-<td>COH1</td>
-<td>HG939456</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">13</td>
-<td align="right">38</td>
-</tr>
-<tr>
-<td>NGBS061</td>
-<td>CP007631</td>
-<td align="right">25</td>
-<td align="right">1</td>
-<td align="right">8</td>
-<td align="right">34</td>
-</tr>
-<tr>
-<td>NGBS572</td>
-<td>CP007632</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">13</td>
-<td align="right">38</td>
-</tr>
-<tr>
-<td>CNCTC_10/84</td>
-<td>CP006910</td>
-<td align="right">25</td>
-<td align="right">2</td>
-<td align="right">2</td>
-<td align="right">29</td>
-</tr>
-<tr>
-<td>SS1</td>
-<td>CP010867</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">6</td>
-<td align="right">31</td>
-</tr>
-<tr>
-<td>H002</td>
-<td>CP011329</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">7</td>
-<td align="right">32</td>
-</tr>
-<tr>
-<td>GBS85147</td>
-<td>CP010319</td>
-<td align="right">25</td>
-<td align="right">3</td>
-<td align="right">4</td>
-<td align="right">32</td>
-</tr>
-<tr>
-<td>SG-M1</td>
-<td>CP012419</td>
-<td align="right">25</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">30</td>
-</tr>
-<tr>
-<td>GBS_ST-1</td>
-<td>CP013202</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">8</td>
-<td align="right">33</td>
-</tr>
-<tr>
-<td>SA20-06</td>
-<td>CP003919</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">2</td>
-<td align="right">27</td>
-</tr>
-<tr>
-<td>138P</td>
-<td>CP007482</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">2</td>
-<td align="right">27</td>
-</tr>
-<tr>
-<td>138spar</td>
-<td>CP007565</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">2</td>
-<td align="right">27</td>
-</tr>
-<tr>
-<td>2-22</td>
-<td>FO393392</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">2</td>
-<td align="right">27</td>
-</tr>
-<tr>
-<td>GX026</td>
-<td>CP011328</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">2</td>
-<td align="right">27</td>
-</tr>
-</tbody></table>
-             <!--  <table class="table table-bordered table-hover table-condensed spaceleft">
+            <div class="col-md-11" style="margin-left: 50px;"><table class="table table-bordered table-hover table-condensed spaceleft">
                      <th>
                          <p>Species</p>
                      </th>
@@ -277,13 +51,13 @@
                          <p>Number of HGT Regions</p>
                      </th>
                      <th>
-                         <p>Core</p>
+                         <p>Core Regions</p>
                      </th>
                      <th>
-                         <p>Exclusive</p>
+                         <p>Exclusive Regions</p>
                      </th>
                      <th>
-                         <p>Shared</p>
+                         <p>Shared Regions</p>
                      </th>
                      <th>
                          <p>Total ncRNA</p>
@@ -293,14 +67,19 @@
                          $i = 1;
                          foreach ($resultTableHgt as $result) {
                              echo "<tr>";
+                             echo "<td> Exemplo </td>";
                              echo "<td> ". $result['abbreviation'] ." </td>";
                              echo "<td> ". $result['Count'] ." </td>";
-                             echo "<td> ". json_encode($regionsInfo[$i++]) ." </td>";
+                             echo "<td> ". json_encode($regionsInfo[$i]['CORE']) ." </td>";
+                             echo "<td> ". json_encode($regionsInfo[$i]['EXCLUSIVE']) ." </td>";
+                             echo "<td> ". json_encode($regionsInfo[$i]['SHARED']) ." </td>";
+                             echo "<td>Number</td>";
                              echo "</tr>";
+                             $i++;
                          }
                      ?>
                  </table>
-               </div> -->
+               </div>
             </div>
         </div>
         <!-- Footer -->

@@ -57,7 +57,7 @@ class Dao extends database {
     foreach ($organismos as $key => $value) {
       //Conta todas regioes Exclusive de cada organismo
       $sqlExclusive = "SELECT COUNT(localization.loc_identification) as EXCLUSIVE FROM localization ".
-      "WHERE localization.organism_id = " . $key . " and localization.loc_identification ".
+      "WHERE localization.organism_id = " . $key . "  and localization.loc_identification ".
       "like 'EXCLUSIVE'";
       //Conta todas regioes Core de cada organismo
       $sqlCore = "SELECT COUNT(localization.loc_identification) as CORE FROM localization ".
