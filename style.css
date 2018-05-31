@@ -86,3 +86,19 @@
     max-width: 100%;
     border: 3px solid;
   }
+  .c3-shape{
+    fill:none;
+  }
+  .whiteBorderedBg{
+    border-radius: 10px;
+    background-color: white;
+    margin-top:100px;
+  }
+  .alignMiddle{
+    margin-left:400px;
+  }
+  @media only screen and (max-width: 900px) {
+    .alignMiddle {
+        margin:auto;
+    }
+  }

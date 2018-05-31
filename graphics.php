@@ -51,23 +51,34 @@
                     </select>
                     <div id="pieChart"></div>
                 </div>
+                <div class="col-md-5 whiteBorderedBg">
+                    <p>More than 5 thousand genomic regions where identified and classified as Core, Exclusive, and Shared
+                    genome sequences. These findings enabled us to identify a minimum/maximum of 25/25, 2/54 and 1/10 of ncRNAs
+                    when considered by region: the Core, Shared, and Exclusive, respectively. Notwithstanding, we encountered an
+                    ncRNA number variation in the Shared and Exclusive regions, which is an indicative of the genomic complexity
+                    of this bacterium. The knowledge about the genomic coordinates of these ncRNAs may facilitate the selection of
+                     targets and provide directions for planning further studies. The data obtained endorse the existence of an
+                     "open" pan-genome of S. agalactiae. Therefore, the original concept of pan-genome could to be expanded to encompass
+                      the full range of functional transcripts, featuring a "Pan-Rnome".</p>
+                </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                    <h2>Regions count per</h2>
-                    <p>Select feature</p>
-                    <select class="selectpicker" onchange="runChart()" id="graphChart" data-size="5" data-live-search="true">
-                        <?php
-                            $i = 0;
-                            while($i < sizeof($selectFeatures)){
-                                echo "<option data-tokens= " . $selectFeatures[$i]['feature_name'] ." > " . $selectFeatures[$i]['feature_name'] . "</option>";
-                                $i++;
-                            }
-                        ?>
-                    </select>
-                    <div style="margin-top: 130px"></div>
+                    <h2 class="alignMiddle">Regions count per</h2>
+<!--                     <p>Select feature</p>
+<select class="selectpicker" onchange="runChart()" id="graphChart" data-size="5" data-live-search="true">
+    <?php
+        $i = 0;
+        while($i < sizeof($selectFeatures)){
+            echo "<option data-tokens= " . $selectFeatures[$i]['feature_name'] ." > " . $selectFeatures[$i]['feature_name'] . "</option>";
+            $i++;
+        }
+    ?>
+</select>
+<div style="margin-top: 130px"></div> -->
                     <div id="chart"></div>
             </div>
+        </div>
         </div>
         <!-- Footer -->
         <footer id="footer" class="section">
@@ -284,7 +295,27 @@
 
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="node_modules/c3-0.5.4/c3.min.js"></script>
-
+        <script type="text/javascript">
+        var chart = c3.generate({
+            bindto:'#chart',
+            data: {
+                columns: [
+                    ['Core', 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category',
+                    categories: ['AE009948','AL732656','CP000114','CP003810','CP003919','CP006910','CP007482','CP007565','CP007570','CP007571','CP007572','CP007631','CP007632','CP010319','CP010867','CP011325','CP011326','CP011327','CP011328','CP011329','CP012419','CP013202','FO393392','HF952104','HF952105','HF952106','HG939456'],
+                    tick:{
+                        rotate:-30,
+                        width:100
+                    }
+                }
+            }
+        });
+        </script>
+<!--
         <script type='text/javascript'>
             var chart = c3.generate({
             bindto: '#chart',
@@ -357,7 +388,7 @@
             }
         });
         }
-        </script>
+        </script> -->
 
     </body>
 </html>
