@@ -67,14 +67,17 @@ class Dao extends database {
       $sqlShared = "SELECT COUNT(localization.loc_identification) as SHARED FROM localization ".
       "WHERE localization.organism_id = " . $key . " and localization.loc_identification ".
       "like 'SHARED'";
+      $rnaCount = "SELECT COUNT(organism_id) as RNA FROM streptornadb.feature where organism_id= " . $key . " ";
       $shared = $this->selectDB($sqlShared,null);
       $exclusive = $this->selectDB($sqlExclusive,null);
       $core = $this->selectDB($sqlCore,null);
+      $rnaC = $this->selectDB($rnaCount,null);
       //Push no array contendo as informacoes de cada genoma
       $regionsAnnotation[$key] = array(
           'CORE' => $core[0]['CORE'],
           'EXCLUSIVE' => $exclusive[0]['EXCLUSIVE'],
-          'SHARED' => $shared[0]['SHARED']
+          'SHARED' => $shared[0]['SHARED'],
+          'rnaCount' => $rnaC[0]['RNA']
       );
     }
     return $regionsAnnotation;

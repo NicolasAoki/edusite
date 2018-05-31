@@ -48,7 +48,7 @@
                          <p>Strain</p>
                      </th>
                      <th>
-                         <p>Number of HGT Regions</p>
+                         <p>HGT Regions</p>
                      </th>
                      <th>
                          <p>Core Regions</p>
@@ -66,20 +66,34 @@
                      //tabela hgt count
                          $i = 1;
                          foreach ($resultTableHgt as $result) {
+                            //tirando aspas dos valores
+                             if($i == 26){
+                                break;
+                             }
                              $core = str_replace('"','',json_encode($regionsInfo[$i]['CORE']));
                              $shared = str_replace('"','',json_encode($regionsInfo[$i]['SHARED']));
                              $exclusive = str_replace('"','',json_encode($regionsInfo[$i]['EXCLUSIVE']));
+                             $rnaCount = str_replace('"','',json_encode($regionsInfo[$i]['rnaCount']));
                              echo "<tr>";
-                             echo "<td> Exemplo </td>";
+                             echo "<td> ". $strain[$i] ." </td>";
                              echo "<td> ". $result['abbreviation'] ." </td>";
                              echo "<td> ". $result['Count'] ." </td>";
                              echo "<td> ". $core ." </td>";
                              echo "<td> ". $exclusive ." </td>";
                              echo "<td> ". $shared ." </td>";
-                             echo "<td>Number</td>";
+                             echo "<td> ". $rnaCount ." </td>";
                              echo "</tr>";
                              $i++;
                          }
+                             echo "<tr>";
+                             echo "<td> COH1 </td>";
+                             echo "<td>  HG939456  </td>";
+                             echo "<td> ". $result['Count'] ." </td>";
+                             echo "<td> ". $core ." </td>";
+                             echo "<td> ". $exclusive ." </td>";
+                             echo "<td> ". $shared ." </td>";
+                             echo "<td> ". $rnaCount ." </td>";
+                             echo "</tr>";
                      ?>
                  </table>
                </div>
