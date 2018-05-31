@@ -66,13 +66,16 @@
                      //tabela hgt count
                          $i = 1;
                          foreach ($resultTableHgt as $result) {
+                             $core = str_replace('"','',json_encode($regionsInfo[$i]['CORE']));
+                             $shared = str_replace('"','',json_encode($regionsInfo[$i]['SHARED']));
+                             $exclusive = str_replace('"','',json_encode($regionsInfo[$i]['EXCLUSIVE']));
                              echo "<tr>";
                              echo "<td> Exemplo </td>";
                              echo "<td> ". $result['abbreviation'] ." </td>";
                              echo "<td> ". $result['Count'] ." </td>";
-                             echo "<td> ". json_encode($regionsInfo[$i]['CORE']) ." </td>";
-                             echo "<td> ". json_encode($regionsInfo[$i]['EXCLUSIVE']) ." </td>";
-                             echo "<td> ". json_encode($regionsInfo[$i]['SHARED']) ." </td>";
+                             echo "<td> ". $core ." </td>";
+                             echo "<td> ". $exclusive ." </td>";
+                             echo "<td> ". $shared ." </td>";
                              echo "<td>Number</td>";
                              echo "</tr>";
                              $i++;
