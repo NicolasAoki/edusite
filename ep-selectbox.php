@@ -11,6 +11,7 @@ switch ($method) {
       $selectValues = $epcontroller->getOrganisms();
       $selectFeatures = $epcontroller->getFeatures();
       $regionsInfo = $epcontroller->getRegions();
+      $countRna = $epcontroller->getCountRna();
       include("graphics.php");
     }catch(Exception $e){
       echo "$e";

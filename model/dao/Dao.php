@@ -92,5 +92,10 @@ class Dao extends database {
     $horario = $this->selectDB($sql,null);
     return $horario;
   }
+  public function getCountncRna(){
+    $sql = "SELECT COUNT(f.feature_name) as ncrnaCount FROM feature as f INNER JOIN organism as o where f.organism_id = o.organism_id group by o.abbreviation";
+    $horario = $this->selectDB($sql,null);
+    return $horario;
+  }
 }
 ?>

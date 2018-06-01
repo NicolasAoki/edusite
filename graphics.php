@@ -52,19 +52,17 @@
                     <div id="pieChart"></div>
                 </div>
                 <div class="col-md-5 whiteBorderedBg">
-                    <p>More than 5 thousand genomic regions where identified and classified as Core, Exclusive, and Shared
+                    <p>&emsp; More than five thousand genomic regions were identified and classified as Core, Exclusive, and Shared
                     genome sequences. These findings enabled us to identify a minimum/maximum of 25/25, 2/54 and 1/10 of ncRNAs
-                    when considered by region: the Core, Shared, and Exclusive, respectively. Notwithstanding, we encountered an
+                    when considered by region: the Core, Shared, and Exclusive, respectively. <br>&emsp; Notwithstanding, we encountered an
                     ncRNA number variation in the Shared and Exclusive regions, which is an indicative of the genomic complexity
                     of this bacterium. The knowledge about the genomic coordinates of these ncRNAs may facilitate the selection of
-                     targets and provide directions for planning further studies. The data obtained endorse the existence of an
-                     "open" pan-genome of S. agalactiae. Therefore, the original concept of pan-genome could to be expanded to encompass
-                      the full range of functional transcripts, featuring a "Pan-Rnome".</p>
+                     targets and provide directions for planning further studies.</p>
                 </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                    <h2 class="alignMiddle">Regions count per</h2>
+                    <h2 class="alignMiddle">ncRNA count by genome </h2>
 <!--                     <p>Select feature</p>
 <select class="selectpicker" onchange="runChart()" id="graphChart" data-size="5" data-live-search="true">
     <?php
@@ -300,7 +298,19 @@
             bindto:'#chart',
             data: {
                 columns: [
-                    ['Core', 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250, 30, 200, 100, 100, 150, 250]
+                    ['ncRNA count', <?php
+                                for ($i=0; $i < sizeof($countRna); $i++) {
+                                    if($i == 26){
+                                        $teste = str_replace('"',' ',json_encode($countRna[$i]['ncrnaCount']));
+                                        echo $teste;
+                                    }else{
+                                        $teste = str_replace('"',' ',json_encode($countRna[$i]['ncrnaCount']));
+                                        $teste = " " . $teste . ",";
+                                        echo $teste;
+                                    }
+
+                                }
+                            ?>]
                 ]
             },
             axis: {
