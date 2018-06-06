@@ -20,7 +20,7 @@
                         <!-- social -->
                         <div class="col-md-4 col-md-push-8">
                             <ul class="footer-social">
-                                <li><a target="" href="https://www.facebook.com/ppgbioinfoutfpr/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
                             </ul>
                         </div>
