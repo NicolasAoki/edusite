@@ -79,26 +79,9 @@
         </div>
         </div>
         <!-- Footer -->
-        <footer id="footer" class="section">
-            <div class="container">
-                <div class="row">
-                </div>
-                <div id="bottom-footer" class="row">
-                    <div class="col-md-4 col-md-push-8">
-                        <ul class="footer-social">
-                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-8 col-md-pull-4">
-                        <div class="footer-copyright">
-                            <span>&copy; Copyright 2018. All Rights Reserved. </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+        <?php
+            include("footer.php");
+        ?>
     <!-- preloader -->
     <div id='preloader'><div class='preloader'></div></div>
 
