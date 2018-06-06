@@ -134,8 +134,8 @@
 		  <div class="row" style="border-radius:5px;">
 				<div class="col-md-12 altura" style="background-color: #e6e4d7">
 					<form id="myForm">
-						<div class="col-md-3 form-group">
-							<label for="exampleFormControlSelect2">Search by Genome + Region type</label>
+						<div class="col-md-2 form-group">
+							<label for="exampleFormControlSelect2">Search by Genome</label>
 							<select multiple class="form-control" id="select-organismos">
 								<option>AE009948</option>
 								<option>AL732656</option>
@@ -166,7 +166,8 @@
 								<option>HG939456</option>
 							</select>
 						</div>
-					<div class="col-md-2" style="margin-top:29px;">
+					<div class="col-md-2">
+						<p><b>Region Type</b></p>
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input" name="SHARED" id="checkbox1">
 							<label class="form-check-label" for="exampleCheck1">Shared</label>
@@ -185,36 +186,24 @@
 						</div>
 					</div>
 					</form>
-						<div class="col-md-5">
-							<div class="col-md-2" style="margin-top: 46px">
-								<button type="button" id="bttRNA" class="btn btn-info">+</button>
-							</div>
-							<div class="col-md-5" >
-								 <p><b>By ncRNA</b></p>
-								<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="display: none;background-color:white;margin-top:10px;">
-							</div>
-						</div>
+					<div class="col-md-2">
+							 <p><b>By ncRNA</b></p>
+							<input type="text" id="srnaName" placeholder="e.g, PreQ1" style="background-color:white;margin-top:10px;">
+					</div>
+					<div class="col-md-2">
+							<p><b>Start</b></p>
+							<input type="text" id="startSequence" placeholder="Start" style="background-color:white;margin-top:10px;">
+					</div>
+					<div class="col-md-2">
+					 	<p><b>End</b></p>
+						<input type="text" id="endSequence" placeholder="End" style="background-color:white;margin-top:10px;">
+					</div>
 				</div>
-
-
 			</div>
 
 			<div class="row" style="background-color: #e6e4d7">
-				<div class="col-md-12 spaceTop">
-					<div class="col-md-1">
-						<button type="button" id="localization" class="btn btn-info">+</button>
-					</div>
-					<p><b>Genomic location</b></p>
-					<div class="col-md-2">
-							<input type="text" id="startSequence" placeholder="Start" style="display: none;background-color:white;margin-bottom:10px;">
-					</div>
-					<div class="col-md-2">
-						<input type="text" id="endSequence" placeholder="End" style="display: none;background-color:white;margin-bottom:10px;">
-					</div>
-					<div class="col-md-5" style="margin-bottom: 20px;">
-						<button id="save" class="btn btn-primary">Submit</button>
-						<!-- <button class="btn btn-success" onClick="window.location.reload()"">redo search</button> -->
-					</div>
+				<div class="col-md-12 spaceTop" style="margin-bottom: 20px;">
+					<button id="save" class="btn btn-primary" style="margin:auto;display:block;">Submit</button>
 				</div>
 			</div>
 		</div>
