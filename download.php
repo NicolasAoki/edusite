@@ -88,6 +88,9 @@
             <div class="row">
                 <div class="col-md-12">
                 <table>
+                   <th>
+                        <p>Name</p>
+                    </th>
                     <th>
                         <p>Organism</p>
                     </th>
@@ -113,7 +116,8 @@
                         $i = 0;
                             while($i < sizeof($organismo)){
                                 if ( $i == 0 ){
-                                    print_r("<tr><td><a href='arquivos/Organismos/". $organismo[$i] ."' download><p> All </p></a></td>");
+                                    print_r("<tr><td></td>");
+                                    print_r("<td><a href='arquivos/Organismos/". $organismo[$i] ."' download><p> All </p></a></td>");
                                     print_r("<td><a href='arquivos/HGT_regions/". $hgt[$i] ."' download><p>All</p></a></td>");
                                     print_r("<td><a href='arquivos/sRNAs_annotations/". $srna[$i] ."' download><p>All</p></a></td>");
                                     print_r("<td><a href='arquivos/regions_annotations/CORE/". $CORE[$i] ."' download><p>All</p></a></td>");
@@ -122,7 +126,8 @@
                                     print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download><button>Fetch All</button></a></td></tr>");
                                     $i++;
                                 }else{
-                                    print_r("<tr><td><a href='arquivos/Organismos/". $organismo[$i] ."' download>". $organismo[$i] ."</a></td>");
+                                    print_r("<tr><td><b>". substr($organismo[$i], 0,8) . "</b></td>");
+                                    print_r("<td><a href='arquivos/Organismos/". $organismo[$i] ."' download>FASTA</a></td>");
                                     print_r("<td><a href='arquivos/HGT_regions/". $hgt[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $hgt[$i] ."' download> | FASTA</td>");
                                     print_r("<td><a href='arquivos/sRNAs_annotations/". $srna[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $hgt[$i] ."' download> | FASTA</td>");
                                     print_r("<td><a href='arquivos/regions_annotations/CORE/". $CORE[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $hgt[$i] ."' download> | FASTA</td>");
