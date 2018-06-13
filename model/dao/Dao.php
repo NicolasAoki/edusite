@@ -97,5 +97,17 @@ class Dao extends database {
     $horario = $this->selectDB($sql,null);
     return $horario;
   }
+  public function getFeatureonHGT(){
+    $sql = "SELECT f.feature_name as name,COUNT(f.feature_name) as FeatureCount 
+            FROM hgt as h 
+            inner join feature as f 
+            where h.organism_id = f.organism_id
+            AND f.start >= h.start 
+            AND f.end <= h.end
+            group by f.feature_name
+            ";
+    $horario = $this->selectDB($sql,null);
+    return $horario;
+  }
 }
 ?>

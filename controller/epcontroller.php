@@ -96,6 +96,10 @@ class EpController {
     $this->Dao = new Dao();
     return $this->Dao->getCountncRna();
   }
+  public function getFeaturesHGT(){
+    $this->Dao = new Dao();
+    return $this->Dao->getFeatureonHGT();
+  }
 }
 
 ?>

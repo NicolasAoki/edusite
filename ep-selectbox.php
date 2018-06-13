@@ -13,6 +13,7 @@ switch ($method) {
       $regionsInfo = $epcontroller->getRegions();
       $countRna = $epcontroller->getCountRna();
       $hgtGroup = $epcontroller->getHgtGroupBy();
+      $featureshgt = $epcontroller->getFeaturesHGT();
       include("graphics.php");
     }catch(Exception $e){
       echo "$e";
