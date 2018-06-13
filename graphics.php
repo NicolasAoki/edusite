@@ -293,7 +293,20 @@
                                     }
 
                                 }
-                            ?>]
+                            ?>],
+                    ['HGT Count',<?php
+                                for ($i=0; $i < sizeof($hgtGroup); $i++) {
+                                    if($i == 26){
+                                        $aux = str_replace('"',' ',json_encode($hgtGroup[$i]['Count']));
+                                        echo $aux;
+                                    }else{
+                                        $aux = str_replace('"',' ',json_encode($hgtGroup[$i]['Count']));
+                                        $aux = " " . $aux . ",";
+                                        echo $aux;
+                                    }
+
+                                }
+                            ?>]        
                 ]
             },
             axis: {

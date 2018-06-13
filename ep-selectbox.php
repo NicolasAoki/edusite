@@ -12,6 +12,7 @@ switch ($method) {
       $selectFeatures = $epcontroller->getFeatures();
       $regionsInfo = $epcontroller->getRegions();
       $countRna = $epcontroller->getCountRna();
+      $hgtGroup = $epcontroller->getHgtGroupBy();
       include("graphics.php");
     }catch(Exception $e){
       echo "$e";

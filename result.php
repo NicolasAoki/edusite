@@ -210,10 +210,10 @@
             </div>
         </div>
     </div>
-            <!-- Footer -->
-        <?php
-            include("footer.php");
-        ?>
+    <!-- Footer -->
+    <?php
+        include("footer.php");
+    ?>
 
     <!-- preloader -->
     <div id='preloader'><div class='preloader'></div></div>
