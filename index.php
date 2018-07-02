@@ -77,14 +77,18 @@
 						<i class="feature-icon fa fa-flask"></i>
 						<div class="feature-content">
 							<h4>Research </h4>
-							<p>Research studies have shown that non-coding RNAs (ncRNAs) can act modulating gene expression in bacteria, as well as coordinating adaptive processes that respond to environmental changes and control the expression of target genes</p>
+							<p style="text-align:justify;">Research studies have shown that non-coding RNAs (ncRNAs)
+							 can act modulating gene expression in bacteria, as well as 
+							 coordinating adaptive processes that respond to environmental
+							  changes and control the expression of target genes</p>
 						</div>
 					</div>
 					<div class="feature">
 						<i class="feature-icon fa fa-users"></i>
 						<div class="feature-content">
 							<h4>ncRNA</h4>
-							<p>Here we report an ncRNA distribution analysis over more than five thousand genomic regions for of S. agalactiae. </p>
+							<p style="text-align:justify;">Here we report an ncRNA distribution analysis over
+							 more than five thousand genomic regions for of S. agalactiae. </p>
 						</div>
 					</div>
 					<!-- /feature -->
