@@ -36,6 +36,7 @@
             <div class="row">
                 <div class="row">
                     <div class="col-md-10">
+                    <h2>Method used to approach the data</h2>
                         <img src="img/pipeline.png" alt="Pipeline website" style="width:60%;margin-left: 150px;">
                         <figcaption>Fig. - Diagram representing how the data was manipulated. Step 1 - Information
                                     acquired through online 3rd party databases (NCBI) and software tools to gather
@@ -49,15 +50,15 @@
                 </div>
                 <div class="col-md-10">
                     <div style="margin-top: 30px;"></div>
-                    <p style="font-size: 18px;">
-                    &emsp; Streptococcus <i>agalactiae</i>, also known as Group B (GBS), is a Gram-positive bacterium that colonizes the gastrointestinal and
+                    <p style="font-size: 18px;text-align:justify;">
+                    Streptococcus <i>agalactiae</i>, also known as Group B (GBS), is a Gram-positive bacterium that colonizes the gastrointestinal and
                     genitourinary tract of humans. This opportunistic, harmless bacterium has also been isolated from various animals,
                     such as fish and cattle. Non-coding RNAs (ncRNAs) act as modulators of gene expression in bacteria, as already
                     detected in GBS related species, such as Streptococcus pneumoniae and Streptococcus pyogenes. Nonetheless, little
                     is known about the genomic distribution of ncRNAs in S. agalactiae. Here, we present a comparative analysis of 27
                     S. agalactiae genomes, whereby more than 5 thousand genomic regions where identified and classified as Core,
                     Exclusive, and Shared genome sequences.
-                    <br>&emsp; These findings enabled us to identify a minimum/maximum of 25/25,
+                    <br><br>These findings enabled us to identify a minimum/maximum of 25/25,
                     2/54 and 1/10 of ncRNAs when considered by region: the Core, Shared, and Exclusive, respectively. Notwithstanding,
                     we encountered an ncRNA number variation in the Shared and Exclusive regions, which is an indicative of the
                     genomic complexity of this bacterium. The knowledge about the genomic coordinates of these ncRNAs may
