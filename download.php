@@ -117,22 +117,22 @@
                             while($i < sizeof($organismo)){
                                 if ( $i == 0 ){
                                     print_r("<tr><td></td>");
-                                    print_r("<td><a href='arquivos/Organismos/". $organismo[$i] ."' download><p> All </p></a></td>");
-                                    print_r("<td><a href='arquivos/HGT_regions/". $hgt[$i] ."' download><p>All</p></a></td>");
-                                    print_r("<td><a href='arquivos/sRNAs_annotations/". $srna[$i] ."' download><p>All</p></a></td>");
-                                    print_r("<td><a href='arquivos/regions_annotations/CORE/". $CORE[$i] ."' download><p>All</p></a></td>");
-                                    print_r("<td><a href='arquivos/regions_annotations/EXCLUSIVE/". $EXCLUSIVE[$i] ."' download><p>All</p></a></td>");
-                                    print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download><p>All</p></a></td>");
-                                    print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download><button>Fetch All</button></a></td></tr>");
+                                    print_r("<td><a href='arquivos/all/organism_all.zip' download><p> All </p></a></td>");
+                                    print_r("<td><a href='arquivos/all/hgt_all.zip' download><p>All</p></a></td>");
+                                    print_r("<td><a href='arquivos/all/srna_all.zip' download><p>All</p></a></td>");
+                                    print_r("<td><a href='arquivos/all/core_all.zip' download><p>All</p></a></td>");
+                                    print_r("<td><a href='arquivos/all/exclusive_all.zip' download><p>All</p></a></td>");
+                                    print_r("<td><a href='arquivos/all/shared_all.zip' download><p>All</p></a></td>");
+                                    print_r("<td><a href='arquivos/all/all.zip' download><button>Fetch All</button></a></td></tr>");
                                     $i++;
                                 }else{
                                     print_r("<tr><td><b>". substr($organismo[$i], 0,8) . "</b></td>");
                                     print_r("<td><a href='arquivos/Organismos/". $organismo[$i] ."' download>FASTA</a></td>");
                                     print_r("<td><a href='arquivos/HGT_regions/". $hgt[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $hgt[$i] ."' download> | FASTA</td>");
-                                    print_r("<td><a href='arquivos/sRNAs_annotations/". $srna[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $hgt[$i] ."' download> | FASTA</td>");
-                                    print_r("<td><a href='arquivos/regions_annotations/CORE/". $CORE[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $hgt[$i] ."' download> | FASTA</td>");
-                                    print_r("<td><a href='arquivos/regions_annotations/EXCLUSIVE/". $EXCLUSIVE[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $hgt[$i] ."' download> | FASTA</td>");
-                                    print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $hgt[$i] ."' download> | FASTA</td>");
+                                    print_r("<td><a href='arquivos/sRNAs_annotations/". $srna[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $srna[$i] ."' download> | FASTA</td>");
+                                    print_r("<td><a href='arquivos/regions_annotations/CORE/". $CORE[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $CORE[$i] ."' download> | FASTA</td>");
+                                    print_r("<td><a href='arquivos/regions_annotations/EXCLUSIVE/". $EXCLUSIVE[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $EXCLUSIVE[$i] ."' download> | FASTA</td>");
+                                    print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download>GFF</a><a href='arquivos/HGT_regions/". $SHARED[$i] ."' download> | FASTA</td>");
                                     print_r("<td><a href='arquivos/regions_annotations/SHARED/". $SHARED[$i] ."' download><button>Fetch All</button></a></td></tr>");
                                     $i++;
                                 }

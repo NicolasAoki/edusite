@@ -68,7 +68,7 @@
                         </tr>
                         <tr>
                             <td><b>Analysis type</b></td>
-                            <td>Mauve</td>
+                            <td>Mauve_2016</td>
                         </tr>
                     </table>
             </div>
