@@ -204,6 +204,7 @@
 			<div class="row" style="background-color: #e6e4d7">
 				<div class="col-md-12 spaceTop" style="margin-bottom: 20px;">
 					<button id="save" class="btn btn-primary" style="margin:auto;display:block;">Submit</button>
+					<button class="btn btn-danger">?</button>
 				</div>
 			</div>
 		</div>
