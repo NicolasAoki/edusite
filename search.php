@@ -131,10 +131,19 @@
 		<!-- /Hero-area -->
 		<div class="spaceTop"></div>
 		<div class="container">
-		  <div class="row" style="border-radius:5px;">
-				<div class="col-md-12 altura" style="background-color: #e6e4d7">
+		<div class="row">
+			<div class="col-md-12">
+				<p style="font-size:1em;text-align: justify;"><b>In this tab you are able to search 
+				27 differents Streptococus species, by selecting the strain 
+				identification (e.g. "AE009948"). From left to right, the genome
+				option is required, the others are optional. The search may take a couple of minutes
+				to display the results, which are: all ncRNA's in a specific region of selected species. </b> </p>
+			</div>
+		</div>
+		  <div class="row" style="border-radius:5px;margin-top:20px">
+				<div class="col-md-12 altura" style="background-color: #e6e4d7;padding-top:20px;">
 					<form id="myForm">
-						<div class="col-md-2 form-group">
+						<div class="col-md-2 col-md-offset-1 form-group">
 							<label for="exampleFormControlSelect2">Search by Genome</label>
 							<select multiple class="form-control" id="select-organismos">
 								<option>AE009948</option>
@@ -202,9 +211,8 @@
 			</div>
 
 			<div class="row" style="background-color: #e6e4d7">
-				<div class="col-md-12 spaceTop" style="margin-bottom: 20px;">
+				<div class="col-md-12" style="margin-bottom: 20px;">
 					<button id="save" class="btn btn-primary" style="margin:auto;display:block;">Submit</button>
-					<button class="btn btn-danger">?</button>
 				</div>
 			</div>
 		</div>
@@ -236,7 +244,6 @@
 		<!-- preloader -->
 		<div id='preloader'><div class='preloader'></div></div>
 		<!-- /preloader -->
-
 
 	</body>
 </html>

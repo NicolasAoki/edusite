@@ -41,7 +41,7 @@
     <div class="spaceTop"></div>
         <div class="row spaceleft">
             <div class="col-md-11" style="margin-left: 50px;"><table class="table table-bordered table-hover table-condensed spaceleft">
-            <p>*There are 458 Core regions, those are strict the same for each genome.</p>
+            <p>*There are 452 Core regions, those are strict the same for each genome.</p>
                      <th>
                          <p>Species</p>
                      </th>
