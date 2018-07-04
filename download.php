@@ -92,9 +92,10 @@
         <div class="spaceTop"></div>
            <div class="container">
            <div class="row">
-                <div class="col-md-12">
-                    <h2></h2>
-                    <p>testes</p>
+                <div class="col-md-9 offset-md-2">
+                    <p><b>The following files are at your disposal, they include
+                    the Streptococcus species, their regions types and ncRNA.
+                    Also able to download in GFF or FASTA format.</b></p>
                 </div>
            </div>
             <div class="row">
