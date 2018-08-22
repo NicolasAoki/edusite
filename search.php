@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -102,6 +103,9 @@
 				console.log(cont)
 				document.getElementById("resultado").innerHTML = "Results: "+cont;
 				$('#tabela').replaceWith(aux_data);
+				if(cont ==0){
+					swal("No results !", "Try another input", "warning");
+				}
 			}
 		});
 
