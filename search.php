@@ -84,6 +84,7 @@
 				aux_data += '<th>Details</th>'
 				aux_data += '</tr>'
 				$.each(data,function(key,value){
+					value.feature_name = value.feature_name.replace(/_/g," ");
 					cont++;
 					aux_data += '<tr>';
 					aux_data += '<td>'+value.abbreviation+'</td>'
@@ -98,7 +99,8 @@
 				});
 				aux_data += '</table>'
 				//$('#tabela').append(aux_data);
-				$('#resultado').replaceWith("Results: "+cont);
+				console.log(cont)
+				document.getElementById("resultado").innerHTML = "Results: "+cont;
 				$('#tabela').replaceWith(aux_data);
 			}
 		});
