@@ -68,6 +68,7 @@
 				var nome_botao = "View";
 				var hgt = $('#checkbox4').is(':checked');
 				var aux = 0;
+				var cont = 0;
 				if(hgt){
 					aux = 1;
 				}
@@ -83,6 +84,7 @@
 				aux_data += '<th>Details</th>'
 				aux_data += '</tr>'
 				$.each(data,function(key,value){
+					cont++;
 					aux_data += '<tr>';
 					aux_data += '<td>'+value.abbreviation+'</td>'
 					aux_data += '<td>'+value.loc_identification+'</td>'
@@ -96,6 +98,7 @@
 				});
 				aux_data += '</table>'
 				//$('#tabela').append(aux_data);
+				$('#resultado').replaceWith("Results: "+cont);
 				$('#tabela').replaceWith(aux_data);
 			}
 		});
@@ -140,8 +143,8 @@
 				to display the results, which are: all ncRNA's in a specific region of selected species. </b> </p>
 			</div>
 		</div>
-		  <div class="row" style="border-radius:5px;margin-top:20px">
-				<div class="col-md-12 altura" style="background-color: #e6e4d7;padding-top:20px;">
+		  <div class="row" style="margin-top:20px;">
+				<div class="col-md-12 altura rounded">
 					<form id="myForm">
 						<div class="col-md-2 col-md-offset-1 form-group">
 							<label for="exampleFormControlSelect2">Search by Genome</label>
@@ -220,6 +223,7 @@
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-12" >
+				<p id="results"><span id="resultado"></span></p>
 				<table class="table table-bordered table-striped" id="tabela">
 					<!-- <tr>
 						<th>abbreviation</th>

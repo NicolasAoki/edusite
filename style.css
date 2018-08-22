@@ -22,7 +22,14 @@
   .spaceTop{
       padding-top: 50px;
   }
-
+  #results{
+    font-weight: bold;
+  }
+ .rounded{
+   background-color: #e6e4d7;
+   padding-top:20px;
+   border-radius: 25px 25px 0 0;
+  }
   table{
     width:100%;
     border: 1px solid black;
