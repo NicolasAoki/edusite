@@ -50,12 +50,18 @@
   }
   th, td{
     text-align: center;
-
   }
   td {
-
-  text-align: center;
-  vertical-align: middle;
+    text-align: center;
+    vertical-align: middle;
+  }
+  td a {
+    padding: auto;
+    position: relative;
+    z-index: 10;
+  }
+  td a:hover{
+    background-color: blue;
   }
   .titulo-result{
     background-color: #fff;

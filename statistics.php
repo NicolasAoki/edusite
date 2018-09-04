@@ -75,7 +75,7 @@
                              echo "<td> ". $strain[$i] ." </td>";
                              echo "<td> ". $result['abbreviation'] ." </td>";
                              echo "<td> ". $result['Count'] ." </td>";
-                             echo "<td> ". $exclusive ." </td>";
+                             echo "<td><a href='#'> ". $exclusive ." </a></td>";
                              echo "<td> ". $shared ." </td>";
                              echo "<td> ". $rnaCount ." </td>";
                              echo "</tr>";
