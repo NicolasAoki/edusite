@@ -7,6 +7,11 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
   case 'GET': {
+    $data = [
+      'region' => $_GET['region'],
+      'strain' => $_GET['strain']
+    ];
+    include("search.php");
     break;
   }
   case 'POST': {

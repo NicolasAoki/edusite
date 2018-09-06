@@ -59,6 +59,8 @@
     padding: auto;
     position: relative;
     z-index: 10;
+    display:block;
+    width:100%;
   }
   td a:hover{
     background-color: blue;

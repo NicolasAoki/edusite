@@ -75,8 +75,8 @@
                              echo "<td> ". $strain[$i] ." </td>";
                              echo "<td> ". $result['abbreviation'] ." </td>";
                              echo "<td> ". $result['Count'] ." </td>";
-                             echo "<td><a href='#'> ". $exclusive ." </a></td>";
-                             echo "<td> ". $shared ." </td>";
+                             echo "<td><a href='ep-dados.php?region=EXCLUSIVE&strain=". $result['abbreviation'] ."'> ". $exclusive ." </a></td>";
+                             echo "<td><a href='#'> ". $shared ." <a/></td>";
                              echo "<td> ". $rnaCount ." </td>";
                              echo "</tr>";
                              $i++;
