@@ -63,7 +63,9 @@
     width:100%;
   }
   td a:hover{
-    background-color: blue;
+    background-color:#97c3c4;
+    transition-delay: 0.5s;
+    transition: background-color 0.5s ease;
   }
   .titulo-result{
     background-color: #fff;
