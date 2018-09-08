@@ -6,10 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>StreptoRNA</title>
-                <script type="text/javascript" src="js/jquery.min.js"></script>
-                <script type="text/javascript" src="js/bootstrap.min.js"></script>
-                <script type="text/javascript" src="js/main.js"></script>
-
+            <script type="text/javascript" src="js/jquery.min.js"></script>
+            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="js/main.js"></script>
+        <!-- hint css -->
+            <link rel="stylesheet" href="css/hint/hint.css">
+        <!-- -->
         <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
         <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -75,8 +77,8 @@
                              echo "<td> ". $strain[$i] ." </td>";
                              echo "<td> ". $result['abbreviation'] ." </td>";
                              echo "<td> ". $result['Count'] ." </td>";
-                             echo "<td><a href='ep-dados.php?region=EXCLUSIVE&strain=". $result['abbreviation'] ."'> ". $exclusive ." </a></td>";
-                             echo "<td><a href='#'> ". $shared ." <a/></td>";
+                             echo "<td><a class='hint--top-right hint--rounded hint--info' aria-label='View ncRNA' href='ep-dados.php?region=EXCLUSIVE&strain=". $result['abbreviation'] ."'> ". $exclusive ." </a></td>";
+                             echo "<td><a class='hint--top-right hint--rounded hint--info' aria-label='View ncRNA' href='#'> ". $shared ." <a/></td>";
                              echo "<td> ". $rnaCount ." </td>";
                              echo "</tr>";
                              $i++;
