@@ -100,6 +100,11 @@ class EpController {
     $this->Dao = new Dao();
     return $this->Dao->getFeatureonHGT();
   }
+  public function getStatisticsToSearch($params) {
+    $this->Dao = new Dao();
+    $where = " WHERE organism.abbreviation like'" .$params['strain']."' AND localization.loc_identification like '".$params['region']."' ";
+    return $this->Dao->getInfo('organism.abbreviation,localization.loc_identification, feature.start, feature.end, feature.strand, feature.sequence, feature_name,feature.bit_score,feature_rf,feature.e_value,feature.feature_id,feature.organism_id,feature.publication_id,feature.type_type_id,feature.analysis_id', $where, $values);
+  }
 }
 
 ?>

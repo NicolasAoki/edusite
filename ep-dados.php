@@ -11,6 +11,7 @@ switch ($method) {
       'region' => $_GET['region'],
       'strain' => $_GET['strain']
     ];
+    $result = $epcontroller->getStatisticsToSearch($data);
     include("search.php");
     break;
   }

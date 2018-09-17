@@ -7,7 +7,6 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
   case 'GET': {
-    /*if($_GET['loc_identification'] == 'EXCLUSIVE'){*/
       try{
         $hgtVisibility = $_GET['hgt_selected'];
         $array = [
@@ -32,7 +31,6 @@ switch ($method) {
       }catch (Exception $e){
         echo "$e";
       }
-      #($_GET['loc_identification'] == 'CORE' OU 'EXCLUSIVE'
   }
   case 'POST': {
     break;
